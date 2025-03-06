@@ -4,6 +4,7 @@ import Login from "../Pages/Login/Login";
 import AdminLayout from "../Layout/AdminLayout/AdminLayout";
 import Dashboard from "../Dashboard/Admin/Dashboard";
 import StudentAdmission from "../Dashboard/Admin/StudentAdmission/StudentAdmission";
+import StudentPromotion from "../Dashboard/Admin/StudentAdmission/StudentPromotion";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "student_admission",
         element: <StudentAdmission />,
+      },
+      {
+        path: "student_promotion",
+        element: <StudentPromotion />,
       },
     ],
   },

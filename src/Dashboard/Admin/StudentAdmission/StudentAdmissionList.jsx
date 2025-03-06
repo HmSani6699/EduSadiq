@@ -248,10 +248,12 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
                             <PiToggleRight />
                             Disable
                           </button>
-                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
-                            <TbArrowRampRight2 />
-                            Promote Student
-                          </button>
+                          <Link to={"/admin/student_promotion"}>
+                            <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                              <TbArrowRampRight2 />
+                              Promote Student
+                            </button>
+                          </Link>
                           <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
                             <AiOutlineDelete />
                             Delete
