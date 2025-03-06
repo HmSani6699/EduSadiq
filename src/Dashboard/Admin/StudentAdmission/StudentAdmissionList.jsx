@@ -18,7 +18,7 @@ import export_icon from "../../../../public/svg/export.svg";
 import print from "../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
 
-const StudentAdmissionList = ({ setCurrentPage }) => {
+const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
   const navigate = useNavigate();
   const [view, setView] = useState("list");
   const [feesCollectOpen, setFeesCollectOpen] = useState(false);
@@ -53,7 +53,7 @@ const StudentAdmissionList = ({ setCurrentPage }) => {
             <img src={export_icon} alt="" /> Export CSV
           </button>
           <button
-            onClick={() => setCurrentPage("studentCreateUpdate")}
+            onClick={() => handleCreateUpdate("studentCreate")}
             className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm"
           >
             <FaPlus className="text-[12px]" /> Add Student
@@ -220,21 +220,25 @@ const StudentAdmissionList = ({ setCurrentPage }) => {
                       {/* Dropdown Menu */}
                       {threeDoteId === id && (
                         <div className="bg-white absolute top-[35px] rounded-[5px] shadow-sm border right-0 flex flex-col p-[20px] z-[20]">
-                          <Link to="/admin/student_profile/10" end>
-                            <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
-                              <IoEyeOutline />
-                              View Student
-                            </button>
-                          </Link>
+                          <button
+                            onClick={() => setCurrentPage("studentView")}
+                            className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
+                          >
+                            <IoEyeOutline />
+                            View Student
+                          </button>
 
                           <button
-                            onClick={() => navigate("/admin/student_update/10")}
+                            onClick={() => handleCreateUpdate("studentUpdate")}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <AiOutlineEdit />
                             Edit
                           </button>
-                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                          <button
+                            onClick={() => handleCreateUpdate("studentView")}
+                            className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
+                          >
                             <MdLockOutline />
                             Login Details
                           </button>
