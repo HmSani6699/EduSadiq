@@ -30,20 +30,23 @@ const AdminLeftNavber = () => {
         >
           <MdOutlineDashboard className="text-[18px] text-[#515B73]" />
         </NavList>
-        <NavList url={"/admin/profile"} title={"Profile"} children_true={true}>
+        {/* <NavList url={"/admin/profile"} title={"Profile"} children_true={true}>
           <img src={user_profile} alt="" className="w-[18px] h-[18px]" />
-        </NavList>
+        </NavList> */}
       </div>
+      {/* =======> Student <======= */}
       <MenuDiraction title={"Student"} />
       <div className="pl-[5px]">
         <NavList
-          url={"/admin/admission"}
+          url={"/admin/student_admission"}
           title={"Admission"}
           children_true={false}
         >
           <FaUserGraduate className="text-[18px] text-[#515B73]" />
         </NavList>
       </div>
+
+      {/* ======> Teacher <====== */}
       <MenuDiraction title={"Teacher"} />
       <div className="pl-[5px]">
         <NavList
@@ -61,6 +64,7 @@ const AdminLeftNavber = () => {
           <FaUserGraduate className="text-[18px] text-[#515B73]" />
         </NavList>
 
+        {/* =====> Class <====== */}
         <MenuDiraction title={"Class"} />
 
         {/* <div>
