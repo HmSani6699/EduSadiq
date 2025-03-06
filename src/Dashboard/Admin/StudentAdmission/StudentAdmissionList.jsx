@@ -17,11 +17,13 @@ import { Link } from "react-router-dom";
 import export_icon from "../../../../public/svg/export.svg";
 import print from "../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
+import LoginDetails from "./LoginDetails";
 
 const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
   const navigate = useNavigate();
   const [view, setView] = useState("list");
   const [feesCollectOpen, setFeesCollectOpen] = useState(false);
+  const [loginDetails, setLoginDetails] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
 
   const handleClickThreeDot = (id) => {
@@ -236,7 +238,7 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
                             Edit
                           </button>
                           <button
-                            onClick={() => handleCreateUpdate("studentView")}
+                            onClick={() => setLoginDetails(true)}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <MdLockOutline />
@@ -268,6 +270,7 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
       {feesCollectOpen && (
         <FeesCollect setFeesCollectOpen={setFeesCollectOpen} />
       )}
+      {loginDetails && <LoginDetails setLoginDetails={setLoginDetails} />}
     </div>
   );
 };
