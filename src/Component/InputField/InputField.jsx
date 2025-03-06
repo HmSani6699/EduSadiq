@@ -1,15 +1,16 @@
 import React from "react";
 
-const InputField = ({ type, title, value, setValue, placeholder }) => {
+const InputField = ({ title, type, placeholder, setValue }) => {
   return (
     <div>
-      <p className="text-[16px] mb-[13px] ">{title}</p>
+      <p className="text-[14px] text-[#202C4B] font-[500] leading-[22px]">
+        {title ? title : ""}
+      </p>
       <input
-        type={type}
-        value={value}
-        setValue={setValue}
-        placeholder={placeholder}
-        className="w-full border-none outline-none py-[6px] px-[25px] rounded-[20px] text-black"
+        type={type ? type : "text"}
+        placeholder={placeholder ? placeholder : ""}
+        onChange={(e) => setValue(e.target.value)}
+        className=" w-full py-2 px-2 text-[14px] font-[400] rounded-[5px] leading-[22px] text-[#515B73] border border-[#E3E5E8] outline-[#506EE4] input_filed_gray mt-1.5"
       />
     </div>
   );
