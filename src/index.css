@@ -2,6 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+body {
+  background: #fff;
+}
+
+.text_colors {
+  color: black;
+}
+
+.bg_colors {
+  background-color: white;
+}
+
+.nav_activ_text_colors {
+  color: #3d5ee1;
+}
+.nav_activ_bg_colors {
+  background-color: #f2f5ff;
+}
+.nav_activ_left_border_colors {
+  border-left: 2px solid #3d5ee1;
+}
+
+.card_shadow {
   background-color: #fff;
+  transition: all 0.5sease-in-out;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #e9edf4;
+  box-shadow: 11px 4.4px 12px -1px rgba(222, 222, 222, 0.3607843137);
+  color: inherit;
+}
+
+/* ====== admin sidescrolling bar  ==== */
+
+.adminScrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 20px;
+  border-radius: 10px; /* Scrollbar er border radius */
+}
+
+/* Track */
+.adminScrollbar::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px; /* Track er border radius */
+}
+
+/* Handle */
+.adminScrollbar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px; /* Handle er border radius */
+}
+
+/* Handle on hover */
+.adminScrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+/* ======================= */
+.table_scrollber::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  border-radius: 10px; /* Scrollbar er border radius */
+}
+
+/* Track */
+.table_scrollber::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px; /* Track er border radius */
+}
+
+/* Handle */
+.table_scrollber::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px; /* Handle er border radius */
+}
+
+/* Handle on hover */
+.table_scrollber::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+/* ======================== */
+.feesCollect::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px; /* Scrollbar er border radius */
+}
+
+/* Track */
+.feesCollect::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px; /* Track er border radius */
+}
+
+/* Handle */
+.feesCollect::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px; /* Handle er border radius */
+}
+
+/* Handle on hover */
+.feesCollect::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+/* ==================== */
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px; /* Scrollbar er border radius */
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px; /* Track er border radius */
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px; /* Handle er border radius */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
 }

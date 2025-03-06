@@ -23,7 +23,11 @@ const AdminLeftNavber = () => {
     <div className=" pb-[50px]">
       <MenuDiraction title={"Main"} />
       <div className="pl-[5px]">
-        <NavList url={"/admin"} title={"Dashboard"} children_true={true}>
+        <NavList
+          url={"/admin/dashboard"}
+          title={"Dashboard"}
+          children_true={true}
+        >
           <MdOutlineDashboard className="text-[18px] text-[#515B73]" />
         </NavList>
         <NavList url={"/admin/profile"} title={"Profile"} children_true={true}>
