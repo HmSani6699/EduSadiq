@@ -17,6 +17,7 @@ import Address from "../Address/Address";
 import PreviousOrganaization from "../PreviousOrganaization/PreviousOrganaization";
 import ParentsInfo from "./ParentsInfo/ParentsInfo";
 import Documents from "../Documents/Documents";
+import SocialMedia from "./SocialMedia/SocialMedia";
 
 const TeacherProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -93,12 +94,6 @@ const TeacherProfile = () => {
                 </p>
                 <p className="text-[14px] text-gray-400">OB</p>
               </div>
-              <button
-                //   onClick={() => navigae("/admin/admission_form")}
-                className="bg-[#506EE4] w-full text-center text-[14px] mt-[20px] text-white font-semibold  rounded-[5px] py-[8px] px-[15px] shadow-sm"
-              >
-                Add Fees
-              </button>
             </div>
           </div>
           {/* primary info */}
@@ -182,6 +177,7 @@ const TeacherProfile = () => {
               <Documents />
               <Address />
               <PreviousOrganaization />
+              <SocialMedia />
             </div>
           ) : (
             ""
