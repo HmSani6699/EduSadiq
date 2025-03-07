@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import user from "../../../../public/man.png";
-import { FaFilter, FaList, FaSortAlphaDown } from "react-icons/fa";
+import { FaFilter, FaList, FaRegCopy, FaSortAlphaDown } from "react-icons/fa";
 import { CiGrid41 } from "react-icons/ci";
 import { BiMessageRoundedEdit } from "react-icons/bi";
-import { MdLockOutline, MdOutlineMail } from "react-icons/md";
+import { MdDone, MdLockOutline, MdOutlineMail } from "react-icons/md";
 import { IoEyeOutline } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -20,7 +20,7 @@ import { FaPlus } from "react-icons/fa";
 import LoginDetails from "./LoginDetails";
 import Message from "../../../Component/Message/Message";
 import Email from "../../../Component/Email/Email";
-import Phone from "../../../Component/Phone/Phone";
+import PhoneComponent from "../../../Component/PhoneComponent/PhoneComponent";
 
 const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
   const [message, setMessage] = useState(false);
@@ -30,9 +30,21 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
   const [feesCollectOpen, setFeesCollectOpen] = useState(false);
   const [loginDetails, setLoginDetails] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
+  const [copied, setCopied] = useState(false);
+  const textToCopy = "sadiq@gmail.com";
 
   const handleClickThreeDot = (id) => {
     setThreeDoteId((prevId) => (prevId === id ? null : id));
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset after 2 sec
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
   };
 
   return (
@@ -215,6 +227,7 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
                       >
                         <MdOutlineMail className="text-[18px]" />
                       </button>
+
                       <button
                         onClick={() => setPhone(true)}
                         className="p-[8px] border rounded-full text-[#515B73]"
@@ -290,12 +303,28 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
       {loginDetails && <LoginDetails setLoginDetails={setLoginDetails} />}
       {/* =====> Message <===== */}
       {message && <Message setMessage={setMessage} />}
-      {/* =====> Email <===== */}
+      {/* =====> Eamil <===== */}
       {email && <Email setEmail={setEmail} />}
       {/* =====> Phone <===== */}
-      {phone && <Phone setPhone={setPhone} />}
+      {phone && <PhoneComponent setPhone={setPhone} />}
     </div>
   );
 };
 
 export default StudentAdmissionList;
+
+//  {
+//    email === id && (
+//      <div
+//        className={`${
+//          copied ? "bg-green-200" : "bg-white "
+//        } absolute top-[35px] rounded-[5px] shadow-sm border  flex gap-[20px] p-[20px] z-[20]`}
+//      >
+//        <div className="flex items-center gap-[10px]">
+//          {copied && <MdDone />}
+//          <h2>{textToCopy}</h2>
+//        </div>
+//        <FaRegCopy className="cursor-pointer" onClick={handleCopy} />
+//      </div>
+//    );
+//  }
