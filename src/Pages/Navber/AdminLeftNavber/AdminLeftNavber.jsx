@@ -50,7 +50,7 @@ const AdminLeftNavber = () => {
       <MenuDiraction title={"Teacher"} />
       <div className="pl-[5px]">
         <NavList
-          url={"/admin/teacher"}
+          url={"/admin/teacher_admission"}
           title={"Manage Teacher"}
           children_true={false}
         >

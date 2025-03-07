@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { FaPlus } from "react-icons/fa";
-import { useNavigate } from "react-router";
+import TeacherList from "./TeacherList";
+import TeacherCreateUpdate from "./TeacherCreateUpdate";
+import TeacherProfile from "../../../Component/Profile/TeacherProfile/TeacherProfile";
 
-import StudentAdmissionList from "./StudentAdmissionList";
-import StudentCreateUpdate from "./StudentCreateUpdate";
-import StudentProfile from "../../../Component/Profile/StudentProfile/StudentProfile";
-
-const StudentAdmission = () => {
-  const navigate = useNavigate();
+const Teacher = () => {
   const [currentPage, setCurrentPage] = useState("studentList");
   const [create, setCreate] = useState(false);
 
@@ -24,17 +20,17 @@ const StudentAdmission = () => {
   return (
     <div>
       {currentPage === "studentList" ? (
-        <StudentAdmissionList
+        <TeacherList
           setCurrentPage={setCurrentPage}
           handleCreateUpdate={handleCreateUpdate}
         />
       ) : currentPage === "studentCreateUpdate" ? (
-        <StudentCreateUpdate create={create} />
+        <TeacherCreateUpdate create={create} />
       ) : currentPage === "studentView" ? (
-        <StudentProfile />
+        <TeacherProfile />
       ) : null}
     </div>
   );
 };
 
-export default StudentAdmission;
+export default Teacher;

@@ -5,6 +5,7 @@ import AdminLayout from "../Layout/AdminLayout/AdminLayout";
 import Dashboard from "../Dashboard/Admin/Dashboard";
 import StudentAdmission from "../Dashboard/Admin/StudentAdmission/StudentAdmission";
 import StudentPromotion from "../Dashboard/Admin/StudentAdmission/StudentPromotion";
+import Teacher from "../Dashboard/Admin/Teacher/Teacher";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,13 @@ const router = createBrowserRouter([
       //   path: "profile",
       //   element: <div>On going amdin Profile ......!</div>,
       // },
+
+      // =====> Teacher Admission <=====//
+      {
+        path: "teacher_admission",
+        element: <Teacher />,
+      },
+
       // =====> Studetn Admission <=====//
       {
         path: "student_admission",
