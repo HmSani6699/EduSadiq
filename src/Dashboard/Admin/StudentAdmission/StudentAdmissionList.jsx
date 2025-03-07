@@ -18,9 +18,14 @@ import export_icon from "../../../../public/svg/export.svg";
 import print from "../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
 import LoginDetails from "./LoginDetails";
+import Message from "../../../Component/Message/Message";
+import Email from "../../../Component/Email/Email";
+import Phone from "../../../Component/Phone/Phone";
 
 const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
-  const navigate = useNavigate();
+  const [message, setMessage] = useState(false);
+  const [email, setEmail] = useState(false);
+  const [phone, setPhone] = useState(false);
   const [view, setView] = useState("list");
   const [feesCollectOpen, setFeesCollectOpen] = useState(false);
   const [loginDetails, setLoginDetails] = useState(false);
@@ -198,13 +203,22 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
 
                   <td className="h-10 px-2 py-[6px]">
                     <div className="flex items-center gap-[15px] relative">
-                      <button className="p-[8px] border rounded-full text-[#515B73]">
+                      <button
+                        onClick={() => setMessage(true)}
+                        className="p-[8px] border rounded-full text-[#515B73]"
+                      >
                         <BiMessageRoundedEdit className="text-[20px]" />
                       </button>
-                      <button className="p-[8px] border rounded-full text-[#515B73]">
+                      <button
+                        onClick={() => setEmail(true)}
+                        className="p-[8px] border rounded-full text-[#515B73]"
+                      >
                         <MdOutlineMail className="text-[18px]" />
                       </button>
-                      <button className="p-[8px] border rounded-full text-[#515B73]">
+                      <button
+                        onClick={() => setPhone(true)}
+                        className="p-[8px] border rounded-full text-[#515B73]"
+                      >
                         <FiPhoneCall className="text-[16px]" />
                       </button>
                       <button
@@ -272,7 +286,14 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
       {feesCollectOpen && (
         <FeesCollect setFeesCollectOpen={setFeesCollectOpen} />
       )}
+      {/* =====> Login details <===== */}
       {loginDetails && <LoginDetails setLoginDetails={setLoginDetails} />}
+      {/* =====> Message <===== */}
+      {message && <Message setMessage={setMessage} />}
+      {/* =====> Email <===== */}
+      {email && <Email setEmail={setEmail} />}
+      {/* =====> Phone <===== */}
+      {phone && <Phone setPhone={setPhone} />}
     </div>
   );
 };

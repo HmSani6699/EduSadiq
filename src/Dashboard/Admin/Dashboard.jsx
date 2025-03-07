@@ -23,6 +23,7 @@ import MonthlyFeesCollected from "./Finance/MonthlyFeesCollected/MonthlyFeesColl
 import FoodFeesCollected from "./Finance/FoodFeesCollected/FoodFeesCollected";
 import DonationCollected from "./Finance/DonationCollected/DonationCollected";
 import FineCollected from "./Finance/FineCollected/FineCollected";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const data = [
@@ -61,9 +62,11 @@ const Dashboard = () => {
         </div>
 
         <div className="flex items-center gap-[10px]">
-          <button className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[10px] shadow-sm">
-            <FaPlus className="text-[12px]" /> Add New Student
-          </button>
+          <Link to={"/admin/student_admission"}>
+            <button className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[10px] shadow-sm">
+              <FaPlus className="text-[12px]" /> Add New Student
+            </button>
+          </Link>
           <button className="bg-[#E9EDF4] text-[14px] text-[#515B73] font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[10px] shadow-sm">
             Fees Details
           </button>
