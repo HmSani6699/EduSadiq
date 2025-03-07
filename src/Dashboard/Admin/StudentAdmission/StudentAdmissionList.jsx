@@ -300,19 +300,3 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
 };
 
 export default StudentAdmissionList;
-
-//  {
-//    email === id && (
-//      <div
-//        className={`${
-//          copied ? "bg-green-200" : "bg-white "
-//        } absolute top-[35px] rounded-[5px] shadow-sm border  flex gap-[20px] p-[20px] z-[20]`}
-//      >
-//        <div className="flex items-center gap-[10px]">
-//          {copied && <MdDone />}
-//          <h2>{textToCopy}</h2>
-//        </div>
-//        <FaRegCopy className="cursor-pointer" onClick={handleCopy} />
-//      </div>
-//    );
-//  }

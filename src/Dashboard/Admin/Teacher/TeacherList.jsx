@@ -14,12 +14,8 @@ import export_icon from "../../../../public/svg/export.svg";
 import print from "../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
 
-const TeacherList = () => {
-  const [message, setMessage] = useState(false);
-  const [email, setEmail] = useState(false);
-  const [phone, setPhone] = useState(false);
+const TeacherList = ({ setCurrentPage }) => {
   const [view, setView] = useState("list");
-  const [feesCollectOpen, setFeesCollectOpen] = useState(false);
   const [loginDetails, setLoginDetails] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
 
@@ -202,7 +198,7 @@ const TeacherList = () => {
                       {threeDoteId === id && (
                         <div className="bg-white absolute top-[35px] rounded-[5px] shadow-sm border right-0 flex flex-col p-[20px] z-[20]">
                           <button
-                            onClick={() => setCurrentPage("studentView")}
+                            onClick={() => setCurrentPage("teacherView")}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <IoEyeOutline />

@@ -4,29 +4,29 @@ import TeacherCreateUpdate from "./TeacherCreateUpdate";
 import TeacherProfile from "../../../Component/Profile/TeacherProfile/TeacherProfile";
 
 const Teacher = () => {
-  const [currentPage, setCurrentPage] = useState("studentList");
+  const [currentPage, setCurrentPage] = useState("teacherList");
   const [create, setCreate] = useState(false);
 
   const handleCreateUpdate = (value) => {
-    if (value == "studentUpdate") {
+    if (value == "teacherUpdate") {
       setCreate(true);
-      setCurrentPage("studentCreateUpdate");
+      setCurrentPage("teacherCreateUpdate");
     }
-    if (value == "studentCreate") {
-      setCurrentPage("studentCreateUpdate");
+    if (value == "teacherCreate") {
+      setCurrentPage("teacherCreateUpdate");
     }
   };
 
   return (
     <div>
-      {currentPage === "studentList" ? (
+      {currentPage === "teacherList" ? (
         <TeacherList
           setCurrentPage={setCurrentPage}
           handleCreateUpdate={handleCreateUpdate}
         />
-      ) : currentPage === "studentCreateUpdate" ? (
+      ) : currentPage === "teacherCreateUpdate" ? (
         <TeacherCreateUpdate create={create} />
-      ) : currentPage === "studentView" ? (
+      ) : currentPage === "teacherView" ? (
         <TeacherProfile />
       ) : null}
     </div>

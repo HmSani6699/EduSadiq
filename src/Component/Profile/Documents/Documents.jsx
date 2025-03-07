@@ -1,7 +1,7 @@
 import React from "react";
 import { HiArrowDownTray } from "react-icons/hi2";
 
-const StudentDocuments = () => {
+const Documents = () => {
   return (
     <div className="card_shadow mt-[30px]">
       <h2 className="text-[#202C4B] text-[16px] font-[500] px-[20px] py-[15px] border-b">
@@ -38,4 +38,4 @@ const StudentDocuments = () => {
   );
 };
 
-export default StudentDocuments;
+export default Documents;
