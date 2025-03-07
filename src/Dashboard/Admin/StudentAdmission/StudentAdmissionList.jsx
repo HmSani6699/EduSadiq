@@ -30,21 +30,9 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
   const [feesCollectOpen, setFeesCollectOpen] = useState(false);
   const [loginDetails, setLoginDetails] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
-  const [copied, setCopied] = useState(false);
-  const textToCopy = "sadiq@gmail.com";
 
   const handleClickThreeDot = (id) => {
     setThreeDoteId((prevId) => (prevId === id ? null : id));
-  };
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(textToCopy);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // Reset after 2 sec
-    } catch (err) {
-      console.error("Failed to copy: ", err);
-    }
   };
 
   return (
