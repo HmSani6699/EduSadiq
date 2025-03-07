@@ -18,6 +18,8 @@ import PreviousOrganaization from "../PreviousOrganaization/PreviousOrganaizatio
 import ParentsInfo from "./ParentsInfo/ParentsInfo";
 import Documents from "../Documents/Documents";
 import SocialMedia from "./SocialMedia/SocialMedia";
+import WorkDetails from "./WorkDetails/WorkDetails";
+import BankDetails from "./BankDetails/BankDetails";
 
 const TeacherProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -177,6 +179,8 @@ const TeacherProfile = () => {
               <Documents />
               <Address />
               <PreviousOrganaization />
+              <BankDetails />
+              <WorkDetails />
               <SocialMedia />
             </div>
           ) : (
