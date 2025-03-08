@@ -1,6 +1,7 @@
 import React from "react";
 import PersonalInformation from "../../../Component/TeacherAdmissionForm/PersonalInformation/PersonalInformation";
 import BankAccount from "../../../Component/TeacherAdmissionForm/BankAccount/BankAccount";
+import SocialMedia from "../../../Component/TeacherAdmissionForm/SocialMedia/SocialMedia";
 
 const TeacherCreateUpdate = ({ create }) => {
   return (
@@ -24,6 +25,7 @@ const TeacherCreateUpdate = ({ create }) => {
       {/* =====> form <==== */}
       <PersonalInformation />
       <BankAccount />
+      <SocialMedia />
     </div>
   );
 };
