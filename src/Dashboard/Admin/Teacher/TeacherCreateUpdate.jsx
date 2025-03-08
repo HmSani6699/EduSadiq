@@ -2,6 +2,7 @@ import React from "react";
 import PersonalInformation from "../../../Component/TeacherAdmissionForm/PersonalInformation/PersonalInformation";
 import BankAccount from "../../../Component/TeacherAdmissionForm/BankAccount/BankAccount";
 import SocialMedia from "../../../Component/TeacherAdmissionForm/SocialMedia/SocialMedia";
+import Password from "../../../Component/Password/Password";
 
 const TeacherCreateUpdate = ({ create }) => {
   return (
@@ -26,6 +27,17 @@ const TeacherCreateUpdate = ({ create }) => {
       <PersonalInformation />
       <BankAccount />
       <SocialMedia />
+      <Password />
+
+      {/*  */}
+      <div className="flex items-end justify-end gap-[10px] mb-[15px]">
+        <button className="text-[14px] font-semibold text-[#202c4bab] py-[8px] px-[15px] bg-gray-200 rounded-[5px]  border">
+          Cancle
+        </button>
+        <button className="text-[14px] font-semibold text-[#fff] bg-[#506EE4] py-[8px] px-[15px] rounded-[5px]  border">
+          Add Teacher
+        </button>
+      </div>
     </div>
   );
 };
