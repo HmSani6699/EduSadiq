@@ -7,6 +7,7 @@ import Teacher from "../Dashboard/Admin/Teacher/Teacher";
 import StudentAdmissionList from "../Dashboard/Admin/Student/StudentAdmissionList";
 import StudentPromotion from "../Dashboard/Admin/Student/StudentPromotion";
 import Student from "../Dashboard/Admin/Student/Student";
+import TeacherAddClass from "../Dashboard/Admin/Teacher/TeacherAddClass/TeacherAddClass";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "teacher_admission",
         element: <Teacher />,
+      },
+      {
+        path: "teacher_add_class",
+        element: <TeacherAddClass />,
       },
 
       // =====> Studetn Admission <=====//

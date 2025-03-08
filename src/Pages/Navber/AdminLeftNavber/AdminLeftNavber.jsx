@@ -56,12 +56,13 @@ const AdminLeftNavber = () => {
         >
           <FaUserGraduate className="text-[18px] text-[#515B73]" />
         </NavList>
+
         <NavList
           url={"/admin/teacher_add_class"}
-          title={"Teacher Class List"}
+          title={"Teacher Add Class"}
           children_true={false}
         >
-          <FaUserGraduate className="text-[18px] text-[#515B73]" />
+          <BiBook className="text-[18px] text-[#515B73]" />
         </NavList>
 
         {/* =====> Class <====== */}
