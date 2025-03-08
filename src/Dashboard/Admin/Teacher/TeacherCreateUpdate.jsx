@@ -4,8 +4,9 @@ import BankAccount from "../../../Component/TeacherAdmissionForm/BankAccount/Ban
 import SocialMedia from "../../../Component/TeacherAdmissionForm/SocialMedia/SocialMedia";
 import Password from "../../../Component/Password/Password";
 import AddClass from "../../../Component/TeacherAdmissionForm/AddClass/AddClass";
+import { IoClose } from "react-icons/io5";
 
-const TeacherCreateUpdate = ({ create }) => {
+const TeacherCreateUpdate = ({ create, setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
@@ -22,6 +23,12 @@ const TeacherCreateUpdate = ({ create }) => {
             <p className="text-[#6A7287] text-[14px]">Add Teacher</p>
           </div>
         </div>
+        <button
+          onClick={() => setCurrentPage("teacherList")}
+          className="text-[14px] font-semibold text-[#fff] flex items-center gap-[6px] bg-red-500 py-[6px] px-[15px] rounded-[5px]  border"
+        >
+          <IoClose className="text-[20px]" /> Close
+        </button>
       </div>
 
       {/* =====> form <==== */}

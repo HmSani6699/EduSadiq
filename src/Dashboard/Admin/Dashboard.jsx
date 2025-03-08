@@ -139,7 +139,7 @@ const Dashboard = () => {
       <div className="flex gap-[20px]">
         <div className="bg-white shadow-md rounded-[8px] lg:w-[60%] lg:p-[20px]">
           <h2 className="text-[25px] font-bold mb-[20px]">
-            Total all years Students
+            Total Fees Collect
           </h2>
           <hr className="mb-[20px]" />
           <ResponsiveContainer width="100%" height={300}>

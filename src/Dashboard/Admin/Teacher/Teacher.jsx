@@ -25,7 +25,7 @@ const Teacher = () => {
           handleCreateUpdate={handleCreateUpdate}
         />
       ) : currentPage === "teacherCreateUpdate" ? (
-        <TeacherCreateUpdate create={create} />
+        <TeacherCreateUpdate create={create} setCurrentPage={setCurrentPage} />
       ) : currentPage === "teacherView" ? (
         <TeacherProfile />
       ) : null}

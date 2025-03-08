@@ -4,8 +4,9 @@ import ParentsInformation from "../../../Component/StudentAdmissionForm/ParentsI
 import SibilingInformation from "../../../Component/StudentAdmissionForm/SibilingInformation/SibilingInformation";
 import Address from "../../../Component/StudentAdmissionForm/Address/Address";
 import PreviousOrganization from "../../../Component/StudentAdmissionForm/PreviousOrganization/PreviousOrganization";
+import { IoClose } from "react-icons/io5";
 
-const StudentCreateUpdate = ({ create }) => {
+const StudentCreateUpdate = ({ create, setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
@@ -22,6 +23,12 @@ const StudentCreateUpdate = ({ create }) => {
             <p className="text-[#6A7287] text-[14px]">Add Student</p>
           </div>
         </div>
+        <button
+          onClick={() => setCurrentPage("studentList")}
+          className="text-[14px] font-semibold text-[#fff] flex items-center gap-[6px] bg-red-500 py-[6px] px-[15px] rounded-[5px]  border"
+        >
+          <IoClose className="text-[20px]" /> Close
+        </button>
       </div>
       {/*  */}
       <PersonalInformation />

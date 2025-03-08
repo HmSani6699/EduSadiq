@@ -29,7 +29,7 @@ const Student = () => {
           handleCreateUpdate={handleCreateUpdate}
         />
       ) : currentPage === "studentCreateUpdate" ? (
-        <StudentCreateUpdate create={create} />
+        <StudentCreateUpdate create={create} setCurrentPage={setCurrentPage} />
       ) : currentPage === "studentView" ? (
         <StudentProfile />
       ) : null}
