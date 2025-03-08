@@ -3,9 +3,10 @@ import Main from "../Layout/Main";
 import Login from "../Pages/Login/Login";
 import AdminLayout from "../Layout/AdminLayout/AdminLayout";
 import Dashboard from "../Dashboard/Admin/Dashboard";
-import StudentAdmission from "../Dashboard/Admin/StudentAdmission/StudentAdmission";
-import StudentPromotion from "../Dashboard/Admin/StudentAdmission/StudentPromotion";
 import Teacher from "../Dashboard/Admin/Teacher/Teacher";
+import StudentAdmissionList from "../Dashboard/Admin/Student/StudentAdmissionList";
+import StudentPromotion from "../Dashboard/Admin/Student/StudentPromotion";
+import Student from "../Dashboard/Admin/Student/Student";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       // =====> Studetn Admission <=====//
       {
         path: "student_admission",
-        element: <StudentAdmission />,
+        element: <Student />,
       },
       {
         path: "student_promotion",

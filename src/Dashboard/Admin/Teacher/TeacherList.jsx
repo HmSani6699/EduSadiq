@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import export_icon from "../../../../public/svg/export.svg";
 import print from "../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
-import LoginDetails from "../StudentAdmission/LoginDetails";
+import LoginDetails from "../Student/LoginDetails";
 
 const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
   const [view, setView] = useState("list");

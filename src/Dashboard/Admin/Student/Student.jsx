@@ -6,7 +6,7 @@ import StudentAdmissionList from "./StudentAdmissionList";
 import StudentCreateUpdate from "./StudentCreateUpdate";
 import StudentProfile from "../../../Component/Profile/StudentProfile/StudentProfile";
 
-const StudentAdmission = () => {
+const Student = () => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState("studentList");
   const [create, setCreate] = useState(false);
@@ -37,4 +37,4 @@ const StudentAdmission = () => {
   );
 };
 
-export default StudentAdmission;
+export default Student;
