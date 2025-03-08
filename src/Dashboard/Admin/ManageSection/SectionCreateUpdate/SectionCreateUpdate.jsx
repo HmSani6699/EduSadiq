@@ -34,7 +34,7 @@ const SectionCreateUpdate = ({ create, setCurrentPage }) => {
         </div>
 
         {/*  */}
-        <div className="flex items-end justify-end gap-[10px] mb-[15px]">
+        <div className="flex items-end justify-end gap-[10px] mb-[15px] p-[20px]">
           <button
             onClick={() => setCurrentPage("sectionList")}
             className="text-[14px] font-semibold text-[#202c4bab] hover:bg-red-500 hover:text-white py-[8px] px-[15px] bg-gray-200 rounded-[5px]  border"

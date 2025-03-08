@@ -3,21 +3,21 @@ import { IoMdInformationCircleOutline } from "react-icons/io";
 import InputField from "../../../../Component/InputField/InputField";
 import SelectInputField from "../../../../Component/SelectInputField/SelectInputField";
 
-const ClassCreateUpdate = ({ create, setCurrentPage }) => {
+const SubjectCreateUpdate = ({ create, setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            {create ? "  Update Class" : "  Add Class"}
+            {create ? "  Update Subject" : "  Add Subject"}
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>
             <p className="text-[#6a72876c]">/</p>
             <p className="text-[#6A7287] text-[14px]">Admin</p>
             <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">Add Class</p>
+            <p className="text-[#6A7287] text-[14px]">Add Subject</p>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@ const ClassCreateUpdate = ({ create, setCurrentPage }) => {
         </div>
 
         {/*  */}
-        <div className="p-[20px] grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
+        <div className="p-[20px] grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
           <SelectInputField
             title={"Section Name"}
             options={[
@@ -38,19 +38,26 @@ const ClassCreateUpdate = ({ create, setCurrentPage }) => {
               { id: 2, value: "পুরাতন" },
             ]}
           />
-          <InputField title={"Class Name"} />
+          <SelectInputField
+            title={"Class Name"}
+            options={[
+              { id: 1, value: "নতুন" },
+              { id: 2, value: "পুরাতন" },
+            ]}
+          />
+          <InputField title={"Subject Name"} />
         </div>
 
         {/*  */}
         <div className="flex items-end justify-end gap-[10px] mb-[15px] p-[20px]">
           <button
-            onClick={() => setCurrentPage("classList")}
+            onClick={() => setCurrentPage("subjectList")}
             className="text-[14px] font-semibold text-[#202c4bab] hover:bg-red-500 hover:text-white py-[8px] px-[15px] bg-gray-200 rounded-[5px]  border"
           >
             Cancle
           </button>
           <button
-            onClick={() => setCurrentPage("classList")}
+            onClick={() => setCurrentPage("subjectList")}
             className="text-[14px] font-semibold text-[#fff] bg-[#506EE4] py-[8px] px-[15px] rounded-[5px]  border"
           >
             Add Class
@@ -61,4 +68,4 @@ const ClassCreateUpdate = ({ create, setCurrentPage }) => {
   );
 };
 
-export default ClassCreateUpdate;
+export default SubjectCreateUpdate;
