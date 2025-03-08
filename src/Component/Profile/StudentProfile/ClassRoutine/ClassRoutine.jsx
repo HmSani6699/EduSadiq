@@ -2,7 +2,7 @@ import React from "react";
 import { FaRegClock } from "react-icons/fa";
 import user from "../../../../../public/man.png";
 
-const ClassRoting = () => {
+const ClassRoutine = () => {
   return (
     <div className="card_shadow mt-[30px]">
       <h2 className="text-[#202C4B] text-[16px] font-[500] px-[20px] py-[15px] border-b">
@@ -55,4 +55,4 @@ const ClassRoting = () => {
   );
 };
 
-export default ClassRoting;
+export default ClassRoutine;

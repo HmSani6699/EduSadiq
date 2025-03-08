@@ -20,6 +20,8 @@ import Documents from "../Documents/Documents";
 import SocialMedia from "./SocialMedia/SocialMedia";
 import WorkDetails from "./WorkDetails/WorkDetails";
 import BankDetails from "./BankDetails/BankDetails";
+import ClassRoutine from "./ClassRoutine/ClassRoutine";
+import AttendanceCalander from "../AttendanceCalander/AttendanceCalander";
 
 const TeacherProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -139,10 +141,10 @@ const TeacherProfile = () => {
               <PiStudent />
             </TabButton>
             <TabButton
-              title={"Time Table"}
+              title={"Class Routine"}
               tabBtn={tabBtn}
               setTabBtn={setTabBtn}
-              tabValue={"time"}
+              tabValue={"class_routine"}
             >
               <MdOutlineTableChart />
             </TabButton>
@@ -183,28 +185,13 @@ const TeacherProfile = () => {
               <WorkDetails />
               <SocialMedia />
             </div>
+          ) : tabBtn === "class_routine" ? (
+            <ClassRoutine />
+          ) : tabBtn === "attendance" ? (
+            <AttendanceCalander />
           ) : (
             ""
           )}
-
-          {/* {tabBtn === "details" ? (
-            <div>
-              <ParentsInfo />
-              <StudentDocuments />
-              <Address />
-              <PreviousOrganaization />
-            </div>
-          ) : tabBtn === "time" ? (
-            <ClassRoting />
-          ) : tabBtn === "attendance" ? (
-            <AttendanceCalander />
-          ) : tabBtn === "fees" ? (
-            <FeesDetails />
-          ) : tabBtn === "exam_results" ? (
-            <ExamResults />
-          ) : (
-            ""
-          )} */}
         </div>
       </div>
     </div>

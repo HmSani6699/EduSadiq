@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Calander from "../../../Calander/Calander";
-import SelectInputField from "../../../SelectInputField/SelectInputField";
+
+import Calander from "../../Calander/Calander";
+import SelectInputField from "../../SelectInputField/SelectInputField";
 
 const AttendanceCalander = () => {
   const [calendarData, setCalendarData] = useState([

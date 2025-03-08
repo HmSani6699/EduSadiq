@@ -14,13 +14,13 @@ import { LiaHandHoldingUsdSolid } from "react-icons/lia";
 import { BsBookmarkStar } from "react-icons/bs";
 import TabButton from "./TabButton/TabButton";
 import ParentsInfo from "./ParentsInfo/ParentsInfo";
-import ClassRoting from "./ClassRoting/ClassRoting";
-import AttendanceCalander from "./AttendanceCalander/AttendanceCalander";
 import FeesDetails from "./FeesDetails/FeesDetails";
 import ExamResults from "./Exam&Results/ExamResults";
 import Address from "../Address/Address";
 import Documents from "../Documents/Documents";
 import PreviousOrganaization from "../PreviousOrganaization/PreviousOrganaization";
+import ClassRoutine from "./ClassRoutine/ClassRoutine";
+import AttendanceCalander from "../AttendanceCalander/AttendanceCalander";
 
 const StudentProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -215,7 +215,7 @@ const StudentProfile = () => {
               <PreviousOrganaization />
             </div>
           ) : tabBtn === "time" ? (
-            <ClassRoting />
+            <ClassRoutine />
           ) : tabBtn === "attendance" ? (
             <AttendanceCalander />
           ) : tabBtn === "fees" ? (
