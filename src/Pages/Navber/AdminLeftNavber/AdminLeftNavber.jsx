@@ -99,28 +99,28 @@ const AdminLeftNavber = () => {
           > */}
         {/* Nav Links with Correct Icons */}
         <NavList
-          url={"/admin/add_bivhag"}
-          title={"Manage Bivhag"}
+          url={"/admin/section"}
+          title={"Manage Section"}
           children_true={false}
         >
           <FaUniversity className="text-[18px] text-[#515B73]" />
         </NavList>
         <NavList
-          url={"/admin/add_category"}
+          url={"/admin/class"}
           title={"Manage Class"}
-          children_true={false}
-        >
-          <BiBook className="text-[18px] text-[#515B73]" />
-        </NavList>
-        <NavList
-          url={"/admin/add_class"}
-          title={"Manage Class List"}
           children_true={false}
         >
           <FaChalkboardTeacher className="text-[18px] text-[#515B73]" />
         </NavList>
         <NavList
-          url={"/admin/add_class_group"}
+          url={"/admin/subject"}
+          title={"Manage Subject"}
+          children_true={false}
+        >
+          <BiBook className="text-[18px] text-[#515B73]" />
+        </NavList>
+        <NavList
+          url={"/admin/class_group"}
           title={"Manage Class Group"}
           children_true={false}
         >

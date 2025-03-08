@@ -8,6 +8,10 @@ import StudentAdmissionList from "../Dashboard/Admin/Student/StudentAdmissionLis
 import StudentPromotion from "../Dashboard/Admin/Student/StudentPromotion";
 import Student from "../Dashboard/Admin/Student/Student";
 import TeacherAddClass from "../Dashboard/Admin/Teacher/TeacherAddClass/TeacherAddClass";
+import ManageSection from "../Dashboard/Admin/ManageSection/ManageSection";
+import ManageClass from "../Dashboard/Admin/ManageClass/ManageClass";
+import ManageSubject from "../Dashboard/Admin/ManageSubject/ManageSubject";
+import ManageClassGroup from "../Dashboard/Admin/ManageClassGroup/ManageClassGroup";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,6 +59,24 @@ const router = createBrowserRouter([
       {
         path: "student_promotion",
         element: <StudentPromotion />,
+      },
+
+      // ======> Class <=====//
+      {
+        path: "section",
+        element: <ManageSection />,
+      },
+      {
+        path: "class",
+        element: <ManageClass />,
+      },
+      {
+        path: "subject",
+        element: <ManageSubject />,
+      },
+      {
+        path: "class_group",
+        element: <ManageClassGroup />,
       },
     ],
   },
