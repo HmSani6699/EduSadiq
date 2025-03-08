@@ -22,6 +22,7 @@ import WorkDetails from "./WorkDetails/WorkDetails";
 import BankDetails from "./BankDetails/BankDetails";
 import ClassRoutine from "./ClassRoutine/ClassRoutine";
 import AttendanceCalander from "../AttendanceCalander/AttendanceCalander";
+import Salary from "./Salary/Salary";
 
 const TeacherProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -157,10 +158,10 @@ const TeacherProfile = () => {
               <LuCalendarDays />
             </TabButton>
             <TabButton
-              title={"Fees"}
+              title={"Salary"}
               tabBtn={tabBtn}
               setTabBtn={setTabBtn}
-              tabValue={"fees"}
+              tabValue={"salary"}
             >
               <LiaHandHoldingUsdSolid />
             </TabButton>
@@ -189,9 +190,9 @@ const TeacherProfile = () => {
             <ClassRoutine />
           ) : tabBtn === "attendance" ? (
             <AttendanceCalander />
-          ) : (
-            ""
-          )}
+          ) : tabBtn === "salary" ? (
+            <Salary />
+          ) : null}
         </div>
       </div>
     </div>
