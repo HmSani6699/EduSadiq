@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddClassList from "./AddClassList/AddClassList";
 import AddClassCreateUpdate from "./AddClassCreateUpdate/AddClassCreateUpdate";
+import TeacherProfile from "../../../../Component/Profile/TeacherProfile/TeacherProfile";
 
 const TeacherAddClass = () => {
   const [currentPage, setCurrentPage] = useState("addClassList");

@@ -6,7 +6,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import InputField from "../../InputField/InputField";
 import SelectInputField from "../../SelectInputField/SelectInputField";
 
-const AddClass = () => {
+const AddClass = ({ addClassSideMenu }) => {
   const [addSibiling, setAddSibiling] = useState([
     {
       teacherName: "Sadiq",
@@ -103,6 +103,17 @@ const AddClass = () => {
 
             {/*  */}
             <div className="p-[20px] grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
+              {addClassSideMenu && (
+                <div className="lg:col-span-3">
+                  <SelectInputField
+                    title={"Teacher Name"}
+                    options={[
+                      { id: 1, value: "নতুন" },
+                      { id: 2, value: "পুরাতন" },
+                    ]}
+                  />
+                </div>
+              )}
               <SelectInputField
                 title={"Section"}
                 options={[

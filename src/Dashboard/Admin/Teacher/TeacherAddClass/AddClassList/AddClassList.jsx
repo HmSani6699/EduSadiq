@@ -7,16 +7,13 @@ import { IoEyeOutline } from "react-icons/io5";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { PiToggleRight } from "react-icons/pi";
-import { TbArrowRampRight2 } from "react-icons/tb";
 import CustomSearchForm from "../../../../../Component/CustomSearchForm/CustomSearchForm";
-import { Link } from "react-router-dom";
 import export_icon from "../../../../../../public/svg/export.svg";
 import print from "../../../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
 
-const AddClassList = () => {
+const AddClassList = ({ setCurrentPage, handleCreateUpdate }) => {
   const [view, setView] = useState("list");
-  const [loginDetails, setLoginDetails] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
 
   const handleClickThreeDot = (id) => {
@@ -48,7 +45,7 @@ const AddClassList = () => {
             <img src={export_icon} alt="" /> Export CSV
           </button>
           <button
-            onClick={() => handleCreateUpdate("teacherCreate")}
+            onClick={() => handleCreateUpdate("addClassCreate")}
             className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm"
           >
             <FaPlus className="text-[12px]" /> Add Class
@@ -241,24 +238,12 @@ const AddClassList = () => {
                           </button>
 
                           <button
-                            onClick={() => handleCreateUpdate("teacherUpdate")}
+                            onClick={() => handleCreateUpdate("addClassUpdate")}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <AiOutlineEdit />
                             Edit
                           </button>
-                          <button
-                            onClick={() => setLoginDetails(true)}
-                            className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
-                          >
-                            <MdLockOutline />
-                            Login Details
-                          </button>
-                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
-                            <PiToggleRight />
-                            Disable
-                          </button>
-
                           <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
                             <AiOutlineDelete />
                             Delete
