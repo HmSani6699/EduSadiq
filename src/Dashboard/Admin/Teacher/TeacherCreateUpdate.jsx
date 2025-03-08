@@ -3,6 +3,7 @@ import PersonalInformation from "../../../Component/TeacherAdmissionForm/Persona
 import BankAccount from "../../../Component/TeacherAdmissionForm/BankAccount/BankAccount";
 import SocialMedia from "../../../Component/TeacherAdmissionForm/SocialMedia/SocialMedia";
 import Password from "../../../Component/Password/Password";
+import AddClass from "../../../Component/TeacherAdmissionForm/AddClass/AddClass";
 
 const TeacherCreateUpdate = ({ create }) => {
   return (
@@ -25,6 +26,7 @@ const TeacherCreateUpdate = ({ create }) => {
 
       {/* =====> form <==== */}
       <PersonalInformation />
+      <AddClass />
       <BankAccount />
       <SocialMedia />
       <Password />
