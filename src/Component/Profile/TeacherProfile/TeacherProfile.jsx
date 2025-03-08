@@ -56,8 +56,8 @@ const TeacherProfile = () => {
         </div>
       </div>
       {/* =====> Tab Part End <===== */}
-      <div className="lg:flex gap-[20px]">
-        <div className="lg:w-1/3">
+      <div className="lg:flex gap-[20px] ">
+        <div className="lg:w-1/3  ">
           {/* basic info */}
           <div className="card_shadow w-full ">
             <div className="flex gap-[10px] items-center p-[20px]">
@@ -164,14 +164,6 @@ const TeacherProfile = () => {
               tabValue={"salary"}
             >
               <LiaHandHoldingUsdSolid />
-            </TabButton>
-            <TabButton
-              title={"  Exam & Results"}
-              tabBtn={tabBtn}
-              setTabBtn={setTabBtn}
-              tabValue={"exam_results"}
-            >
-              <BsBookmarkStar />
             </TabButton>
           </div>
           {/* =====> TAb content <===== */}

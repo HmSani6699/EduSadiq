@@ -13,8 +13,9 @@ import { Link } from "react-router-dom";
 import export_icon from "../../../../public/svg/export.svg";
 import print from "../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
+import LoginDetails from "../StudentAdmission/LoginDetails";
 
-const TeacherList = ({ setCurrentPage }) => {
+const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
   const [view, setView] = useState("list");
   const [loginDetails, setLoginDetails] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
@@ -48,7 +49,7 @@ const TeacherList = ({ setCurrentPage }) => {
             <img src={export_icon} alt="" /> Export CSV
           </button>
           <button
-            onClick={() => handleCreateUpdate("studentCreate")}
+            onClick={() => handleCreateUpdate("teacherCreate")}
             className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm"
           >
             <FaPlus className="text-[12px]" /> Add Teacher
@@ -202,11 +203,11 @@ const TeacherList = ({ setCurrentPage }) => {
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <IoEyeOutline />
-                            View Student
+                            View Teacher
                           </button>
 
                           <button
-                            onClick={() => handleCreateUpdate("studentUpdate")}
+                            onClick={() => handleCreateUpdate("teacherUpdate")}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <AiOutlineEdit />
@@ -223,12 +224,7 @@ const TeacherList = ({ setCurrentPage }) => {
                             <PiToggleRight />
                             Disable
                           </button>
-                          <Link to={"/admin/student_promotion"}>
-                            <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
-                              <TbArrowRampRight2 />
-                              Promote Student
-                            </button>
-                          </Link>
+
                           <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
                             <AiOutlineDelete />
                             Delete
@@ -243,6 +239,8 @@ const TeacherList = ({ setCurrentPage }) => {
           </table>
         </div>
       </div>
+      {/* =====> Login details <===== */}
+      {loginDetails && <LoginDetails setLoginDetails={setLoginDetails} />}
     </div>
   );
 };
