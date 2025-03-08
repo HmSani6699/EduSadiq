@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import export_icon from "../../../../../public/svg/export.svg";
 import print from "../../../../../public/svg/print.svg";
-import { FaFilter, FaList, FaPlus, FaSortAlphaDown } from "react-icons/fa";
-import { CiGrid41 } from "react-icons/ci";
+import { FaPlus } from "react-icons/fa";
 import CustomSearchForm from "../../../../Component/CustomSearchForm/CustomSearchForm";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaRegPenToSquare } from "react-icons/fa6";
 
-const SectionList = () => {
-  const [view, setView] = useState("list");
-  const [threeDoteId, setThreeDoteId] = useState();
-
-  const handleClickThreeDot = (id) => {
-    setThreeDoteId((prevId) => (prevId === id ? null : id));
-  };
-
+const SectionList = ({ setCurrentPage, handleCreateUpdate }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
@@ -106,7 +98,9 @@ const SectionList = () => {
                       <button>
                         <RiDeleteBin6Line className="text-[18px] text-red-500" />
                       </button>
-                      <button>
+                      <button
+                        onClick={() => handleCreateUpdate("sectionUpdate")}
+                      >
                         <FaRegPenToSquare className="text-[16px] text-green-500" />
                       </button>
                     </div>

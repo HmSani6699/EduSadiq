@@ -7,11 +7,11 @@ const ManageSection = () => {
   const [create, setCreate] = useState(false);
 
   const handleCreateUpdate = (value) => {
-    if (value == "sectionClassUpdate") {
+    if (value == "sectionUpdate") {
       setCreate(true);
       setCurrentPage("sectionCreateUpdate");
     }
-    if (value == "sectionClassCreate") {
+    if (value == "sectionCreate") {
       setCurrentPage("sectionCreateUpdate");
     }
   };
