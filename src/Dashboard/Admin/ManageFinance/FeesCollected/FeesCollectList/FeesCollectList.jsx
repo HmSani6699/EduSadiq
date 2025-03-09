@@ -66,14 +66,36 @@ const FeesCollectList = ({ setCurrentPage, handleCreateUpdate }) => {
           <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px] ">
             <thead>
               <tr className="bg-[#f4f7fe] font-semibold text-sm md:text-base">
-                <td className="whitespace-nowrap h-10 px-[20px] text-center  text-[#202C4B] text-[14px]">
+                <td className="whitespace-nowrap h-10 px-[20px]   text-[#202C4B] text-[14px]">
                   ID
                 </td>
                 <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Type Name
+                  Stident Name
                 </td>
+                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+                  Section
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+                  Class
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+                  Fees Type
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+                  Month
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+                  Amount
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+                  Payment Type
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+                  Payment Reference No
+                </td>
+
                 <td className="whitespace-nowrap h-10 px-[30px] text-[#202C4B] text-[14px] text-center">
-                  Action
+                  Stutas
                 </td>
               </tr>
             </thead>
@@ -85,25 +107,40 @@ const FeesCollectList = ({ setCurrentPage, handleCreateUpdate }) => {
                     index % 2 === 1 ? "bg-[#f4f7fe] border-b" : "border-b"
                   }
                 >
-                  <td className="whitespace-nowrap text-[#3D5EE1] px-[20px] text-center text-[14px] pl-[20px] h-10  py-[13px]">
+                  <td className="whitespace-nowrap text-[#3D5EE1] px-[20px]  text-[14px] pl-[20px] h-10  py-[13px]">
                     1
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    Five
+                    MD Sadiqur Rahman
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    One
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    One
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    Monthley
                   </td>
 
-                  <td className="whitespace-nowrap text-[#515B73] text-[14px] flex items-center justify-center h-10 px-2 py-[13px]">
-                    <div className="flex gap-[20px] items-center">
-                      <button>
-                        <RiDeleteBin6Line className="text-[18px] text-red-500" />
-                      </button>
-                      <button
-                        onClick={() => handleCreateUpdate("feesCollectUpdate")}
-                      >
-                        <FaRegPenToSquare className="text-[16px] text-green-500" />
-                      </button>
-                    </div>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    January
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    5000
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    Cash
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    ADFG3536
+                  </td>
+
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[0px]">
+                    <h2 className="bg-green-100 text-green-700 text-[12px] font-semibold border-[2px[ rounded-[5px] py-[2px]">
+                      . Active
+                    </h2>
                   </td>
                 </tr>
               ))}
