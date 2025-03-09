@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import StaffCreateUpdate from "./StaffCreateUpdate/StaffCreateUpdate";
 import StaffList from "./StaffList/StaffList";
+import StaffProfile from "../../../Component/Profile/StaffProfile/StaffProfile";
 
 const Staff = () => {
   const [currentPage, setCurrentPage] = useState("staffList");
@@ -26,7 +27,7 @@ const Staff = () => {
       ) : currentPage === "staffCreateUpdate" ? (
         <StaffCreateUpdate create={create} setCurrentPage={setCurrentPage} />
       ) : currentPage === "staffView" ? (
-        <staffProfile />
+        <StaffProfile />
       ) : null}
     </div>
   );
