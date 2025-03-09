@@ -12,6 +12,7 @@ import ManageSection from "../Dashboard/Admin/ManageSection/ManageSection";
 import ManageClass from "../Dashboard/Admin/ManageClass/ManageClass";
 import ManageSubject from "../Dashboard/Admin/ManageSubject/ManageSubject";
 import ManageClassGroup from "../Dashboard/Admin/ManageClassGroup/ManageClassGroup";
+import Staff from "../Dashboard/Admin/Staff/Staff";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,6 +50,12 @@ const router = createBrowserRouter([
       {
         path: "teacher_add_class",
         element: <TeacherAddClass />,
+      },
+
+      // =====> Staff Admission <=====//
+      {
+        path: "staff_admission",
+        element: <Staff />,
       },
 
       // =====> Studetn Admission <=====//

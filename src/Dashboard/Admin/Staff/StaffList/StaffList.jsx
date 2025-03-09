@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import user from "../../../../public/man.png";
+import user from "../../../../../public/man.png";
 import { FaFilter, FaList, FaSortAlphaDown } from "react-icons/fa";
 import { CiGrid41 } from "react-icons/ci";
 import { MdLockOutline } from "react-icons/md";
@@ -7,15 +7,13 @@ import { IoEyeOutline } from "react-icons/io5";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { PiToggleRight } from "react-icons/pi";
-
-import CustomSearchForm from "../../../Component/CustomSearchForm/CustomSearchForm";
-
-import export_icon from "../../../../public/svg/export.svg";
-import print from "../../../../public/svg/print.svg";
+import CustomSearchForm from "../../../../Component/CustomSearchForm/CustomSearchForm";
+import export_icon from "../../../../../public/svg/export.svg";
+import print from "../../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
-import LoginDetails from "../Student/LoginDetails";
+import LoginDetails from "../../Student/LoginDetails";
 
-const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
+const StaffList = ({ setCurrentPage, handleCreateUpdate }) => {
   const [view, setView] = useState("list");
   const [loginDetails, setLoginDetails] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
@@ -30,14 +28,14 @@ const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            Teacher List
+            Staff List
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>
             <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">Teacher</p>
+            <p className="text-[#6A7287] text-[14px]">Staff</p>
             <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">All Teacher</p>
+            <p className="text-[#6A7287] text-[14px]">All Staff</p>
           </div>
         </div>
 
@@ -49,17 +47,17 @@ const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
             <img src={export_icon} alt="" /> Export CSV
           </button>
           <button
-            onClick={() => handleCreateUpdate("teacherCreate")}
+            onClick={() => handleCreateUpdate("staffCreate")}
             className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm"
           >
-            <FaPlus className="text-[12px]" /> Add Teacher
+            <FaPlus className="text-[12px]" /> Add Staff
           </button>
         </div>
       </div>
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
         <div className="flex items-center justify-between bg-white px-[20px] pt-[20px]">
-          <h2 className="text-lg font-semibold">Teacher List</h2>
+          <h2 className="text-lg font-semibold">Staff List</h2>
 
           <div className="flex items-center gap-2">
             {/* Filter Dropdown */}
@@ -199,7 +197,7 @@ const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
                       {threeDoteId === id && (
                         <div className="bg-white absolute top-[35px] rounded-[5px] shadow-sm border right-0 flex flex-col p-[20px] z-[20]">
                           <button
-                            onClick={() => setCurrentPage("teacherView")}
+                            onClick={() => setCurrentPage("staffView")}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <IoEyeOutline />
@@ -207,7 +205,7 @@ const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
                           </button>
 
                           <button
-                            onClick={() => handleCreateUpdate("teacherUpdate")}
+                            onClick={() => handleCreateUpdate("staffUpdate")}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <AiOutlineEdit />
@@ -245,4 +243,4 @@ const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
   );
 };
 
-export default TeacherList;
+export default StaffList;
