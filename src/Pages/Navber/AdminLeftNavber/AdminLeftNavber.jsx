@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { MdOutlineDashboard } from "react-icons/md";
+import { MdMoneyOff, MdOutlineDashboard } from "react-icons/md";
 import {
   FaBook,
   FaChalkboardTeacher,
+  FaFileInvoiceDollar,
   FaGraduationCap,
+  FaHandHoldingHeart,
   FaLayerGroup,
   FaUniversity,
   FaUserGraduate,
@@ -21,7 +23,7 @@ const AdminLeftNavber = () => {
   const loation = useLocation();
 
   return (
-    <div className=" pb-[50px] pl-[5px]">
+    <div className=" pb-[20px] pl-[5px]">
       <MenuDiraction title={"Main"} />
 
       <NavList
@@ -138,6 +140,30 @@ const AdminLeftNavber = () => {
       </NavList>
       {/* </div>
         </div> */}
+
+      {/* =====> Finance  <====== */}
+      <MenuDiraction title={"Finance"} />
+      <NavList
+        url={"/admin/fees_collect_type"}
+        title={"Manage Fees Type"}
+        children_true={false}
+      >
+        <FaFileInvoiceDollar className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList
+        url={"/admin/staff_admission"}
+        title={"Manage Fees Collected"}
+        children_true={false}
+      >
+        <MdMoneyOff className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList
+        url={"/admin/staff_admission"}
+        title={"Manage Donation"}
+        children_true={false}
+      >
+        <FaHandHoldingHeart className="text-[18px] text-[#515B73]" />
+      </NavList>
     </div>
   );
 };
