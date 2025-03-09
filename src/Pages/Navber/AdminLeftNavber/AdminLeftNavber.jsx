@@ -151,7 +151,7 @@ const AdminLeftNavber = () => {
         <FaFileInvoiceDollar className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
-        url={"/admin/staff_admission"}
+        url={"/admin/fees_collect"}
         title={"Manage Fees Collected"}
         children_true={false}
       >
