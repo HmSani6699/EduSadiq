@@ -158,7 +158,7 @@ const AdminLeftNavber = () => {
         <MdMoneyOff className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
-        url={"/admin/staff_admission"}
+        url={"/admin/donation"}
         title={"Manage Donation"}
         children_true={false}
       >

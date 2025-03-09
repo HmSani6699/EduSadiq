@@ -15,6 +15,7 @@ import ManageClassGroup from "../Dashboard/Admin/ManageClassGroup/ManageClassGro
 import Staff from "../Dashboard/Admin/Staff/Staff";
 import FeesCollectedType from "../Dashboard/Admin/ManageFinance/FeesCollectedType/FeesCollectedType";
 import FeesCollected from "../Dashboard/Admin/ManageFinance/FeesCollected/FeesCollected";
+import ManageDonation from "../Dashboard/Admin/ManageDonation/ManageDonation";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -96,6 +97,10 @@ const router = createBrowserRouter([
       {
         path: "fees_collect",
         element: <FeesCollected />,
+      },
+      {
+        path: "donation",
+        element: <ManageDonation />,
       },
     ],
   },

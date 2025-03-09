@@ -1,24 +1,24 @@
 import React, { useState } from "react";
-import export_icon from "../../../../../../public/svg/export.svg";
-import print from "../../../../../../public/svg/print.svg";
+import export_icon from "../../../../../public/svg/export.svg";
+import print from "../../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
-import CustomSearchForm from "../../../../../Component/CustomSearchForm/CustomSearchForm";
+import CustomSearchForm from "../../../../Component/CustomSearchForm/CustomSearchForm";
 
-const FeesCollectList = ({ setCurrentPage, handleCreateUpdate }) => {
+const ManageDonationList = ({ setCurrentPage, handleCreateUpdate }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            Fees Collected
+            Donation Collected
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>
             <p className="text-[#6a72876c]">/</p>
             <p className="text-[#6A7287] text-[14px]">Admin</p>
             <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">Fees Collected </p>
+            <p className="text-[#6A7287] text-[14px]">Donation Collected </p>
           </div>
         </div>
 
@@ -30,17 +30,17 @@ const FeesCollectList = ({ setCurrentPage, handleCreateUpdate }) => {
             <img src={export_icon} alt="" /> Export CSV
           </button>
           <button
-            onClick={() => handleCreateUpdate("feesCollectCreate")}
+            onClick={() => handleCreateUpdate("donationCreate")}
             className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm"
           >
-            <FaPlus className="text-[12px]" /> Add Fees Collected
+            <FaPlus className="text-[12px]" /> Add Donation
           </button>
         </div>
       </div>
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
         <div className="flex items-center justify-between bg-white px-[20px] pt-[20px]">
-          <h2 className="text-lg font-semibold">Fees Collected </h2>
+          <h2 className="text-lg font-semibold">Donation </h2>
 
           <div className="lg:w-1/2 w-full">
             <CustomSearchForm classAdd={"w-2/3"} />
@@ -68,27 +68,25 @@ const FeesCollectList = ({ setCurrentPage, handleCreateUpdate }) => {
                   ID
                 </td>
                 <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Stident Name
+                  Name
                 </td>
                 <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Section
+                  Phone
                 </td>
-                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Class
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  Address
                 </td>
-                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Fees Type
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  Donation Type
                 </td>
-                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Month
-                </td>
-                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
                   Amount
                 </td>
-                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
                   Payment Type
                 </td>
-                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
                   Payment Reference No
                 </td>
 
@@ -105,7 +103,7 @@ const FeesCollectList = ({ setCurrentPage, handleCreateUpdate }) => {
                     index % 2 === 1 ? "bg-[#f4f7fe] border-b" : "border-b"
                   }
                 >
-                  <td className="whitespace-nowrap text-[#3D5EE1] px-[20px]  text-[14px] pl-[20px] h-10  py-[13px]">
+                  <td className="whitespace-nowrap text-[#202C4B] px-[20px]  text-[14px] pl-[20px] h-10  py-[13px]">
                     1
                   </td>
 
@@ -113,18 +111,15 @@ const FeesCollectList = ({ setCurrentPage, handleCreateUpdate }) => {
                     MD Sadiqur Rahman
                   </td>
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    One
+                    01996359111
                   </td>
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    One
+                    Pakunda
                   </td>
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
                     Monthley
                   </td>
 
-                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    January
-                  </td>
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
                     5000
                   </td>
@@ -150,4 +145,4 @@ const FeesCollectList = ({ setCurrentPage, handleCreateUpdate }) => {
   );
 };
 
-export default FeesCollectList;
+export default ManageDonationList;
