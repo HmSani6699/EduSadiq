@@ -81,42 +81,44 @@ const SibilingInformation = () => {
                 </div>
               </div>
 
-              {/*  */}
-              {addSibiling?.length === 1 ? (
-                <div className="flex items-center gap-[10px] justify-end">
-                  <button
-                    className="text-[14px] flex items-center gap-[10px] text-[#fff] bg-[#506EE4] py-[6px] px-[15px] rounded-[5px]  border"
-                    onClick={handeAddNewSibiling}
-                  >
-                    <FaPlus className="text-[12px]" /> Add New
-                  </button>
-                </div>
-              ) : addSibiling?.length === newIndex ? (
-                <div className="flex items-center gap-[10px] justify-end">
-                  <button
-                    className="text-[14px] flex items-center gap-[10px] text-[#fff] bg-[#506EE4] py-[6px] px-[15px] rounded-[5px]  border"
-                    onClick={handeAddNewSibiling}
-                  >
-                    <FaPlus className="text-[12px]" /> Add New
-                  </button>
+              {/* =====> Sibiling info <====== */}
+              <div className="lg:block hidden">
+                {addSibiling?.length === 1 ? (
+                  <div className="flex items-center gap-[10px] justify-end">
+                    <button
+                      className="text-[14px] flex items-center gap-[10px] text-[#fff] bg-[#506EE4] py-[6px] px-[15px] rounded-[5px]  border"
+                      onClick={handeAddNewSibiling}
+                    >
+                      <FaPlus className="text-[12px]" /> Add New
+                    </button>
+                  </div>
+                ) : addSibiling?.length === newIndex ? (
+                  <div className="flex items-center gap-[10px] justify-end">
+                    <button
+                      className="text-[14px] flex items-center gap-[10px] text-[#fff] bg-[#506EE4] py-[6px] px-[15px] rounded-[5px]  border"
+                      onClick={handeAddNewSibiling}
+                    >
+                      <FaPlus className="text-[12px]" /> Add New
+                    </button>
 
-                  <button
-                    onClick={() => handleSibilingDelete(i)}
-                    className="text-[14px] flex items-center gap-[10px] text-[#ff1a1a] bg-[#e1a8a8ab] py-[6px] px-[15px] rounded-[5px]  border"
-                  >
-                    <RiDeleteBin6Line className="text-[12px]" /> Delete
-                  </button>
-                </div>
-              ) : (
-                <div className="flex items-center gap-[10px] justify-end mb-[25px]">
-                  <button
-                    onClick={() => handleSibilingDelete(i)}
-                    className="text-[14px] flex items-center gap-[10px] text-[#ff1a1a] bg-[#e1a8a8ab] py-[6px] px-[15px] rounded-[5px]  border"
-                  >
-                    <RiDeleteBin6Line className="text-[12px]" /> Delete
-                  </button>
-                </div>
-              )}
+                    <button
+                      onClick={() => handleSibilingDelete(i)}
+                      className="text-[14px] flex items-center gap-[10px] text-[#ff1a1a] bg-[#e1a8a8ab] py-[6px] px-[15px] rounded-[5px]  border"
+                    >
+                      <RiDeleteBin6Line className="text-[12px]" /> Delete
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-[10px] justify-end mb-[25px]">
+                    <button
+                      onClick={() => handleSibilingDelete(i)}
+                      className="text-[14px] flex items-center gap-[10px] text-[#ff1a1a] bg-[#e1a8a8ab] py-[6px] px-[15px] rounded-[5px]  border"
+                    >
+                      <RiDeleteBin6Line className="text-[12px]" /> Delete
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/*  */}
@@ -171,6 +173,45 @@ const SibilingInformation = () => {
                   { id: 2, value: "পুরাতন" },
                 ]}
               />
+            </div>
+
+            {/* =====> Sibiling info <====== */}
+            <div className="lg:hidden  block mb-[20px] px-[20px]">
+              {addSibiling?.length === 1 ? (
+                <div className="flex items-center gap-[10px] justify-end">
+                  <button
+                    className="text-[14px] flex items-center gap-[10px] text-[#fff] bg-[#506EE4] py-[6px] px-[15px] rounded-[5px]  border"
+                    onClick={handeAddNewSibiling}
+                  >
+                    <FaPlus className="text-[12px]" /> Add New
+                  </button>
+                </div>
+              ) : addSibiling?.length === newIndex ? (
+                <div className="flex items-center gap-[10px] justify-end">
+                  <button
+                    className="text-[14px] flex items-center gap-[10px] text-[#fff] bg-[#506EE4] py-[6px] px-[15px] rounded-[5px]  border"
+                    onClick={handeAddNewSibiling}
+                  >
+                    <FaPlus className="text-[12px]" /> Add New
+                  </button>
+
+                  <button
+                    onClick={() => handleSibilingDelete(i)}
+                    className="text-[14px] flex items-center gap-[10px] text-[#ff1a1a] bg-[#e1a8a8ab] py-[6px] px-[15px] rounded-[5px]  border"
+                  >
+                    <RiDeleteBin6Line className="text-[12px]" /> Delete
+                  </button>
+                </div>
+              ) : (
+                <div className="flex items-center gap-[10px] justify-end mb-[25px]">
+                  <button
+                    onClick={() => handleSibilingDelete(i)}
+                    className="text-[14px] flex items-center gap-[10px] text-[#ff1a1a] bg-[#e1a8a8ab] py-[6px] px-[15px] rounded-[5px]  border"
+                  >
+                    <RiDeleteBin6Line className="text-[12px]" /> Delete
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         );

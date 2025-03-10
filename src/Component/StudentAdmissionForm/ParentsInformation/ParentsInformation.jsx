@@ -90,39 +90,41 @@ const ParentsInformation = () => {
             Guardian Details
           </h2>
 
-          <div className="my-[20px] flex items-center space-x-6">
+          <div className="my-[20px] lg:flex items-center gap-[20px]">
             <span className="text-gray-600 text-sm font-medium">
               If Guardian Is
             </span>
 
             {/* Radio Options */}
-            {["Parents", "Guardian", "Others"].map((option) => (
-              <label
-                key={option}
-                className="flex items-center space-x-2 cursor-pointer"
-              >
-                <input
-                  type="radio"
-                  name="guardian"
-                  value={option}
-                  checked={selectedGuardian === option}
-                  onChange={() => setSelectedGuardian(option)}
-                  className="hidden"
-                />
-                <div
-                  className={`w-4 h-4 border-2 rounded-full flex items-center justify-center ${
-                    selectedGuardian === option
-                      ? "border-blue-600"
-                      : "border-gray-400"
-                  }`}
+            <div className="flex items-center gap-[20px] mt-[15px] lg:mt-0">
+              {["Parents", "Guardian", "Others"].map((option) => (
+                <label
+                  key={option}
+                  className="flex items-center space-x-2 cursor-pointer"
                 >
-                  {selectedGuardian === option && (
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  )}
-                </div>
-                <span className="text-gray-700 text-sm">{option}</span>
-              </label>
-            ))}
+                  <input
+                    type="radio"
+                    name="guardian"
+                    value={option}
+                    checked={selectedGuardian === option}
+                    onChange={() => setSelectedGuardian(option)}
+                    className="hidden"
+                  />
+                  <div
+                    className={`w-4 h-4 border-2 rounded-full flex items-center justify-center ${
+                      selectedGuardian === option
+                        ? "border-blue-600"
+                        : "border-gray-400"
+                    }`}
+                  >
+                    {selectedGuardian === option && (
+                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    )}
+                  </div>
+                  <span className="text-gray-700 text-sm">{option}</span>
+                </label>
+              ))}
+            </div>
           </div>
 
           <div className="flex items-center gap-[15px] mt-[15px] ">
