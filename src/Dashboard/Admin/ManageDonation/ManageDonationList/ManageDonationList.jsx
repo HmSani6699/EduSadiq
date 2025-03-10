@@ -108,7 +108,7 @@ const ManageDonationList = ({ setCurrentPage, handleCreateUpdate }) => {
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    MD Sadiqur Rahman
+                    MD Najmul Islam
                   </td>
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
                     01996359111

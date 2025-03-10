@@ -1,6 +1,6 @@
 import React from "react";
 import { IoIosCloseCircle } from "react-icons/io";
-import user from "../../../public/sadiq.jpg";
+import user from "../../../public/najmul.png";
 import { GoDotFill } from "react-icons/go";
 import InputField from "../InputField/InputField";
 import TextareaFiled from "../InputField/TextareaFiled";
@@ -30,7 +30,7 @@ const FeesCollect = ({ setFeesCollectOpen }) => {
               <img className="rounded-[5px]" src={user} alt="user jpg" />
             </div>
             <div>
-              <h2 className="text-[#202C4B] font-semibold">Sadiqur Rahman</h2>
+              <h2 className="text-[#202C4B] font-semibold">Najmul Islam</h2>
               <p className="text-[#202C4B] text-[14px]">One , A</p>
             </div>
           </div>
