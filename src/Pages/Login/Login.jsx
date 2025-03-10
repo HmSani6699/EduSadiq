@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="w-full shadow-lg h-screen flex items-center justify-center bg-slate-100">
-      <div className="border p-[30px] rounded-[5px] bg-white">
+    <div className="w-full lg:shadow-lg h-screen flex items-center justify-center lg:bg-slate-100 bg-white">
+      <div className="lg:border p-[30px] rounded-[5px] bg-white">
         <div className="flex items-center justify-center">
           <div className="flex items-center pl-[20px] gap-[5px] pb-4 ">
             <img
@@ -19,7 +19,7 @@ const Login = () => {
             </h2>
           </div>
         </div>
-        <h2 className="text-[18px] my-[15px]">
+        <h2 className="text-[18px] my-[15px] text-center">
           A complete solution for your educational institution
         </h2>
 
