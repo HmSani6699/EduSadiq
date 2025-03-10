@@ -43,7 +43,7 @@ const TeacherProfile = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-[10px]">
+        <div className="flex items-center gap-[10px] lg:mt-0 mt-[15px]">
           <button className="bg-[#E9EDF4] text-[14px] text-[#515B73] font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm">
             <MdLockOutline /> Login Details
           </button>
@@ -132,7 +132,7 @@ const TeacherProfile = () => {
         </div>
         <div className="lg:w-2/3">
           {/* tab */}
-          <div className="flex gap-[20px] overflow-auto feesCollect">
+          <div className="flex gap-[20px] overflow-auto feesCollect pb-[20px] lg:pb-0">
             <TabButton
               title={"Teacher Details"}
               tabBtn={tabBtn}
