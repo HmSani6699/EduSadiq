@@ -28,7 +28,7 @@ const AdminLayout = () => {
     <div className="flex max-w-[1400px] mx-auto bg-[#fff] min-h-screen relative">
       {/* ====> Sidebar (Fixed for Large Devices, Toggle for Mobile) <==== */}
       <div
-        className={`lg:block ${
+        className={`lg:block  ${
           isSidebarOpen ? "block" : "hidden"
         } fixed z-50 w-[270px] min-h-screen bg-white shadow-lg`}
       >
@@ -82,11 +82,11 @@ const AdminLayout = () => {
             <div className="flex items-center gap-5 justify-between">
               <img src={seting_icon} alt="Settings Icon" />
               <IoNotificationsOutline className="text-[18px] cursor-pointer" />
-              <button onClick={toggleFullScreen}>
+              <button className="lg:block hidden" onClick={toggleFullScreen}>
                 <img src={full_screen} alt="" />
               </button>
               <div className="flex items-center gap-[6px]">
-                <h2 className="font-medium whitespace-nowrap">
+                <h2 className="font-medium whitespace-nowrap lg:block hidden">
                   Md: Nujmul Islam
                 </h2>
 
@@ -103,7 +103,7 @@ const AdminLayout = () => {
         </div>
 
         {/* ====> Main Content <==== */}
-        <div className="container mx-auto lg:p-[20px] p-[10px] overflow-y-auto mt-[70px] lg:mt-[50px]">
+        <div className="container mx-auto lg:p-[20px] p-[10px] overflow-y-auto mt-[50px] lg:mt-[50px]">
           <Outlet />
         </div>
       </div>

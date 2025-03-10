@@ -49,7 +49,7 @@ const Dashboard = () => {
   return (
     <div className="">
       {/* =====> Tab Part Start <===== */}
-      <div className="flex items-center justify-between pb-[20px]">
+      <div className="lg:flex items-center justify-between pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
             Admin Dashboard
@@ -61,7 +61,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-[10px]">
+        <div className="flex items-center gap-[10px] mt-[15px]">
           <Link to={"/admin/student_admission"}>
             <button className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[10px] shadow-sm">
               <FaPlus className="text-[12px]" /> Add New Student
@@ -74,7 +74,7 @@ const Dashboard = () => {
       </div>
       {/* =====> Tab Part End <===== */}
 
-      <div className="w-full h-[100px] overflow-hidden rounded-[5px] relative mb-[30px]">
+      <div className="w-full h-[100px] overflow-hidden rounded-[5px] relative lg:mb-[30px] mb-[15px]">
         <img className="w-full " src={banner_tab} alt="" />
         <div className="absolute top-1/2  left-[20px] -translate-y-1/2">
           <h2 className="text-[25px] text-white font-bold">
@@ -136,7 +136,7 @@ const Dashboard = () => {
       </div>
 
       {/* ===== */}
-      <div className="flex gap-[20px]">
+      <div className="lg:flex gap-[20px]">
         <div className="bg-white shadow-md rounded-[8px] lg:w-[60%] lg:p-[20px]">
           <h2 className="text-[25px] font-bold mb-[20px]">
             Total Fees Collect
@@ -164,7 +164,7 @@ const Dashboard = () => {
           </ResponsiveContainer>
         </div>
         {/* === */}
-        <div className="bg-white shadow-md rounded-lg p-5 w-96">
+        <div className="bg-white shadow-md rounded-lg p-5 lg:w-96 w-full mt-[15px] lg:mt-0">
           <div className="flex justify-between items-center border-b pb-2 mb-3">
             <h2 className="text-lg font-semibold">Attendance</h2>
             <button className="text-sm text-gray-600">📅 Today</button>
@@ -219,7 +219,7 @@ const Dashboard = () => {
       </div>
 
       {/* =====> Finance <====== */}
-      <div className="flex gap-[20px] mt-[30px]">
+      <div className="lg:flex gap-[20px] mt-[30px]">
         <div className="lg:w-1/2 flex flex-col gap-[20px]">
           <TotalEarningChart />
           <TotalExpensesChart />
