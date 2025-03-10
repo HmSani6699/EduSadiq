@@ -12,6 +12,7 @@ import export_icon from "../../../../../public/svg/export.svg";
 import print from "../../../../../public/svg/print.svg";
 import { FaPlus } from "react-icons/fa";
 import LoginDetails from "../../Student/LoginDetails";
+import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
 
 const StaffList = ({ setCurrentPage, handleCreateUpdate }) => {
   const [view, setView] = useState("list");
@@ -25,35 +26,14 @@ const StaffList = ({ setCurrentPage, handleCreateUpdate }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
-      <div className="lg:flex items-center justify-between pt-[10px] pb-[20px]">
-        <div>
-          <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            Staff List
-          </h2>
-          <div className="flex items-center gap-[10px]">
-            <p className="text-[#6A7287] text-[14px]">Dashboard</p>
-            <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">Staff</p>
-            <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">All Staff</p>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-[10px] lg:mt-0 mt-[15px]">
-          <button className="bg-white border rounded-[5px] py-[10px] px-[10px]">
-            <img src={print} alt="" />
-          </button>
-          <button className="bg-[#E9EDF4] text-[14px] text-[#515B73] font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm">
-            <img src={export_icon} alt="" /> Export CSV
-          </button>
-          <button
-            onClick={() => handleCreateUpdate("staffCreate")}
-            className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm"
-          >
-            <FaPlus className="text-[12px]" /> Add Staff
-          </button>
-        </div>
-      </div>
+      <PageMenuDiraction
+        title="Staff List"
+        currentMenu="Admin"
+        currentPage="Staff List"
+        handleCreateUpdate={handleCreateUpdate}
+        functionValue="staffList"
+        buttonTitle="Add Staff"
+      />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px] border shadow-sm">
         <div className="lg:flex items-center justify-between bg-white px-[20px] lg:pt-[20px] pt-[10px]">
