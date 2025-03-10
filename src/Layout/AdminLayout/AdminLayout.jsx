@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import user from "../../../public/man.png";
+import user from "../../../public/najmul.png";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import { Outlet } from "react-router";
@@ -87,7 +87,7 @@ const AdminLayout = () => {
               </button>
               <div className="flex items-center gap-[6px]">
                 <h2 className="font-medium whitespace-nowrap">
-                  Md: Sadiqur Rahman
+                  Md: Nujmul Islam
                 </h2>
 
                 <div className="w-[40px] h-[40px] rounded-full overflow-hidden">

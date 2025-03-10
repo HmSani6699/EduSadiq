@@ -78,7 +78,7 @@ const Dashboard = () => {
         <img className="w-full " src={banner_tab} alt="" />
         <div className="absolute top-1/2  left-[20px] -translate-y-1/2">
           <h2 className="text-[25px] text-white font-bold">
-            Welcome Back, Md. Sadiq
+            Welcome Back, Md. Nujmul Islam
           </h2>
           <p className="text-[14px] text-white ">Have a Good day at work</p>
         </div>

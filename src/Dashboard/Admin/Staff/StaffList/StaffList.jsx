@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import user from "../../../../../public/man.png";
+import user from "../../../../../public/najmul.png";
 import { FaFilter, FaList, FaSortAlphaDown } from "react-icons/fa";
 import { CiGrid41 } from "react-icons/ci";
 import { MdLockOutline } from "react-icons/md";
@@ -153,12 +153,12 @@ const StaffList = ({ setCurrentPage, handleCreateUpdate }) => {
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    Md Nivale
+                    Md Najmul Islam
                   </td>
                   <td className="h-10 px-2 py-[13px]">
-                    <div className="w-[35px] h-[35px]">
+                    <div className="w-[35px] h-[35px] rounded-full">
                       <img
-                        className="w-full h-full object-cover rounded"
+                        className="w-full h-full object-cover rounded-full"
                         src={user}
                         alt="user"
                       />
@@ -172,7 +172,7 @@ const StaffList = ({ setCurrentPage, handleCreateUpdate }) => {
                     01996359111
                   </td>
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-[20px] py-[13px]">
-                    sadiq@gmail.com
+                    najmul@gmail.com
                   </td>
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[0px]">
                     <h2 className="bg-green-100 text-green-700 text-[12px] font-semibold border-[2px[ rounded-[5px] py-[2px]">

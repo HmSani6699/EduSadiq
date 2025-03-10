@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import user from "../../../../../../public/man.png";
+import user from "../../../../../../public/najmul.png";
 import { FaFilter, FaList, FaSortAlphaDown } from "react-icons/fa";
 import { CiGrid41 } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
@@ -149,12 +149,12 @@ const AddClassList = ({ setCurrentPage, handleCreateUpdate }) => {
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    Md Nivale
+                    Md Najmul Islam
                   </td>
                   <td className="h-10 px-2 py-[13px]">
-                    <div className="w-[35px] h-[35px]">
+                    <div className="w-[35px] h-[35px] rounded-full">
                       <img
-                        className="w-full h-full object-cover rounded"
+                        className="w-full h-full object-cover rounded-full"
                         src={user}
                         alt="user"
                       />
