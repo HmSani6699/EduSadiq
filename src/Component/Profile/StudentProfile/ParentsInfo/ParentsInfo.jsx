@@ -1,5 +1,5 @@
 import React from "react";
-import user from "../../../../../public/sadiq.jpg";
+import user from "../../../../../public/najmul.png";
 
 const ParentsInfo = () => {
   return (
@@ -14,7 +14,7 @@ const ParentsInfo = () => {
           </div>
           <div>
             <h2 className="text-[#202C4B] text-[15px] font-semibold">
-              Sadiqur Rahman
+              Najmul Islam
             </h2>
             <p className="text-[#506EE4] text-[14px]">Father</p>
           </div>

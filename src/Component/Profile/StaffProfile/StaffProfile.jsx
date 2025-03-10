@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineEdit } from "react-icons/ai";
 import { MdLockOutline, MdOutlineEmail } from "react-icons/md";
-import user from "../../../../public/sadiq.jpg";
+import user from "../../../../public/najmul.png";
 import { GoDotFill } from "react-icons/go";
 import { IoCallOutline } from "react-icons/io5";
 import { PiStudent } from "react-icons/pi";
@@ -64,7 +64,7 @@ const StaffProfile = () => {
                 </button>
                 <div>
                   <h2 className="text-[#202C4B] font-semibold whitespace-nowrap mt-[6px]">
-                    Sadiqur Rahman
+                    Nujmul Islam
                   </h2>
                   <p className="text-[#506EE4] text-[14px]">AD12345</p>
                 </div>

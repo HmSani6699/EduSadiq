@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRegClock } from "react-icons/fa";
-import user from "../../../../../public/man.png";
+import user from "../../../../../public/najmul.png";
 
 const ClassRoutine = () => {
   return (
@@ -43,7 +43,7 @@ const ClassRoutine = () => {
                       src={user}
                       alt="User Avatar"
                     />
-                    <h2 className="text-[14px]">Sadiqur Rahman</h2>
+                    <h2 className="text-[14px]">Najmul Islam</h2>
                   </div>
                 </div>
               ))}
