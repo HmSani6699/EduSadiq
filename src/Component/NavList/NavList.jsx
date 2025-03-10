@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 
-const NavList = ({ url, title, children_true, children }) => {
+const NavList = ({ url, title, children }) => {
   let location = useLocation();
 
   return (

@@ -5,43 +5,24 @@ import { FaPlus } from "react-icons/fa";
 import CustomSearchForm from "../../../../Component/CustomSearchForm/CustomSearchForm";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaRegPenToSquare } from "react-icons/fa6";
+import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
 
 const SubjectList = ({ setCurrentPage, handleCreateUpdate }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
-      <div className="flex items-center justify-between pt-[10px] pb-[20px]">
-        <div>
-          <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            Subject List
-          </h2>
-          <div className="flex items-center gap-[10px]">
-            <p className="text-[#6A7287] text-[14px]">Dashboard</p>
-            <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">Admin</p>
-            <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">Subject List</p>
-          </div>
-        </div>
 
-        <div className="flex items-center gap-[10px]">
-          <button className="bg-white border rounded-[5px] py-[10px] px-[10px]">
-            <img src={print} alt="" />
-          </button>
-          <button className="bg-[#E9EDF4] text-[14px] text-[#515B73] font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm">
-            <img src={export_icon} alt="" /> Export CSV
-          </button>
-          <button
-            onClick={() => handleCreateUpdate("subjectCreate")}
-            className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm"
-          >
-            <FaPlus className="text-[12px]" /> Add Subject
-          </button>
-        </div>
-      </div>
+      <PageMenuDiraction
+        title="Subject List"
+        currentMenu="Admin"
+        currentPage="Subject List"
+        handleCreateUpdate={handleCreateUpdate}
+        functionValue="subjectCreate"
+        buttonTitle="Add Subject"
+      />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
-        <div className="flex items-center justify-between bg-white px-[20px] pt-[20px]">
+        <div className="lg:flex items-center justify-between bg-white px-[20px] pt-[20px]">
           <h2 className="text-lg font-semibold">Subject List</h2>
 
           <div className="lg:w-1/2 w-full">

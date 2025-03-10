@@ -31,7 +31,7 @@ const StaffList = ({ setCurrentPage, handleCreateUpdate }) => {
         currentMenu="Admin"
         currentPage="Staff List"
         handleCreateUpdate={handleCreateUpdate}
-        functionValue="staffList"
+        functionValue="staffCreate"
         buttonTitle="Add Staff"
       />
       {/* =====> Tab Part End <===== */}

@@ -49,6 +49,13 @@ const PersonalInformation = () => {
 
         <InputField title={"First Name"} />
         <InputField title={"Last Name"} />
+        <SelectInputField
+          title={"Section"}
+          options={[
+            { id: 1, value: "নতুন" },
+            { id: 2, value: "পুরাতন" },
+          ]}
+        />
 
         <SelectInputField
           title={"Class"}
@@ -57,15 +64,9 @@ const PersonalInformation = () => {
             { id: 2, value: "পুরাতন" },
           ]}
         />
+
         <SelectInputField
-          title={"Section"}
-          options={[
-            { id: 1, value: "নতুন" },
-            { id: 2, value: "পুরাতন" },
-          ]}
-        />
-        <SelectInputField
-          title={"Category"}
+          title={"Class Group"}
           options={[
             { id: 1, value: "নতুন" },
             { id: 2, value: "পুরাতন" },

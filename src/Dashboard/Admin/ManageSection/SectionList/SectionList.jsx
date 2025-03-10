@@ -16,7 +16,7 @@ const SectionList = ({ handleCreateUpdate }) => {
         currentMenu="Admin"
         currentPage="Section List"
         handleCreateUpdate={handleCreateUpdate}
-        functionValue="sectionList"
+        functionValue="sectionCreate"
         buttonTitle="Add Section"
       />
       {/* =====> Tab Part End <===== */}

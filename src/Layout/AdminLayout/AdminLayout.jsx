@@ -49,8 +49,11 @@ const AdminLayout = () => {
           </h2>
         </div>
         {/* ====> Scrollable Navbar <==== */}
-        <nav className="mt-[10px] px-[10px] h-[calc(100vh-140px)] overflow-y-auto adminScrollbar">
-          <AdminLeftNavber onClick={() => setIsSidebarOpen(false)} />
+        <nav
+          onClick={() => setIsSidebarOpen(false)}
+          className="mt-[10px] px-[10px] h-[calc(100vh-140px)] overflow-y-auto adminScrollbar"
+        >
+          <AdminLeftNavber />
         </nav>
         <div className="flex items-center justify-center gap-[20px] w-full pt-[15px] border-t  h-full">
           <button className="text-[16px] text-[#515B73] font-semibold">

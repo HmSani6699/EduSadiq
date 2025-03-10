@@ -18,10 +18,7 @@ import user_profile from "../../../../public/svg/user_profile.svg";
 import MenuDiraction from "../../../Component/MenuDiraction/MenuDiraction";
 import NavList from "../../../Component/NavList/NavList";
 
-const AdminLeftNavber = () => {
-  const [openAcademicMenu, setOpenAcademicMenu] = useState(false);
-  const loation = useLocation();
-
+const AdminLeftNavber = ({ setIsSidebarOpen }) => {
   return (
     <div className=" pb-[20px] pl-[5px]">
       <MenuDiraction title={"Main"} />
@@ -29,7 +26,7 @@ const AdminLeftNavber = () => {
       <NavList
         url={"/admin/dashboard"}
         title={"Dashboard"}
-        children_true={true}
+        setIsSidebarOpen={setIsSidebarOpen}
       >
         <MdOutlineDashboard className="text-[18px] text-[#515B73]" />
       </NavList>

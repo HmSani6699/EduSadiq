@@ -33,7 +33,7 @@ const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
         currentMenu="Teacher"
         currentPage="Teacher List"
         handleCreateUpdate={handleCreateUpdate}
-        functionValue="teacherList"
+        functionValue="teacherCreate"
         buttonTitle="Add Teacher"
       />
       {/* =====> Tab Part End <===== */}
