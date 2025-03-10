@@ -16,6 +16,11 @@ import Staff from "../Dashboard/Admin/Staff/Staff";
 import FeesCollectedType from "../Dashboard/Admin/ManageFinance/FeesCollectedType/FeesCollectedType";
 import FeesCollected from "../Dashboard/Admin/ManageFinance/FeesCollected/FeesCollected";
 import ManageDonation from "../Dashboard/Admin/ManageDonation/ManageDonation";
+import ManageExamType from "../Dashboard/Admin/Exam/ManageExamType/ManageExamType";
+import ManageExamSchedule from "../Dashboard/Admin/Exam/ManageExamSchedule/ManageExamSchedule";
+import ManageExamAttendance from "../Dashboard/Admin/Exam/ManageExamAttendance/ManageExamAttendance";
+import ManageExamResult from "../Dashboard/Admin/Exam/ManageExamResult/ManageExamResult";
+import ManageExamGrade from "../Dashboard/Admin/Exam/ManageExamGrade/ManageExamGrade";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -101,6 +106,28 @@ const router = createBrowserRouter([
       {
         path: "donation",
         element: <ManageDonation />,
+      },
+
+      // =====> Exam <=====//
+      {
+        path: "exam_type",
+        element: <ManageExamType />,
+      },
+      {
+        path: "exam_schedule",
+        element: <ManageExamSchedule />,
+      },
+      {
+        path: "exam_attendance",
+        element: <ManageExamAttendance />,
+      },
+      {
+        path: "exam_result",
+        element: <ManageExamResult />,
+      },
+      {
+        path: "exam_grade",
+        element: <ManageExamGrade />,
       },
     ],
   },

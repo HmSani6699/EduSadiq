@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { MdMoneyOff, MdOutlineDashboard } from "react-icons/md";
 import {
+  FaAward,
   FaBook,
   FaChalkboardTeacher,
+  FaClipboardCheck,
   FaFileInvoiceDollar,
   FaGraduationCap,
   FaHandHoldingHeart,
   FaLayerGroup,
+  FaListAlt,
+  FaRegClock,
   FaUniversity,
+  FaUserCheck,
   FaUserGraduate,
   FaUsersCog,
 } from "react-icons/fa";
@@ -160,6 +165,44 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
         children_true={false}
       >
         <FaHandHoldingHeart className="text-[18px] text-[#515B73]" />
+      </NavList>
+      {/* =====> Finance  <====== */}
+      <MenuDiraction title={"Examinations"} />
+      <NavList
+        url={"/admin/exam_type"}
+        title={"Exam Type"}
+        children_true={false}
+      >
+        <FaListAlt className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList
+        url={"/admin/exam_schedule"}
+        title={"Exam Schedule"}
+        children_true={false}
+      >
+        <FaRegClock className="text-[18px] text-[#515B73]" />
+      </NavList>
+
+      <NavList
+        url={"/admin/exam_attendance"}
+        title={"Exam Attendance"}
+        children_true={false}
+      >
+        <FaUserCheck className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList
+        url={"/admin/exam_result"}
+        title={"Exam Result"}
+        children_true={false}
+      >
+        <FaClipboardCheck className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList
+        url={"/admin/exam_grade"}
+        title={"Exam Grade"}
+        children_true={false}
+      >
+        <FaAward className="text-[18px] text-[#515B73]" />
       </NavList>
     </div>
   );
