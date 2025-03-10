@@ -17,8 +17,8 @@ const PhoneComponent = ({ setPhone }) => {
     }
   };
   return (
-    <div className="fixed inset-0 z-[70] flex justify-center items-center  py-[30px]   bg-black bg-opacity-50">
-      <div className="bg-white   rounded-lg shadow-lg relative lg:w-[500px]  ">
+    <div className="fixed inset-0 z-[70] flex justify-center items-center  py-[30px] px-[20px]  bg-black bg-opacity-50">
+      <div className="bg-white   rounded-lg shadow-lg relative lg:w-[500px] w-full  ">
         <div className="flex items-center justify-between border-b p-[15px]">
           <h2 className="text-[20px] text-[#202C4B] font-bold">Phone</h2>
           <button onClick={() => setPhone(false)}>
