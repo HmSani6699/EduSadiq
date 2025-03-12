@@ -43,11 +43,32 @@ const ExamScheduleList = ({ setCurrentPage, handleScheduleUpdateType }) => {
           <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px] ">
             <thead>
               <tr className="bg-[#f4f7fe] font-semibold text-sm md:text-base">
-                <td className="whitespace-nowrap text-center h-10 px-[20px]  text-[#202C4B] text-[14px]">
+                <td className="whitespace-nowrap  h-10 px-[20px]  text-[#202C4B] text-[14px]">
                   ID
                 </td>
-                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Type Name
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  Subject
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  Exam Date
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  Start Time
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  End Time
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  Duraion
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  Room NO
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  Max Marks
+                </td>
+                <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
+                  Min Marks
                 </td>
 
                 <td className="whitespace-nowrap h-10 px-[30px] text-[#202C4B] text-[14px] text-center">
@@ -63,12 +84,33 @@ const ExamScheduleList = ({ setCurrentPage, handleScheduleUpdateType }) => {
                     index % 2 === 1 ? "bg-[#f4f7fe] border-b" : "border-b"
                   }
                 >
-                  <td className="whitespace-nowrap text-[#3D5EE1] text-center text-[14px] pl-[20px] h-10 px-2 py-[13px]">
+                  <td className="whitespace-nowrap text-[#3D5EE1]  text-[14px] pl-[20px] h-10 px-2 py-[13px]">
                     1
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    Five
+                    Bangla
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    01/01/2025
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    10:10PM
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    10:10PM
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    2 Har
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    20
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    100
+                  </td>
+                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                    20
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] flex items-center justify-center h-10 px-2 py-[13px]">
