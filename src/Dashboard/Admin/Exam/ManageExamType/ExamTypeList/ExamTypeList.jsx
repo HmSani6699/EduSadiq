@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import CustomSearchForm from "../../../../Component/CustomSearchForm/CustomSearchForm";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaRegPenToSquare } from "react-icons/fa6";
-import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
+import PageMenuDiraction from "../../../../../Component/PageMenuDiraction/PageMenuDiraction";
+import CustomSearchForm from "../../../../../Component/CustomSearchForm/CustomSearchForm";
 
-const ClassListComponent = ({ handleCreateUpdate }) => {
+const ExamTypeList = ({ handleCreateUpdate }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
@@ -14,13 +14,13 @@ const ClassListComponent = ({ handleCreateUpdate }) => {
         currentMenu="Admin"
         currentPage="Class List"
         handleCreateUpdate={handleCreateUpdate}
-        functionValue="classCreate"
+        functionValue="examTypeCreate"
         buttonTitle="Add Class"
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
         <div className="lg:flex items-center justify-between bg-white px-[20px] pt-[20px]">
-          <h2 className="text-lg font-semibold">Class List</h2>
+          <h2 className="text-lg font-semibold">Exam Type List</h2>
 
           <div className="lg:w-1/2 w-full">
             <CustomSearchForm classAdd={"w-2/3"} />
@@ -44,15 +44,13 @@ const ClassListComponent = ({ handleCreateUpdate }) => {
           <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px] ">
             <thead>
               <tr className="bg-[#f4f7fe] font-semibold text-sm md:text-base">
-                <td className="whitespace-nowrap h-10 px-[20px]  text-[#202C4B] text-[14px]">
+                <td className="whitespace-nowrap text-center h-10 px-[20px]  text-[#202C4B] text-[14px]">
                   ID
                 </td>
                 <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Section Name
+                  Type Name
                 </td>
-                <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Class Name
-                </td>
+
                 <td className="whitespace-nowrap h-10 px-[30px] text-[#202C4B] text-[14px] text-center">
                   Action
                 </td>
@@ -66,15 +64,12 @@ const ClassListComponent = ({ handleCreateUpdate }) => {
                     index % 2 === 1 ? "bg-[#f4f7fe] border-b" : "border-b"
                   }
                 >
-                  <td className="whitespace-nowrap text-[#3D5EE1] text-[14px] pl-[20px] h-10 px-2 py-[13px]">
+                  <td className="whitespace-nowrap text-[#3D5EE1] text-center text-[14px] pl-[20px] h-10 px-2 py-[13px]">
                     1
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
                     Five
-                  </td>
-                  <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    One
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] flex items-center justify-center h-10 px-2 py-[13px]">
@@ -83,7 +78,7 @@ const ClassListComponent = ({ handleCreateUpdate }) => {
                         <RiDeleteBin6Line className="text-[18px] text-red-500" />
                       </button>
                       <button
-                        onClick={() => handleCreateUpdate("sectionUpdate")}
+                        onClick={() => handleCreateUpdate("examTypeUpdate")}
                       >
                         <FaRegPenToSquare className="text-[16px] text-green-500" />
                       </button>
@@ -99,4 +94,4 @@ const ClassListComponent = ({ handleCreateUpdate }) => {
   );
 };
 
-export default ClassListComponent;
+export default ExamTypeList;
