@@ -7,12 +7,9 @@ const PageMenuDiraction = ({
   title,
   currentMenu,
   currentPage,
-  handleCreateUpdate,
-  functionValue,
+  setCurrentPage,
   buttonTitle,
 }) => {
-  console.log(functionValue);
-
   return (
     <div className="lg:flex items-center justify-between pt-[10px] pb-[20px]">
       <div>
@@ -34,7 +31,7 @@ const PageMenuDiraction = ({
           <img src={export_icon} alt="" /> Export CSV
         </button>
         <button
-          onClick={() => handleCreateUpdate(functionValue)}
+          onClick={() => setCurrentPage(false)}
           className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm"
         >
           <FaPlus className="text-[12px]" /> {buttonTitle}
