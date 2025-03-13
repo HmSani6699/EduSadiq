@@ -3,16 +3,37 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
 import SelectInputField from "../../../../Component/SelectInputField/SelectInputField";
-import { LuClipboardList } from "react-icons/lu";
 import { FiCalendar } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaRegPenToSquare } from "react-icons/fa6";
+import Swal from "sweetalert2";
 
 const NoticeList = ({ setCurrentPage, handleScheduleUpdateType }) => {
   const [openResult, setOpenResult] = useState();
   const handleClickResults = (id) => {
     setOpenResult((prevId) => (prevId === id ? null : id));
   };
+
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+    });
+  };
+
   return (
     <div>
       <PageMenuDiraction
@@ -55,7 +76,7 @@ const NoticeList = ({ setCurrentPage, handleScheduleUpdateType }) => {
                       First periodical
                     </h2>
                     <p className="text-[13px] text-gray-400 flex items-center gap-[5px]">
-                      <FiCalendar className="text-[18px] text-[#515B73]" />
+                      <FiCalendar className="text-[14px] text-[#515B73]" />
                       Added on : 24 May 2024
                     </p>
                   </div>
@@ -93,12 +114,12 @@ const NoticeList = ({ setCurrentPage, handleScheduleUpdateType }) => {
 
                   <div className="flex items-center justify-between ">
                     <p className="text-[13px] text-gray-400 flex items-center gap-[5px] mt-[20px]">
-                      <FiCalendar className="text-[18px] text-[#515B73]" />
+                      <FiCalendar className="text-[14px] text-[#515B73]" />
                       Added on : 24 May 2024
                     </p>
                     <div className="flex items-end justify-end">
                       <div className="flex gap-[20px] items-center">
-                        <button>
+                        <button onClick={() => handleDelete()}>
                           <RiDeleteBin6Line className="text-[18px] text-red-500" />
                         </button>
                         <button>

@@ -6,14 +6,14 @@ import Address from "../../../Component/StudentAdmissionForm/Address/Address";
 import PreviousOrganization from "../../../Component/StudentAdmissionForm/PreviousOrganization/PreviousOrganization";
 import { IoClose } from "react-icons/io5";
 
-const StudentCreateUpdate = ({ create, setCurrentPage }) => {
+const StudentCreateUpdate = ({ type, setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            {create ? "  Update Student" : "  Add Student"}
+            {type === "create" ? "  Add Student" : "  Update Student"}
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>

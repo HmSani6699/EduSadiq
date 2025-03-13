@@ -7,34 +7,35 @@ import StudentCreateUpdate from "./StudentCreateUpdate";
 import StudentProfile from "../../../Component/Profile/StudentProfile/StudentProfile";
 
 const Student = () => {
-  const navigate = useNavigate();
-  const [currentPage, setCurrentPage] = useState("studentList");
-  const [create, setCreate] = useState(false);
+  const [currentPage, setCurrentPage] = useState(true);
+  const [type, setType] = useState("create");
+  const [vewiID, setViewID] = useState();
 
-  const handleCreateUpdate = (value) => {
-    if (value == "studentUpdate") {
-      setCreate(true);
-      setCurrentPage("studentCreateUpdate");
-    }
-    if (value == "studentCreate") {
-      setCurrentPage("studentCreateUpdate");
-    }
+  const handleScheduleCreateUpdate = (type) => {};
+
+  const handleScheduleUpdateType = (id) => {
+    setViewID(id);
+    setType("update");
+    setCurrentPage(false);
   };
 
   return (
     <div>
-      {currentPage === "studentList" ? (
+      {currentPage === "studentView" ? (
+        <StudentProfile />
+      ) : currentPage ? (
         <StudentAdmissionList
           setCurrentPage={setCurrentPage}
-          handleCreateUpdate={handleCreateUpdate}
+          handleScheduleUpdateType={handleScheduleUpdateType}
         />
-      ) : currentPage === "studentCreateUpdate" ? (
-        <StudentCreateUpdate create={create} setCurrentPage={setCurrentPage} />
-      ) : currentPage === "studentView" ? (
-        <StudentProfile />
-      ) : null}
+      ) : (
+        <StudentCreateUpdate setCurrentPage={setCurrentPage} type={type} />
+      )}
     </div>
   );
 };
 
 export default Student;
+//  ) currentPage === "studentView" ? (
+//         <StudentProfile />
+//       ) : null}

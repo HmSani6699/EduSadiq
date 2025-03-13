@@ -1,29 +1,25 @@
 import React, { useState } from "react";
 import user from "../../../../public/najmul.png";
-import { FaFilter, FaList, FaRegCopy, FaSortAlphaDown } from "react-icons/fa";
+import { FaFilter, FaList, FaSortAlphaDown } from "react-icons/fa";
 import { CiGrid41 } from "react-icons/ci";
 import { BiMessageRoundedEdit } from "react-icons/bi";
-import { MdDone, MdLockOutline, MdOutlineMail } from "react-icons/md";
+import { MdLockOutline, MdOutlineMail } from "react-icons/md";
 import { IoEyeOutline } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { PiToggleRight } from "react-icons/pi";
 import { TbArrowRampRight2 } from "react-icons/tb";
-import { useNavigate } from "react-router";
 import CustomSearchForm from "../../../Component/CustomSearchForm/CustomSearchForm";
 import FeesCollect from "../../../Component/FeesCollect/FeesCollect";
 import { Link } from "react-router-dom";
-import export_icon from "../../../../public/svg/export.svg";
-import print from "../../../../public/svg/print.svg";
-import { FaPlus } from "react-icons/fa";
 import LoginDetails from "./LoginDetails";
 import Message from "../../../Component/Message/Message";
 import Email from "../../../Component/Email/Email";
 import PhoneComponent from "../../../Component/PhoneComponent/PhoneComponent";
 import PageMenuDiraction from "../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
+const StudentAdmissionList = ({ setCurrentPage, handleScheduleUpdateType }) => {
   const [message, setMessage] = useState(false);
   const [email, setEmail] = useState(false);
   const [phone, setPhone] = useState(false);
@@ -43,9 +39,10 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
         title="Student List"
         currentMenu="Student"
         currentPage="Student List"
-        handleCreateUpdate={handleCreateUpdate}
+        setCurrentPage={setCurrentPage}
         functionValue="studentCreate"
         buttonTitle="Add Student"
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px] border shadow-sm">
@@ -226,7 +223,7 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
                           </button>
 
                           <button
-                            onClick={() => handleCreateUpdate("studentUpdate")}
+                            onClick={() => handleScheduleUpdateType()}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <AiOutlineEdit />
@@ -263,6 +260,7 @@ const StudentAdmissionList = ({ setCurrentPage, handleCreateUpdate }) => {
           </table>
         </div>
       </div>
+
       {/* ======> fees collect <===== */}
       {feesCollectOpen && (
         <FeesCollect setFeesCollectOpen={setFeesCollectOpen} />
