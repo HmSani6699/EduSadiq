@@ -23,6 +23,7 @@ import ManageExamResult from "../Dashboard/Admin/Exam/ManageExamResult/ManageExa
 import ManageExamGrade from "../Dashboard/Admin/Exam/ManageExamGrade/ManageExamGrade";
 import ManageClassRoom from "../Dashboard/Admin/Academic/ManageClassRoom/ManageClassRoom";
 import ManageClassRoutine from "../Dashboard/Admin/Academic/ManageClassRoutine/ManageClassRoutine";
+import ManageTimeTable from "../Dashboard/Admin/Academic/ManageTimeTable/ManageTimeTable";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -102,6 +103,10 @@ const router = createBrowserRouter([
       {
         path: "class_group",
         element: <ManageClassGroup />,
+      },
+      {
+        path: "time-table",
+        element: <ManageTimeTable />,
       },
 
       // ======> Finance <=====//

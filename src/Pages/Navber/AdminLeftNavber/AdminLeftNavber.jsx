@@ -23,6 +23,7 @@ import { BiBook } from "react-icons/bi";
 import user_profile from "../../../../public/svg/user_profile.svg";
 import MenuDiraction from "../../../Component/MenuDiraction/MenuDiraction";
 import NavList from "../../../Component/NavList/NavList";
+import { LuTable2 } from "react-icons/lu";
 
 const AdminLeftNavber = ({ setIsSidebarOpen }) => {
   return (
@@ -139,6 +140,13 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
         children_true={false}
       >
         <FaLayerGroup className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList
+        url={"/admin/time-table"}
+        title={"Manage Time Table"}
+        children_true={false}
+      >
+        <LuTable2 className="text-[18px] text-[#515B73]" />
       </NavList>
       {/* </div>
         </div> */}
