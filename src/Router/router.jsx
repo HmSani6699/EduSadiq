@@ -21,6 +21,8 @@ import ManageExamSchedule from "../Dashboard/Admin/Exam/ManageExamSchedule/Manag
 import ManageExamAttendance from "../Dashboard/Admin/Exam/ManageExamAttendance/ManageExamAttendance";
 import ManageExamResult from "../Dashboard/Admin/Exam/ManageExamResult/ManageExamResult";
 import ManageExamGrade from "../Dashboard/Admin/Exam/ManageExamGrade/ManageExamGrade";
+import ManageClassRoom from "../Dashboard/Admin/Academic/ManageClassRoom/ManageClassRoom";
+import ManageClassRoutine from "../Dashboard/Admin/Academic/ManageClassRoutine/ManageClassRoutine";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -76,10 +78,18 @@ const router = createBrowserRouter([
         element: <StudentPromotion />,
       },
 
-      // ======> Class <=====//
+      // ======> Academic <=====//
       {
         path: "section",
         element: <ManageSection />,
+      },
+      {
+        path: "class-room",
+        element: <ManageClassRoom />,
+      },
+      {
+        path: "class-routine",
+        element: <ManageClassRoutine />,
       },
       {
         path: "class",

@@ -10,6 +10,7 @@ import {
   FaHandHoldingHeart,
   FaLayerGroup,
   FaListAlt,
+  FaRegCalendarAlt,
   FaRegClock,
   FaUniversity,
   FaUserCheck,
@@ -80,7 +81,7 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
       </NavList>
 
       {/* =====> Class <====== */}
-      <MenuDiraction title={"Class"} />
+      <MenuDiraction title={"Academic"} />
 
       {/* <div>
           <div
@@ -112,18 +113,17 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
             }`}
           > */}
       {/* Nav Links with Correct Icons */}
-      <NavList
-        url={"/admin/section"}
-        title={"Manage Section"}
-        children_true={false}
-      >
+      <NavList url={"/admin/class-routine"} title={"Class Routine"}>
+        <FaRegCalendarAlt className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList url={"/admin/class-room"} title={"Class Room"}>
+        <FaChalkboardTeacher className="text-[18px] text-[#515B73]" />
+      </NavList>
+
+      <NavList url={"/admin/section"} title={"Manage Section"}>
         <FaUniversity className="text-[18px] text-[#515B73]" />
       </NavList>
-      <NavList
-        url={"/admin/class"}
-        title={"Manage Class"}
-        children_true={false}
-      >
+      <NavList url={"/admin/class"} title={" Class Name"} children_true={false}>
         <FaChalkboardTeacher className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
@@ -143,30 +143,7 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
       {/* </div>
         </div> */}
 
-      {/* =====> Finance  <====== */}
-      <MenuDiraction title={"Finance"} />
-      <NavList
-        url={"/admin/fees_collect_type"}
-        title={"Manage Fees Type"}
-        children_true={false}
-      >
-        <FaFileInvoiceDollar className="text-[18px] text-[#515B73]" />
-      </NavList>
-      <NavList
-        url={"/admin/fees_collect"}
-        title={"Manage Fees Collected"}
-        children_true={false}
-      >
-        <MdMoneyOff className="text-[18px] text-[#515B73]" />
-      </NavList>
-      <NavList
-        url={"/admin/donation"}
-        title={"Manage Donation"}
-        children_true={false}
-      >
-        <FaHandHoldingHeart className="text-[18px] text-[#515B73]" />
-      </NavList>
-      {/* =====> Finance  <====== */}
+      {/* =====> Examinations  <====== */}
       <MenuDiraction title={"Examinations"} />
       <NavList
         url={"/admin/exam_type"}
@@ -203,6 +180,29 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
         children_true={false}
       >
         <FaAward className="text-[18px] text-[#515B73]" />
+      </NavList>
+      {/* =====> Finance  <====== */}
+      <MenuDiraction title={"Finance"} />
+      <NavList
+        url={"/admin/fees_collect_type"}
+        title={"Manage Fees Type"}
+        children_true={false}
+      >
+        <FaFileInvoiceDollar className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList
+        url={"/admin/fees_collect"}
+        title={"Manage Fees Collected"}
+        children_true={false}
+      >
+        <MdMoneyOff className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList
+        url={"/admin/donation"}
+        title={"Manage Donation"}
+        children_true={false}
+      >
+        <FaHandHoldingHeart className="text-[18px] text-[#515B73]" />
       </NavList>
     </div>
   );

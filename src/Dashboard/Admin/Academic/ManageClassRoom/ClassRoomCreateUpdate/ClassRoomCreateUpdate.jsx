@@ -2,22 +2,23 @@ import React, { useState } from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import SelectInputField from "../../../../../Component/SelectInputField/SelectInputField";
 import TextareaFiled from "../../../../../Component/InputField/TextareaFiled";
+import InputField from "../../../../../Component/InputField/InputField";
 
-const ExamGradeCreateUpdate = ({ setCurrentPage, type }) => {
+const ClassRoomCreateUpdate = ({ setCurrentPage, type }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            {type === "create" ? "  Add Exam Grade" : "  Update Exam Grade"}
+            {type === "create" ? "  Add Class Room" : "  Update Class Room"}
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>
             <p className="text-[#6a72876c]">/</p>
             <p className="text-[#6A7287] text-[14px]">Admin</p>
             <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">Add Exam Type</p>
+            <p className="text-[#6A7287] text-[14px]">Add Class Room</p>
           </div>
         </div>
       </div>
@@ -28,28 +29,15 @@ const ExamGradeCreateUpdate = ({ setCurrentPage, type }) => {
             <IoMdInformationCircleOutline className="text-[#202C4B] text-[14px]" />
           </div>
           <h2 className="text-[#202C4B] font-semibold text-[18px]">
-            Exam Grade
+            Class Room
           </h2>
         </div>
         {/*  */}
 
-        <div className="p-[20px] grid grid-cols-1 lg:grid-cols-2 gap-[20px] border-b">
+        <div className="p-[20px] grid grid-cols-1 lg:grid-cols-3 gap-[20px] border-b">
+          <InputField title={"Room Name"} />
           <SelectInputField
-            title={"Grade"}
-            options={[
-              { id: 1, value: "নতুন" },
-              { id: 2, value: "পুরাতন" },
-            ]}
-          />
-          <SelectInputField
-            title={"Marks From (%)"}
-            options={[
-              { id: 1, value: "নতুন" },
-              { id: 2, value: "পুরাতন" },
-            ]}
-          />
-          <SelectInputField
-            title={"Marks Upto (%)"}
+            title={"Capacity"}
             options={[
               { id: 1, value: "নতুন" },
               { id: 2, value: "পুরাতন" },
@@ -57,24 +45,12 @@ const ExamGradeCreateUpdate = ({ setCurrentPage, type }) => {
           />
 
           <SelectInputField
-            title={"Grade Pointes"}
+            title={"Status"}
             options={[
               { id: 1, value: "নতুন" },
               { id: 2, value: "পুরাতন" },
             ]}
           />
-          <div className="col-span-2">
-            <SelectInputField
-              title={"Status"}
-              options={[
-                { id: 1, value: "নতুন" },
-                { id: 2, value: "পুরাতন" },
-              ]}
-            />
-          </div>
-          <div className="col-span-2">
-            <TextareaFiled title={"Description"} />
-          </div>
         </div>
 
         <div className="flex items-end justify-end gap-[10px] mb-[15px] p-[20px]">
@@ -98,4 +74,4 @@ const ExamGradeCreateUpdate = ({ setCurrentPage, type }) => {
   );
 };
 
-export default ExamGradeCreateUpdate;
+export default ClassRoomCreateUpdate;

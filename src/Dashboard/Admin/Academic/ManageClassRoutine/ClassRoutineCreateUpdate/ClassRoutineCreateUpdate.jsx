@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import SelectInputField from "../../../../../Component/SelectInputField/SelectInputField";
-import TextareaFiled from "../../../../../Component/InputField/TextareaFiled";
+import InputField from "../../../../../Component/InputField/InputField";
 
-const ExamGradeCreateUpdate = ({ setCurrentPage, type }) => {
+const ClassRoutineCreateUpdate = ({ setCurrentPage, type }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            {type === "create" ? "  Add Exam Grade" : "  Update Exam Grade"}
+            {type === "create"
+              ? "  Add Class Routine"
+              : "  Update Class Routine"}
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>
             <p className="text-[#6a72876c]">/</p>
             <p className="text-[#6A7287] text-[14px]">Admin</p>
             <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">Add Exam Type</p>
+            <p className="text-[#6A7287] text-[14px]">Add Class Routine</p>
           </div>
         </div>
       </div>
@@ -28,28 +30,14 @@ const ExamGradeCreateUpdate = ({ setCurrentPage, type }) => {
             <IoMdInformationCircleOutline className="text-[#202C4B] text-[14px]" />
           </div>
           <h2 className="text-[#202C4B] font-semibold text-[18px]">
-            Exam Grade
+            Class Routine
           </h2>
         </div>
         {/*  */}
 
-        <div className="p-[20px] grid grid-cols-1 lg:grid-cols-2 gap-[20px] border-b">
+        <div className="p-[20px] grid grid-cols-1 lg:grid-cols-3 gap-[20px] border-b">
           <SelectInputField
-            title={"Grade"}
-            options={[
-              { id: 1, value: "নতুন" },
-              { id: 2, value: "পুরাতন" },
-            ]}
-          />
-          <SelectInputField
-            title={"Marks From (%)"}
-            options={[
-              { id: 1, value: "নতুন" },
-              { id: 2, value: "পুরাতন" },
-            ]}
-          />
-          <SelectInputField
-            title={"Marks Upto (%)"}
+            title={"Teacher Name"}
             options={[
               { id: 1, value: "নতুন" },
               { id: 2, value: "পুরাতন" },
@@ -57,24 +45,49 @@ const ExamGradeCreateUpdate = ({ setCurrentPage, type }) => {
           />
 
           <SelectInputField
-            title={"Grade Pointes"}
+            title={"Section"}
             options={[
               { id: 1, value: "নতুন" },
               { id: 2, value: "পুরাতন" },
             ]}
           />
-          <div className="col-span-2">
-            <SelectInputField
-              title={"Status"}
-              options={[
-                { id: 1, value: "নতুন" },
-                { id: 2, value: "পুরাতন" },
-              ]}
-            />
-          </div>
-          <div className="col-span-2">
-            <TextareaFiled title={"Description"} />
-          </div>
+          <SelectInputField
+            title={"Class"}
+            options={[
+              { id: 1, value: "নতুন" },
+              { id: 2, value: "পুরাতন" },
+            ]}
+          />
+          <SelectInputField
+            title={"Subject"}
+            options={[
+              { id: 1, value: "নতুন" },
+              { id: 2, value: "পুরাতন" },
+            ]}
+          />
+          <SelectInputField
+            title={"Day"}
+            options={[
+              { id: 1, value: "নতুন" },
+              { id: 2, value: "পুরাতন" },
+            ]}
+          />
+          <SelectInputField
+            title={"Class Room"}
+            options={[
+              { id: 1, value: "নতুন" },
+              { id: 2, value: "পুরাতন" },
+            ]}
+          />
+          <InputField title={"Start Time"} />
+          <InputField title={"End Time"} />
+          <SelectInputField
+            title={"Status"}
+            options={[
+              { id: 1, value: "নতুন" },
+              { id: 2, value: "পুরাতন" },
+            ]}
+          />
         </div>
 
         <div className="flex items-end justify-end gap-[10px] mb-[15px] p-[20px]">
@@ -89,7 +102,7 @@ const ExamGradeCreateUpdate = ({ setCurrentPage, type }) => {
               onClick={() => setCurrentPage(true)}
               className="text-[14px] font-semibold text-[#fff] bg-[#506EE4] py-[8px] px-[15px] rounded-[5px]  border"
             >
-              Add Grade
+              Add Routine
             </button>
           </div>
         </div>
@@ -98,4 +111,4 @@ const ExamGradeCreateUpdate = ({ setCurrentPage, type }) => {
   );
 };
 
-export default ExamGradeCreateUpdate;
+export default ClassRoutineCreateUpdate;
