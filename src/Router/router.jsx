@@ -24,6 +24,7 @@ import ManageExamGrade from "../Dashboard/Admin/Exam/ManageExamGrade/ManageExamG
 import ManageClassRoom from "../Dashboard/Admin/Academic/ManageClassRoom/ManageClassRoom";
 import ManageClassRoutine from "../Dashboard/Admin/Academic/ManageClassRoutine/ManageClassRoutine";
 import ManageTimeTable from "../Dashboard/Admin/Academic/ManageTimeTable/ManageTimeTable";
+import Notice from "../Dashboard/Admin/Notice/Notice";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -142,6 +143,15 @@ const router = createBrowserRouter([
       },
       {
         path: "exam_grade",
+        element: <ManageExamGrade />,
+      },
+      // ======> Notise & Events <=====//
+      {
+        path: "notise",
+        element: <Notice />,
+      },
+      {
+        path: "events",
         element: <ManageExamGrade />,
       },
     ],

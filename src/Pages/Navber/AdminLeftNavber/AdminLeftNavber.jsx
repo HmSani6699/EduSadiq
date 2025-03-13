@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { MdMoneyOff, MdOutlineDashboard } from "react-icons/md";
+import {
+  MdMoneyOff,
+  MdOutlineDashboard,
+  MdOutlineEventAvailable,
+} from "react-icons/md";
 import {
   FaAward,
   FaBook,
@@ -23,7 +27,7 @@ import { BiBook } from "react-icons/bi";
 import user_profile from "../../../../public/svg/user_profile.svg";
 import MenuDiraction from "../../../Component/MenuDiraction/MenuDiraction";
 import NavList from "../../../Component/NavList/NavList";
-import { LuTable2 } from "react-icons/lu";
+import { LuClipboardList, LuTable2 } from "react-icons/lu";
 
 const AdminLeftNavber = ({ setIsSidebarOpen }) => {
   return (
@@ -211,6 +215,19 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
         children_true={false}
       >
         <FaHandHoldingHeart className="text-[18px] text-[#515B73]" />
+      </NavList>
+
+      {/* =====> Announcements  <====== */}
+      <MenuDiraction title={"Announcements"} />
+      <NavList
+        url={"/admin/notise"}
+        title={"Notise Board"}
+        children_true={false}
+      >
+        <LuClipboardList className="text-[18px] text-[#515B73]" />
+      </NavList>
+      <NavList url={"/admin/events"} title={"Events"} children_true={false}>
+        <MdOutlineEventAvailable className="text-[18px] text-[#515B73]" />
       </NavList>
     </div>
   );
