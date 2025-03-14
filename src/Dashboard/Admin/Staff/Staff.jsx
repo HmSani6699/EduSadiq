@@ -5,30 +5,29 @@ import StaffProfile from "../../../Component/Profile/StaffProfile/StaffProfile";
 
 const Staff = () => {
   const [currentPage, setCurrentPage] = useState("staffList");
-  const [create, setCreate] = useState(false);
+  const [type, setType] = useState("create");
+  const [viewID, setViewID] = useState();
 
-  const handleCreateUpdate = (value) => {
-    if (value == "staffUpdate") {
-      setCreate(true);
-      setCurrentPage("staffCreateUpdate");
-    }
-    if (value == "staffCreate") {
-      setCurrentPage("staffCreateUpdate");
-    }
+  const handleCreateUpdate = (value) => {};
+
+  const handleStaffUpdate = (id) => {
+    setViewID(id);
+    setType("update");
+    setCurrentPage(false);
   };
 
   return (
     <div>
-      {currentPage === "staffList" ? (
+      {currentPage === "staffView" ? (
+        <StaffProfile />
+      ) : currentPage ? (
         <StaffList
           setCurrentPage={setCurrentPage}
-          handleCreateUpdate={handleCreateUpdate}
+          handleStaffUpdate={handleStaffUpdate}
         />
-      ) : currentPage === "staffCreateUpdate" ? (
-        <StaffCreateUpdate create={create} setCurrentPage={setCurrentPage} />
-      ) : currentPage === "staffView" ? (
-        <StaffProfile />
-      ) : null}
+      ) : (
+        <StaffCreateUpdate type={type} setCurrentPage={setCurrentPage} />
+      )}
     </div>
   );
 };

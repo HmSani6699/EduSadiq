@@ -14,7 +14,7 @@ import { FaPlus } from "react-icons/fa";
 import LoginDetails from "../../Student/LoginDetails";
 import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const StaffList = ({ setCurrentPage, handleCreateUpdate }) => {
+const StaffList = ({ setCurrentPage, handleStaffUpdate }) => {
   const [view, setView] = useState("list");
   const [loginDetails, setLoginDetails] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
@@ -30,9 +30,9 @@ const StaffList = ({ setCurrentPage, handleCreateUpdate }) => {
         title="Staff List"
         currentMenu="Admin"
         currentPage="Staff List"
-        handleCreateUpdate={handleCreateUpdate}
-        functionValue="staffCreate"
+        setCurrentPage={setCurrentPage}
         buttonTitle="Add Staff"
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px] border shadow-sm">
@@ -185,7 +185,7 @@ const StaffList = ({ setCurrentPage, handleCreateUpdate }) => {
                           </button>
 
                           <button
-                            onClick={() => handleCreateUpdate("staffUpdate")}
+                            onClick={() => handleStaffUpdate()}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <AiOutlineEdit />
