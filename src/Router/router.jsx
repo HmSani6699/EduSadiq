@@ -30,6 +30,8 @@ import SuperAdminLayout from "../Layout/SuperAdminLayout/SuperAdminLayout";
 import SuperAdmin from "../Dashboard/SuperAdmin/SuperAdmin";
 import ManageInstitute from "../Dashboard/SuperAdmin/ManageInstitute/ManageInstitute";
 import ManageInstituteType from "../Dashboard/SuperAdmin/ManageInstituteType/ManageInstituteType";
+import WebDemoView from "../Dashboard/SuperAdmin/WebDemoView/WebDemoView";
+import AppDemoView from "../Dashboard/SuperAdmin/AppDemoView/AppDemoView";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -58,6 +60,16 @@ const router = createBrowserRouter([
       {
         path: "institute-type",
         element: <ManageInstituteType />,
+      },
+
+      // ======= Web & App view <======//
+      {
+        path: "web-demo-view",
+        element: <WebDemoView />,
+      },
+      {
+        path: "app-demo-view",
+        element: <AppDemoView />,
       },
       ,
     ],

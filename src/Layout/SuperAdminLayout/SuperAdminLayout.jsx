@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import user from "../../../public/najmul.png";
+import user from "../../../public/sadiq.jpg";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import { Outlet } from "react-router";
@@ -8,7 +8,6 @@ import seting_icon from "../../../public/svg/seting.svg";
 import edu_logo from "../../../public/svg/edulogo.svg";
 import logo_out from "../../../public/svg/logout.svg";
 import full_screen from "../../../public/svg/fullscreen.svg";
-import AdminLeftNavber from "../../Pages/Navber/AdminLeftNavber/AdminLeftNavber";
 import SuperAdminLeftNavber from "../../Pages/Navber/SuperAdminLeftNavber/SuperAdminLeftNavber";
 
 const SuperAdminLayout = () => {
@@ -91,10 +90,10 @@ const SuperAdminLayout = () => {
               </button>
               <div className="flex items-center gap-[6px]">
                 <h2 className="font-medium whitespace-nowrap lg:block hidden">
-                  Md: Nujmul Islam
+                  Md: Sadiq
                 </h2>
 
-                <div className="w-[40px] h-[40px] rounded-full overflow-hidden">
+                <div className="w-[40px] h-[40px] rounded-full overflow-hidden border">
                   <img
                     className="h-full w-full object-cover"
                     src={user}
