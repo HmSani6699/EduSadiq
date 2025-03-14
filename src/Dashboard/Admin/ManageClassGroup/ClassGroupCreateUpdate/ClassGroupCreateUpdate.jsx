@@ -3,14 +3,14 @@ import { IoMdInformationCircleOutline } from "react-icons/io";
 import InputField from "../../../../Component/InputField/InputField";
 import SelectInputField from "../../../../Component/SelectInputField/SelectInputField";
 
-const ClassGroupCreateUpdate = ({ create, setCurrentPage }) => {
+const ClassGroupCreateUpdate = ({ type, setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            {create ? "  Update Class Group" : "  Add Class Group"}
+            {type === "create" ? "  Add Class Group" : "  Update Class Group"}
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>
@@ -69,7 +69,7 @@ const ClassGroupCreateUpdate = ({ create, setCurrentPage }) => {
             onClick={() => setCurrentPage("classGroupList")}
             className="text-[14px] font-semibold text-[#fff] bg-[#506EE4] py-[8px] px-[15px] rounded-[5px]  border"
           >
-            Add Class
+            Add Class Group
           </button>
         </div>
       </div>

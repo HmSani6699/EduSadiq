@@ -3,32 +3,28 @@ import ClassGroupList from "./ClassGroupList/ClassGroupList";
 import ClassGroupCreateUpdate from "./ClassGroupCreateUpdate/ClassGroupCreateUpdate";
 
 const ManageClassGroup = () => {
-  const [currentPage, setCurrentPage] = useState("classGroupList");
-  const [create, setCreate] = useState(false);
+  const [currentPage, setCurrentPage] = useState(true);
+  const [type, setType] = useState("create");
+  const [viewID, setViewID] = useState();
 
-  const handleCreateUpdate = (value) => {
-    if (value == "classGroupUpdate") {
-      setCreate(true);
-      setCurrentPage("classGroupCreateUpdate");
-    }
-    if (value == "classGroupCreate") {
-      setCurrentPage("classGroupCreateUpdate");
-    }
+  const handleCreateUpdate = (value) => {};
+
+  const handleClassGroupUpdate = (id) => {
+    setViewID(id);
+    setType("update");
+    setCurrentPage(false);
   };
 
   return (
     <div>
-      {currentPage === "classGroupList" ? (
+      {currentPage ? (
         <ClassGroupList
           setCurrentPage={setCurrentPage}
-          handleCreateUpdate={handleCreateUpdate}
+          handleClassGroupUpdate={handleClassGroupUpdate}
         />
-      ) : currentPage === "classGroupCreateUpdate" ? (
-        <ClassGroupCreateUpdate
-          create={create}
-          setCurrentPage={setCurrentPage}
-        />
-      ) : null}
+      ) : (
+        <ClassGroupCreateUpdate type={type} setCurrentPage={setCurrentPage} />
+      )}
     </div>
   );
 };

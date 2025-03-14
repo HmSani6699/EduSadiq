@@ -7,7 +7,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const ClassGroupList = ({ setCurrentPage, handleCreateUpdate }) => {
+const ClassGroupList = ({ setCurrentPage, handleClassGroupUpdate }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
@@ -16,9 +16,9 @@ const ClassGroupList = ({ setCurrentPage, handleCreateUpdate }) => {
         title="Class Group List"
         currentMenu="Admin"
         currentPage="Class Group List"
-        handleCreateUpdate={handleCreateUpdate}
-        functionValue="classGroupCreate"
+        setCurrentPage={setCurrentPage}
         buttonTitle="Add Group"
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
@@ -97,9 +97,7 @@ const ClassGroupList = ({ setCurrentPage, handleCreateUpdate }) => {
                       <button>
                         <RiDeleteBin6Line className="text-[18px] text-red-500" />
                       </button>
-                      <button
-                        onClick={() => handleCreateUpdate("classGroupUpdate")}
-                      >
+                      <button onClick={() => handleClassGroupUpdate()}>
                         <FaRegPenToSquare className="text-[16px] text-green-500" />
                       </button>
                     </div>
