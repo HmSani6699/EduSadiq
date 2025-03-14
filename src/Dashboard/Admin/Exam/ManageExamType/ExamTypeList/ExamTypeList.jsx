@@ -4,18 +4,18 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import PageMenuDiraction from "../../../../../Component/PageMenuDiraction/PageMenuDiraction";
 import CustomSearchForm from "../../../../../Component/CustomSearchForm/CustomSearchForm";
 
-const ExamTypeList = ({ handleCreateUpdate }) => {
+const ExamTypeList = ({ setCurrentPage, handleExamTypeUpdate }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
 
       <PageMenuDiraction
-        title="Class List"
+        title="Exam Type"
         currentMenu="Admin"
-        currentPage="Class List"
-        handleCreateUpdate={handleCreateUpdate}
-        functionValue="examTypeCreate"
-        buttonTitle="Add Class"
+        currentPage="Exam Type"
+        setCurrentPage={setCurrentPage}
+        buttonTitle="Add Type"
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
@@ -77,9 +77,7 @@ const ExamTypeList = ({ handleCreateUpdate }) => {
                       <button>
                         <RiDeleteBin6Line className="text-[18px] text-red-500" />
                       </button>
-                      <button
-                        onClick={() => handleCreateUpdate("examTypeUpdate")}
-                      >
+                      <button onClick={() => handleExamTypeUpdate()}>
                         <FaRegPenToSquare className="text-[16px] text-green-500" />
                       </button>
                     </div>

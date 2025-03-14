@@ -4,7 +4,7 @@ import AddClassCreateUpdate from "./AddClassCreateUpdate/AddClassCreateUpdate";
 import TeacherProfile from "../../../../Component/Profile/TeacherProfile/TeacherProfile";
 
 const TeacherAddClass = () => {
-  const [currentPage, setCurrentPage] = useState("addClassList");
+  const [currentPage, setCurrentPage] = useState(true);
   const [type, setType] = useState("create");
   const [viewID, setViewID] = useState();
 

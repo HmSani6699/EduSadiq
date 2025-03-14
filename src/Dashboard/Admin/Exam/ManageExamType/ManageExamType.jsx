@@ -3,29 +3,28 @@ import ExamTypeCreateUpdate from "./ExamTypeCreateUpdate/ExamTypeCreateUpdate";
 import ExamTypeList from "./ExamTypeList/ExamTypeList";
 
 const ManageExamType = () => {
-  const [currentPage, setCurrentPage] = useState("examTypeList");
-  const [create, setCreate] = useState(false);
+  const [currentPage, setCurrentPage] = useState(true);
+  const [type, setType] = useState("create");
+  const [viewID, setViewID] = useState();
 
-  const handleCreateUpdate = (value) => {
-    if (value == "examTypeUpdate") {
-      setCreate(true);
-      setCurrentPage("examTypeCreateUpdate");
-    }
-    if (value == "examTypeCreate") {
-      setCurrentPage("examTypeCreateUpdate");
-    }
+  const handleCreateUpdate = (value) => {};
+
+  const handleExamTypeUpdate = (id) => {
+    setViewID(id);
+    setType("update");
+    setCurrentPage(false);
   };
 
   return (
     <div>
-      {currentPage === "examTypeList" ? (
+      {currentPage ? (
         <ExamTypeList
           setCurrentPage={setCurrentPage}
-          handleCreateUpdate={handleCreateUpdate}
+          handleExamTypeUpdate={handleExamTypeUpdate}
         />
-      ) : currentPage === "examTypeCreateUpdate" ? (
-        <ExamTypeCreateUpdate create={create} setCurrentPage={setCurrentPage} />
-      ) : null}
+      ) : (
+        <ExamTypeCreateUpdate type={type} setCurrentPage={setCurrentPage} />
+      )}
     </div>
   );
 };
