@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CustomSearchForm from "../../../../../Component/CustomSearchForm/CustomSearchForm";
 import PageMenuDiraction from "../../../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const FeesCollectList = ({ handleCreateUpdate }) => {
+const FeesCollectList = ({ setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
@@ -10,9 +10,9 @@ const FeesCollectList = ({ handleCreateUpdate }) => {
         title="Fees Collect List"
         currentMenu="Admin"
         currentPage="Fees Collect List"
-        handleCreateUpdate={handleCreateUpdate}
-        functionValue="feesCollectCreate"
+        setCurrentPage={setCurrentPage}
         buttonTitle="Add Fees "
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">

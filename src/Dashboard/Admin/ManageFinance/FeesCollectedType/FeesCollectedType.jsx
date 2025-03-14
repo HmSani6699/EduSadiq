@@ -3,32 +3,31 @@ import FeesCollectTypeCreateUpdate from "./FeesCollectTypeCreateUpdate/FeesColle
 import FeesCollectTypeList from "./FeesCollectTypeList/FeesCollectTypeList";
 
 const FeesCollectedType = () => {
-  const [currentPage, setCurrentPage] = useState("feesCollectTypeList");
-  const [create, setCreate] = useState(false);
+  const [currentPage, setCurrentPage] = useState(true);
+  const [type, setType] = useState("create");
+  const [viewID, setViewID] = useState();
 
-  const handleCreateUpdate = (value) => {
-    if (value == "feesCollectTypeUpdate") {
-      setCreate(true);
-      setCurrentPage("feesCollectTypeCreateUpdate");
-    }
-    if (value == "feesCollectTypeCreate") {
-      setCurrentPage("feesCollectTypeCreateUpdate");
-    }
+  const handleCreateUpdate = (value) => {};
+
+  const handleFeesTypeUpdate = (id) => {
+    setViewID(id);
+    setType("update");
+    setCurrentPage(false);
   };
 
   return (
     <div>
-      {currentPage === "feesCollectTypeList" ? (
+      {currentPage ? (
         <FeesCollectTypeList
           setCurrentPage={setCurrentPage}
-          handleCreateUpdate={handleCreateUpdate}
+          handleFeesTypeUpdate={handleFeesTypeUpdate}
         />
-      ) : currentPage === "feesCollectTypeCreateUpdate" ? (
+      ) : (
         <FeesCollectTypeCreateUpdate
-          create={create}
+          type={type}
           setCurrentPage={setCurrentPage}
         />
-      ) : null}
+      )}
     </div>
   );
 };

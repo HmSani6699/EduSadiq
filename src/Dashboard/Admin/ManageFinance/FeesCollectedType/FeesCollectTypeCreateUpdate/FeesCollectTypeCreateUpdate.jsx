@@ -2,14 +2,14 @@ import React from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import InputField from "../../../../../Component/InputField/InputField";
 
-const FeesCollectTypeCreateUpdate = ({ create, setCurrentPage }) => {
+const FeesCollectTypeCreateUpdate = ({ type, setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            {create ? "  Update Fees Collect" : "  Add Fees Collect"}
+            {type === "create" ? "  Add Fess Type" : "  Update Fess Type"}
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>

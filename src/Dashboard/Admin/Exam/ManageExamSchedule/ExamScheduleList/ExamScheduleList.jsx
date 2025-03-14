@@ -15,6 +15,7 @@ const ExamScheduleList = ({ setCurrentPage, handleScheduleUpdateType }) => {
         setCurrentPage={setCurrentPage}
         buttonTitle="Add Schedule"
         currentPage="Exam Schedule"
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
