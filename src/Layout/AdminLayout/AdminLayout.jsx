@@ -38,14 +38,14 @@ const AdminLayout = () => {
           </button>
         </div>
         {/* ====> Logo div (Fixed) <==== */}
-        <div className="flex items-center pl-[20px] gap-[5px] mt-[20px] pb-4 ">
+        <div className="flex items-center pl-[20px]  mt-[20px] pb-4 ">
           <img
             className="transition-all duration-300 w-[40px] h-[40px]"
             src={edu_logo}
             alt="website logo"
           />
           <h2 className=" text-[24px]">
-            <span className="font-bold">Edu</span>Sadiq
+            <span className="font-bold text-[#3d5ee1]">Edu</span>Sadiq
           </h2>
         </div>
         {/* ====> Scrollable Navbar <==== */}
