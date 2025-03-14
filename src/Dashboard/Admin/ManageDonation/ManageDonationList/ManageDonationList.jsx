@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import export_icon from "../../../../../public/svg/export.svg";
-import print from "../../../../../public/svg/print.svg";
-import { FaPlus } from "react-icons/fa";
 import CustomSearchForm from "../../../../Component/CustomSearchForm/CustomSearchForm";
 import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const ManageDonationList = ({ setCurrentPage, handleCreateUpdate }) => {
+const ManageDonationList = ({ setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
@@ -13,9 +10,9 @@ const ManageDonationList = ({ setCurrentPage, handleCreateUpdate }) => {
         title="Donation List"
         currentMenu="Admin"
         currentPage="Donation List"
-        handleCreateUpdate={handleCreateUpdate}
-        functionValue="donationCreate"
+        setCurrentPage={setCurrentPage}
         buttonTitle="Add Donation "
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">

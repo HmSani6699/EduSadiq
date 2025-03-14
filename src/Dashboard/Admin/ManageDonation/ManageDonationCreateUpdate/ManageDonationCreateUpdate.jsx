@@ -77,7 +77,7 @@ const ManageDonationCreateUpdate = ({ create, setCurrentPage }) => {
             onClick={() => setCurrentPage("donationList")}
             className="text-[14px] font-semibold text-[#fff] bg-[#506EE4] py-[8px] px-[15px] rounded-[5px]  border"
           >
-            Add Fees Collect
+            Add Donation
           </button>
         </div>
       </div>
