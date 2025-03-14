@@ -26,6 +26,7 @@ import ManageClassRoutine from "../Dashboard/Admin/Academic/ManageClassRoutine/M
 import ManageTimeTable from "../Dashboard/Admin/Academic/ManageTimeTable/ManageTimeTable";
 import Notice from "../Dashboard/Admin/Notice/Notice";
 import Invoice from "../Component/Invoice/Invoice";
+import SuperAdminLayout from "../Layout/SuperAdminLayout/SuperAdminLayout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +35,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Login />,
+      },
+    ],
+  },
+
+  // ======= Super Admin <=====//
+  {
+    path: "/super-admin",
+    element: <SuperAdminLayout />,
+    children: [
+      {
+        path: "/super-admin",
+        element: <Dashboard />,
       },
     ],
   },
