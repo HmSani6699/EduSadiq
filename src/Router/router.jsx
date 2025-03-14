@@ -27,6 +27,9 @@ import ManageTimeTable from "../Dashboard/Admin/Academic/ManageTimeTable/ManageT
 import Notice from "../Dashboard/Admin/Notice/Notice";
 import Invoice from "../Component/Invoice/Invoice";
 import SuperAdminLayout from "../Layout/SuperAdminLayout/SuperAdminLayout";
+import SuperAdmin from "../Dashboard/SuperAdmin/SuperAdmin";
+import ManageInstitute from "../Dashboard/SuperAdmin/ManageInstitute/ManageInstitute";
+import ManageInstituteType from "../Dashboard/SuperAdmin/ManageInstituteType/ManageInstituteType";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,8 +49,17 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/super-admin",
-        element: <Dashboard />,
+        element: <SuperAdmin />,
       },
+      {
+        path: "institute",
+        element: <ManageInstitute />,
+      },
+      {
+        path: "institute-type",
+        element: <ManageInstituteType />,
+      },
+      ,
     ],
   },
   // =======> Admin Route <=====//

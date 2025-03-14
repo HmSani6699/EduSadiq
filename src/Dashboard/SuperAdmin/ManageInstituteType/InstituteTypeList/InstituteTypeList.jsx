@@ -4,22 +4,22 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const SectionList = ({ setCurrentPage, handleSectionUpdate }) => {
+const InstituteTypeList = ({ setCurrentPage, handleTypeUpdate }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <PageMenuDiraction
-        title="Section List"
+        title="Institute Type"
         currentMenu="Admin"
-        currentPage="Section List"
+        currentPage="Institute Type"
         setCurrentPage={setCurrentPage}
-        buttonTitle="Add Section"
+        buttonTitle="Add Type"
         addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
         <div className="lg:flex items-center justify-between bg-white px-[20px] pt-[20px]">
-          <h2 className="text-lg font-semibold">Section List</h2>
+          <h2 className="text-lg font-semibold">Institute Type List</h2>
 
           <div className="lg:w-1/2 w-full">
             <CustomSearchForm classAdd={"w-2/3"} />
@@ -43,12 +43,12 @@ const SectionList = ({ setCurrentPage, handleSectionUpdate }) => {
           <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px] ">
             <thead>
               <tr className="bg-[#f4f7fe] font-semibold text-sm md:text-base">
-                <td className="whitespace-nowrap h-10 px-[20px]  text-[#202C4B] text-[14px]">
+                <td className="whitespace-nowrap h-10 px-[20px] text-center  text-[#202C4B] text-[14px]">
                   ID
                 </td>
                 <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
-                  Section Name
-                </td>{" "}
+                  Type Name
+                </td>
                 <td className="whitespace-nowrap h-10 px-[30px] text-[#202C4B] text-[14px] text-center">
                   Action
                 </td>
@@ -62,12 +62,12 @@ const SectionList = ({ setCurrentPage, handleSectionUpdate }) => {
                     index % 2 === 1 ? "bg-[#f4f7fe] border-b" : "border-b"
                   }
                 >
-                  <td className="whitespace-nowrap text-[#3D5EE1] text-[14px] pl-[20px] h-10 px-2 py-[13px]">
+                  <td className="whitespace-nowrap text-[#3D5EE1] text-center text-[14px] pl-[20px] h-10 px-2 py-[13px]">
                     1
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    Five
+                    Madrasa
                   </td>
 
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] flex items-center justify-center h-10 px-2 py-[13px]">
@@ -75,7 +75,7 @@ const SectionList = ({ setCurrentPage, handleSectionUpdate }) => {
                       <button>
                         <RiDeleteBin6Line className="text-[18px] text-red-500" />
                       </button>
-                      <button onClick={() => handleSectionUpdate()}>
+                      <button onClick={() => handleTypeUpdate()}>
                         <FaRegPenToSquare className="text-[16px] text-green-500" />
                       </button>
                     </div>
@@ -90,4 +90,4 @@ const SectionList = ({ setCurrentPage, handleSectionUpdate }) => {
   );
 };
 
-export default SectionList;
+export default InstituteTypeList;

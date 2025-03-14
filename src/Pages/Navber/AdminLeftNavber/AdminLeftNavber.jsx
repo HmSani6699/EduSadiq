@@ -6,11 +6,9 @@ import {
 } from "react-icons/md";
 import {
   FaAward,
-  FaBook,
   FaChalkboardTeacher,
   FaClipboardCheck,
   FaFileInvoiceDollar,
-  FaGraduationCap,
   FaHandHoldingHeart,
   FaLayerGroup,
   FaListAlt,
@@ -22,9 +20,7 @@ import {
   FaUsersCog,
 } from "react-icons/fa";
 
-import { useLocation } from "react-router";
 import { BiBook } from "react-icons/bi";
-import user_profile from "../../../../public/svg/user_profile.svg";
 import MenuDiraction from "../../../Component/MenuDiraction/MenuDiraction";
 import NavList from "../../../Component/NavList/NavList";
 import { LuClipboardList, LuTable2 } from "react-icons/lu";
