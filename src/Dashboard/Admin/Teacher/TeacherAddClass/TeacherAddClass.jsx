@@ -5,30 +5,29 @@ import TeacherProfile from "../../../../Component/Profile/TeacherProfile/Teacher
 
 const TeacherAddClass = () => {
   const [currentPage, setCurrentPage] = useState("addClassList");
-  const [create, setCreate] = useState(false);
+  const [type, setType] = useState("create");
+  const [viewID, setViewID] = useState();
 
-  const handleCreateUpdate = (value) => {
-    if (value == "addClassUpdate") {
-      setCreate(true);
-      setCurrentPage("addClassCreateUpdate");
-    }
-    if (value == "addClassCreate") {
-      setCurrentPage("addClassCreateUpdate");
-    }
+  const handleCreateUpdate = (value) => {};
+
+  const handleAddClassUpdate = (id) => {
+    setViewID(id);
+    setType("update");
+    setCurrentPage(false);
   };
 
   return (
     <div>
-      {currentPage === "addClassList" ? (
+      {currentPage === "teacherView" ? (
+        <TeacherProfile />
+      ) : currentPage ? (
         <AddClassList
           setCurrentPage={setCurrentPage}
-          handleCreateUpdate={handleCreateUpdate}
+          handleAddClassUpdate={handleAddClassUpdate}
         />
-      ) : currentPage === "addClassCreateUpdate" ? (
-        <AddClassCreateUpdate create={create} setCurrentPage={setCurrentPage} />
-      ) : currentPage === "teacherView" ? (
-        <TeacherProfile />
-      ) : null}
+      ) : (
+        <AddClassCreateUpdate type={type} setCurrentPage={setCurrentPage} />
+      )}
     </div>
   );
 };

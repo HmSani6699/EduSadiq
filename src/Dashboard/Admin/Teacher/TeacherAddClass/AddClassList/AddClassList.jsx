@@ -6,12 +6,9 @@ import { IoEyeOutline } from "react-icons/io5";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import CustomSearchForm from "../../../../../Component/CustomSearchForm/CustomSearchForm";
-import export_icon from "../../../../../../public/svg/export.svg";
-import print from "../../../../../../public/svg/print.svg";
-import { FaPlus } from "react-icons/fa";
 import PageMenuDiraction from "../../../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const AddClassList = ({ setCurrentPage, handleCreateUpdate }) => {
+const AddClassList = ({ setCurrentPage, handleAddClassUpdate }) => {
   const [view, setView] = useState("list");
   const [threeDoteId, setThreeDoteId] = useState();
 
@@ -26,9 +23,9 @@ const AddClassList = ({ setCurrentPage, handleCreateUpdate }) => {
         title="Teacher Add Class"
         currentMenu="Teacher"
         currentPage="Teacher Add Class"
-        handleCreateUpdate={handleCreateUpdate}
-        functionValue="addClassCreate"
+        setCurrentPage={setCurrentPage}
         buttonTitle="Add Class"
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
@@ -216,7 +213,7 @@ const AddClassList = ({ setCurrentPage, handleCreateUpdate }) => {
                           </button>
 
                           <button
-                            onClick={() => handleCreateUpdate("addClassUpdate")}
+                            onClick={() => handleAddClassUpdate()}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <AiOutlineEdit />
