@@ -25,6 +25,7 @@ import ManageClassRoom from "../Dashboard/Admin/Academic/ManageClassRoom/ManageC
 import ManageClassRoutine from "../Dashboard/Admin/Academic/ManageClassRoutine/ManageClassRoutine";
 import ManageTimeTable from "../Dashboard/Admin/Academic/ManageTimeTable/ManageTimeTable";
 import Notice from "../Dashboard/Admin/Notice/Notice";
+import Invoice from "../Component/Invoice/Invoice";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -152,7 +153,17 @@ const router = createBrowserRouter([
       },
       {
         path: "events",
-        element: <ManageExamGrade />,
+        element: (
+          <div className="flex items-center justify-center">
+            <Invoice
+              instituteName={"Pakunda Ismamia Madrasa"}
+              invoiceNO={122}
+              pay={" ৳ 122"}
+              invoiceDate={"01/03/2025"}
+              dueDate={"01/03/2025"}
+            />
+          </div>
+        ),
       },
     ],
   },

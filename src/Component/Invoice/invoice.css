@@ -1,0 +1,6 @@
+.bg_image {
+  background-image: url("/public/invoice.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
