@@ -7,7 +7,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const SubjectList = ({ setCurrentPage, handleCreateUpdate }) => {
+const SubjectList = ({ setCurrentPage, handleSubjectUpdate }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
@@ -16,9 +16,9 @@ const SubjectList = ({ setCurrentPage, handleCreateUpdate }) => {
         title="Subject List"
         currentMenu="Admin"
         currentPage="Subject List"
-        handleCreateUpdate={handleCreateUpdate}
-        functionValue="subjectCreate"
+        setCurrentPage={setCurrentPage}
         buttonTitle="Add Subject"
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
@@ -91,9 +91,7 @@ const SubjectList = ({ setCurrentPage, handleCreateUpdate }) => {
                       <button>
                         <RiDeleteBin6Line className="text-[18px] text-red-500" />
                       </button>
-                      <button
-                        onClick={() => handleCreateUpdate("subjectUpdate")}
-                      >
+                      <button onClick={() => handleSubjectUpdate()}>
                         <FaRegPenToSquare className="text-[16px] text-green-500" />
                       </button>
                     </div>

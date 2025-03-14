@@ -3,29 +3,28 @@ import SubjectList from "./SubjectList/SubjectList";
 import SubjectCreateUpdate from "./SubjectCreateUpdate/SubjectCreateUpdate";
 
 const ManageSubject = () => {
-  const [currentPage, setCurrentPage] = useState("subjectList");
-  const [create, setCreate] = useState(false);
+  const [currentPage, setCurrentPage] = useState(true);
+  const [type, setType] = useState("create");
+  const [viewID, setViewID] = useState();
 
-  const handleCreateUpdate = (value) => {
-    if (value == "subjectUpdate") {
-      setCreate(true);
-      setCurrentPage("subjectCreateUpdate");
-    }
-    if (value == "subjectCreate") {
-      setCurrentPage("subjectCreateUpdate");
-    }
+  const handleCreateUpdate = (value) => {};
+
+  const handleSubjectUpdate = (id) => {
+    setViewID(id);
+    setType("update");
+    setCurrentPage(false);
   };
 
   return (
     <div>
-      {currentPage === "subjectList" ? (
+      {currentPage ? (
         <SubjectList
           setCurrentPage={setCurrentPage}
-          handleCreateUpdate={handleCreateUpdate}
+          handleSubjectUpdate={handleSubjectUpdate}
         />
-      ) : currentPage === "subjectCreateUpdate" ? (
-        <SubjectCreateUpdate create={create} setCurrentPage={setCurrentPage} />
-      ) : null}
+      ) : (
+        <SubjectCreateUpdate type={type} setCurrentPage={setCurrentPage} />
+      )}
     </div>
   );
 };
