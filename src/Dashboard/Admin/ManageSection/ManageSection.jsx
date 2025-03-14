@@ -3,29 +3,28 @@ import SectionList from "./SectionList/SectionList";
 import SectionCreateUpdate from "./SectionCreateUpdate/SectionCreateUpdate";
 
 const ManageSection = () => {
-  const [currentPage, setCurrentPage] = useState("sectionList");
-  const [create, setCreate] = useState(false);
+  const [currentPage, setCurrentPage] = useState(true);
+  const [type, setType] = useState("create");
+  const [viewID, setViewID] = useState();
 
-  const handleCreateUpdate = (value) => {
-    if (value == "sectionUpdate") {
-      setCreate(true);
-      setCurrentPage("sectionCreateUpdate");
-    }
-    if (value == "sectionCreate") {
-      setCurrentPage("sectionCreateUpdate");
-    }
+  const handleCreateUpdate = (value) => {};
+
+  const handleSectionUpdate = (id) => {
+    setViewID(id);
+    setType("update");
+    setCurrentPage(false);
   };
 
   return (
     <div>
-      {currentPage === "sectionList" ? (
+      {currentPage ? (
         <SectionList
           setCurrentPage={setCurrentPage}
-          handleCreateUpdate={handleCreateUpdate}
+          handleSectionUpdate={handleSectionUpdate}
         />
-      ) : currentPage === "sectionCreateUpdate" ? (
-        <SectionCreateUpdate create={create} setCurrentPage={setCurrentPage} />
-      ) : null}
+      ) : (
+        <SectionCreateUpdate type={type} setCurrentPage={setCurrentPage} />
+      )}
     </div>
   );
 };

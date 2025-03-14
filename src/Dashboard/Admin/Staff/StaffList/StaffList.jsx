@@ -8,9 +8,6 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { PiToggleRight } from "react-icons/pi";
 import CustomSearchForm from "../../../../Component/CustomSearchForm/CustomSearchForm";
-import export_icon from "../../../../../public/svg/export.svg";
-import print from "../../../../../public/svg/print.svg";
-import { FaPlus } from "react-icons/fa";
 import LoginDetails from "../../Student/LoginDetails";
 import PageMenuDiraction from "../../../../Component/PageMenuDiraction/PageMenuDiraction";
 

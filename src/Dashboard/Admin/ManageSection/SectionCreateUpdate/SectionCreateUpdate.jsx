@@ -2,14 +2,14 @@ import React from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import InputField from "../../../../Component/InputField/InputField";
 
-const SectionCreateUpdate = ({ create, setCurrentPage }) => {
+const SectionCreateUpdate = ({ type, setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            {create ? "  Update Teacher" : "  Add Teacher"}
+            {type === "create" ? "  Add Section" : "  Update Section"}
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>
@@ -45,7 +45,7 @@ const SectionCreateUpdate = ({ create, setCurrentPage }) => {
             onClick={() => setCurrentPage("sectionList")}
             className="text-[14px] font-semibold text-[#fff] bg-[#506EE4] py-[8px] px-[15px] rounded-[5px]  border"
           >
-            Add Teacher
+            Add Section
           </button>
         </div>
       </div>
