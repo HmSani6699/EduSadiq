@@ -3,14 +3,14 @@ import { IoMdInformationCircleOutline } from "react-icons/io";
 import InputField from "../../../../Component/InputField/InputField";
 import SelectInputField from "../../../../Component/SelectInputField/SelectInputField";
 
-const ClassCreateUpdate = ({ create, setCurrentPage }) => {
+const ClassCreateUpdate = ({ type, setCurrentPage }) => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
       <div className="flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            {create ? "  Update Class" : "  Add Class"}
+            {type === "create" ? "  Add Class Name" : "  Update Class Name"}
           </h2>
           <div className="flex items-center gap-[10px]">
             <p className="text-[#6A7287] text-[14px]">Dashboard</p>

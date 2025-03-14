@@ -3,29 +3,28 @@ import ClassCreateUpdate from "./ClassCreateUpdate/ClassCreateUpdate";
 import ClassListComponent from "./ClassListComponent/ClassListComponent";
 
 const ManageClass = () => {
-  const [currentPage, setCurrentPage] = useState("classList");
-  const [create, setCreate] = useState(false);
+  const [currentPage, setCurrentPage] = useState(true);
+  const [type, setType] = useState("create");
+  const [viewID, setViewID] = useState();
 
-  const handleCreateUpdate = (value) => {
-    if (value == "classUpdate") {
-      setCreate(true);
-      setCurrentPage("classCreateUpdate");
-    }
-    if (value == "classCreate") {
-      setCurrentPage("classCreateUpdate");
-    }
+  const handleCreateUpdate = (value) => {};
+
+  const handleClassNameUpdate = (id) => {
+    setViewID(id);
+    setType("update");
+    setCurrentPage(false);
   };
 
   return (
     <div>
-      {currentPage === "classList" ? (
+      {currentPage ? (
         <ClassListComponent
           setCurrentPage={setCurrentPage}
-          handleCreateUpdate={handleCreateUpdate}
+          handleClassNameUpdate={handleClassNameUpdate}
         />
-      ) : currentPage === "classCreateUpdate" ? (
-        <ClassCreateUpdate create={create} setCurrentPage={setCurrentPage} />
-      ) : null}
+      ) : (
+        <ClassCreateUpdate type={type} setCurrentPage={setCurrentPage} />
+      )}
     </div>
   );
 };
