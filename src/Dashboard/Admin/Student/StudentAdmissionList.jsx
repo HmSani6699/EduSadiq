@@ -19,7 +19,7 @@ import Email from "../../../Component/Email/Email";
 import PhoneComponent from "../../../Component/PhoneComponent/PhoneComponent";
 import PageMenuDiraction from "../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const StudentAdmissionList = ({ setCurrentPage, handleScheduleUpdateType }) => {
+const StudentAdmissionList = ({ setCurrentPage, handleStudentUpdate }) => {
   const [message, setMessage] = useState(false);
   const [email, setEmail] = useState(false);
   const [phone, setPhone] = useState(false);
@@ -223,7 +223,7 @@ const StudentAdmissionList = ({ setCurrentPage, handleScheduleUpdateType }) => {
                           </button>
 
                           <button
-                            onClick={() => handleScheduleUpdateType()}
+                            onClick={() => handleStudentUpdate()}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <AiOutlineEdit />

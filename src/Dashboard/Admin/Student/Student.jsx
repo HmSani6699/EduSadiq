@@ -9,11 +9,11 @@ import StudentProfile from "../../../Component/Profile/StudentProfile/StudentPro
 const Student = () => {
   const [currentPage, setCurrentPage] = useState(true);
   const [type, setType] = useState("create");
-  const [vewiID, setViewID] = useState();
+  const [viewID, setViewID] = useState();
 
   const handleScheduleCreateUpdate = (type) => {};
 
-  const handleScheduleUpdateType = (id) => {
+  const handleStudentUpdate = (id) => {
     setViewID(id);
     setType("update");
     setCurrentPage(false);
@@ -26,7 +26,7 @@ const Student = () => {
       ) : currentPage ? (
         <StudentAdmissionList
           setCurrentPage={setCurrentPage}
-          handleScheduleUpdateType={handleScheduleUpdateType}
+          handleStudentUpdate={handleStudentUpdate}
         />
       ) : (
         <StudentCreateUpdate setCurrentPage={setCurrentPage} type={type} />

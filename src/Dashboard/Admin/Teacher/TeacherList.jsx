@@ -7,16 +7,11 @@ import { IoEyeOutline } from "react-icons/io5";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { PiToggleRight } from "react-icons/pi";
-
 import CustomSearchForm from "../../../Component/CustomSearchForm/CustomSearchForm";
-
-import export_icon from "../../../../public/svg/export.svg";
-import print from "../../../../public/svg/print.svg";
-import { FaPlus } from "react-icons/fa";
 import LoginDetails from "../Student/LoginDetails";
 import PageMenuDiraction from "../../../Component/PageMenuDiraction/PageMenuDiraction";
 
-const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
+const TeacherList = ({ setCurrentPage, handleTeacherUpdate }) => {
   const [view, setView] = useState("list");
   const [loginDetails, setLoginDetails] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
@@ -32,9 +27,9 @@ const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
         title="Teacher List"
         currentMenu="Teacher"
         currentPage="Teacher List"
-        handleCreateUpdate={handleCreateUpdate}
-        functionValue="teacherCreate"
+        setCurrentPage={setCurrentPage}
         buttonTitle="Add Teacher"
+        addButton={true}
       />
       {/* =====> Tab Part End <===== */}
       <div className="w-full overflow-x-auto bg-white rounded-[10px] border shadow-sm">
@@ -187,7 +182,7 @@ const TeacherList = ({ setCurrentPage, handleCreateUpdate }) => {
                           </button>
 
                           <button
-                            onClick={() => handleCreateUpdate("teacherUpdate")}
+                            onClick={() => handleTeacherUpdate()}
                             className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
                           >
                             <AiOutlineEdit />
