@@ -9,7 +9,7 @@ const SelectInputField = ({ title, options, setValue }) => {
       </p>
       <select
         onChange={(e) => setValue(e.target.value)}
-        className=" w-full py-[10px] px-2 text-[14px] font-[400] rounded-[5px] leading-[22px] text-[#515B73] border border-[#E3E5E8] outline-[#506EE4] input_filed_gray mt-1.5"
+        className=" w-full py-[9px] px-2 text-[14px] font-[400] rounded-[5px] leading-[22px] text-[#515B73] border border-[#E3E5E8] outline-[#506EE4] input_filed_gray mt-1.5"
       >
         <option value="">Please Select</option>
 
