@@ -9,10 +9,19 @@ import edu_logo from "../../../public/svg/edulogo.svg";
 import logo_out from "../../../public/svg/logout.svg";
 import full_screen from "../../../public/svg/fullscreen.svg";
 import AdminLeftNavber from "../../Pages/Navber/AdminLeftNavber/AdminLeftNavber";
+import language from "../../../src/assets/svg/language.svg";
+import { useTranslation } from "react-i18next";
 
 const AdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    // Set direction if Arabic
+    // document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
+  };
 
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
@@ -78,12 +87,17 @@ const AdminLayout = () => {
 
             {/* Title */}
             <h2 className="font-semibold lg:pl-[270px] lg:block hidden text-[24px]">
-              Welcome to Admin
+              {/* Welcome to Admin */} {t("hallo")}
             </h2>
+
+            <button onClick={() => changeLanguage("en")}>English</button>
+            <button onClick={() => changeLanguage("bn")}>বাংলা</button>
+            <button onClick={() => changeLanguage("ar")}>العربية</button>
 
             {/* Right Side */}
             <div className="flex items-center gap-5 justify-between">
-              <img src={seting_icon} alt="Settings Icon" />
+              {/* <img src={seting_icon} alt="Settings Icon" /> */}
+              <img src={language} alt="Settings Icon" />
               <IoNotificationsOutline className="text-[18px] cursor-pointer" />
               <button className="lg:block hidden" onClick={toggleFullScreen}>
                 <img src={full_screen} alt="" />
