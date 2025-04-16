@@ -16,11 +16,15 @@ const AdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const { t, i18n } = useTranslation();
+  const [arabicLayout, setArabicLayout] = useState("");
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     // Set direction if Arabic
-    // document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
+    setArabicLayout(document.documentElement.dir);
+    setLanguageMenuOpen(false);
   };
 
   const toggleFullScreen = () => {
@@ -73,7 +77,11 @@ const AdminLayout = () => {
       </div>
 
       {/* ====> Right Content <==== */}
-      <div className="transition-all duration-300 w-full lg:pl-[270px] relative">
+      <div
+        className={`transition-all duration-300 w-full  relative ${
+          arabicLayout === "rtl" ? "lg:pr-[270px]" : "lg:pl-[270px]"
+        }`}
+      >
         {/* ====> Top Navbar (Fixed) <==== */}
         <div className="fixed top-0 left-0  right-0 lg:pr-[15px] z-40 w-full bg-white shadow-sm">
           <div className="flex items-center justify-between py-[8px] px-[10px] w-full max-w-[1400px] mx-auto">
@@ -90,14 +98,25 @@ const AdminLayout = () => {
               {/* Welcome to Admin */} {t("hallo")}
             </h2>
 
-            <button onClick={() => changeLanguage("en")}>English</button>
-            <button onClick={() => changeLanguage("bn")}>বাংলা</button>
-            <button onClick={() => changeLanguage("ar")}>العربية</button>
-
             {/* Right Side */}
             <div className="flex items-center gap-5 justify-between">
               {/* <img src={seting_icon} alt="Settings Icon" /> */}
-              <img src={language} alt="Settings Icon" />
+              <div className="relative">
+                <button onClick={() => setLanguageMenuOpen(!languageMenuOpen)}>
+                  <img src={language} alt="Settings Icon" />
+                </button>
+                {languageMenuOpen && (
+                  <div className="absolute top-[25px] left-0 flex flex-col gap-2 bg-white shadow-lg p-4 rounded-md z-50">
+                    <button onClick={() => changeLanguage("en")}>
+                      English
+                    </button>
+                    <button onClick={() => changeLanguage("bn")}>বাংলা</button>
+                    <button onClick={() => changeLanguage("ar")}>
+                      العربية
+                    </button>{" "}
+                  </div>
+                )}
+              </div>
               <IoNotificationsOutline className="text-[18px] cursor-pointer" />
               <button className="lg:block hidden" onClick={toggleFullScreen}>
                 <img src={full_screen} alt="" />
