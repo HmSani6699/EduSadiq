@@ -1,3 +1,8 @@
 {
-  "hallo": "english"
+  "Dashboard": "Dashboard",
+  "Menu_1": "Student",
+  "Menu_2": "Teacher",
+  "Admission": "Student Admission",
+  "Manage_tracher": "Manage Teacher",
+  "Teacher_Add_Class": "Teacher Add Class"
 }

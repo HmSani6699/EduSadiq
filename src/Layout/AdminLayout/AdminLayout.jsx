@@ -95,7 +95,7 @@ const AdminLayout = () => {
 
             {/* Title */}
             <h2 className="font-semibold lg:pl-[270px] lg:block hidden text-[24px]">
-              {/* Welcome to Admin */} {t("hallo")}
+              Welcome to Admin
             </h2>
 
             {/* Right Side */}

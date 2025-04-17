@@ -1,3 +1,8 @@
 {
-  "hallo": "arabic"
+  "Dashboard": "لوحة القيادة",
+  "Menu_1": "طالب",
+  "Menu_2": "مدرس",
+  "Admission": "قبول الطلاب",
+  "Manage_tracher": "إدارة المعلم",
+  "Teacher_Add_Class": "إضافة المعلم للفصل"
 }

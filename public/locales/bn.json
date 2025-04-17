@@ -1,3 +1,8 @@
 {
-  "hallo": "bangla"
+  "Dashboard": "ড্যাশবোর্ড",
+  "Menu_1": "শিক্ষার্থী",
+  "Menu_2": "শিক্ষক",
+  "Admission": "শিক্ষার্থী ভর্তি",
+  "Manage_tracher": "শিক্ষক ব্যবস্থাপনা",
+  "Teacher_Add_Class": "টিচার অ্যাড ক্লাস"
 }

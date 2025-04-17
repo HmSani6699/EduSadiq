@@ -24,15 +24,18 @@ import { BiBook } from "react-icons/bi";
 import MenuDiraction from "../../../Component/MenuDiraction/MenuDiraction";
 import NavList from "../../../Component/NavList/NavList";
 import { LuClipboardList, LuTable2 } from "react-icons/lu";
+import { useTranslation } from "react-i18next";
 
 const AdminLeftNavber = ({ setIsSidebarOpen }) => {
+  const { t } = useTranslation();
+
   return (
     <div className=" pb-[20px] pl-[5px]">
       <MenuDiraction title={"Main"} />
 
       <NavList
         url={"/admin/dashboard"}
-        title={"Dashboard"}
+        title={t("Dashboard")}
         setIsSidebarOpen={setIsSidebarOpen}
       >
         <MdOutlineDashboard className="text-[18px] text-[#515B73]" />
@@ -42,22 +45,22 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
         </NavList> */}
 
       {/* =======> Student <======= */}
-      <MenuDiraction title={"Student"} />
+      <MenuDiraction title={t("Menu_1")} />
 
       <NavList
         url={"/admin/student_admission"}
-        title={"Admission"}
+        title={t("Admission")}
         children_true={false}
       >
         <FaUserGraduate className="text-[18px] text-[#515B73]" />
       </NavList>
 
       {/* ======> Teacher <====== */}
-      <MenuDiraction title={"Teacher"} />
+      <MenuDiraction title={t("Menu_2")} />
 
       <NavList
         url={"/admin/teacher_admission"}
-        title={"Manage Teacher"}
+        title={t("Manage_tracher")}
         children_true={false}
       >
         <FaChalkboardTeacher className="text-[18px] text-[#515B73]" />
@@ -65,7 +68,7 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
 
       <NavList
         url={"/admin/teacher_add_class"}
-        title={"Teacher Add Class"}
+        title={t("Teacher_Add_Class")}
         children_true={false}
       >
         <BiBook className="text-[18px] text-[#515B73]" />
