@@ -1,8 +1,20 @@
 {
   "Dashboard": "Dashboard",
+  "Menu": "Main",
   "Menu_1": "Student",
   "Menu_2": "Teacher",
+  "Menu_3": "Staff",
+  "Menu_4": "Academic",
+  "Menu_5": "Examinations",
   "Admission": "Student Admission",
   "Manage_tracher": "Manage Teacher",
-  "Teacher_Add_Class": "Teacher Add Class"
+  "Teacher_Add_Class": "Teacher Add Class",
+  "Manage_staff": "Manage Staff",
+  "Class_room": "Manage Class Room",
+  "Manage_section": "Manage Section",
+  "Manage_class_name": "Manage Class Name",
+  "Manage_subject": "Manage Subject",
+  "Manage_class_group": "Manage Class Group",
+  "Manage_time_table": "Manage Time Table",
+  "Class_routine": "Manage Class Routine"
 }

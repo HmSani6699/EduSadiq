@@ -1,8 +1,20 @@
 {
   "Dashboard": "ড্যাশবোর্ড",
+  "Menu": "হোম",
   "Menu_1": "শিক্ষার্থী",
   "Menu_2": "শিক্ষক",
+  "Menu_3": "কর্মী",
+  "Menu_4": "একাডেমিক",
+  "Menu_5": "পরীক্ষা",
   "Admission": "শিক্ষার্থী ভর্তি",
   "Manage_tracher": "শিক্ষক ব্যবস্থাপনা",
-  "Teacher_Add_Class": "টিচার অ্যাড ক্লাস"
+  "Teacher_Add_Class": "শিক্ষক অ্যাড ক্লাস",
+  "Manage_staff": "কর্মী ব্যবস্থাপনা",
+  "Class_room": "ক্লাস রুম",
+  "Manage_section": "ক্লাস বিভাগ",
+  "Manage_class_name": "ক্লাসের নাম",
+  "Manage_subject": "ক্লাসের বিষয়",
+  "Manage_class_group": "ক্লাস গ্রুপ",
+  "Manage_time_table": "ক্লাস টাইম টেবিল",
+  "Class_routine": "ক্লাস রুটিন"
 }

@@ -31,7 +31,7 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
 
   return (
     <div className=" pb-[20px] pl-[5px]">
-      <MenuDiraction title={"Main"} />
+      <MenuDiraction title={t("Menu")} />
 
       <NavList
         url={"/admin/dashboard"}
@@ -75,17 +75,17 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
       </NavList>
 
       {/* ======> Staff <====== */}
-      <MenuDiraction title={"Staff"} />
+      <MenuDiraction title={t("Menu_3")} />
       <NavList
         url={"/admin/staff_admission"}
-        title={"Manage Staff"}
+        title={t("Manage_staff")}
         children_true={false}
       >
         <FaUsersCog className="text-[18px] text-[#515B73]" />
       </NavList>
 
       {/* =====> Class <====== */}
-      <MenuDiraction title={"Academic"} />
+      <MenuDiraction title={t("Menu_4")} />
 
       {/* <div>
           <div
@@ -117,45 +117,51 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
             }`}
           > */}
       {/* Nav Links with Correct Icons */}
-      <NavList url={"/admin/class-routine"} title={"Class Routine"}>
-        <FaRegCalendarAlt className="text-[18px] text-[#515B73]" />
-      </NavList>
-      <NavList url={"/admin/class-room"} title={"Class Room"}>
+
+      <NavList url={"/admin/class-room"} title={t("Class_room")}>
         <FaChalkboardTeacher className="text-[18px] text-[#515B73]" />
       </NavList>
 
-      <NavList url={"/admin/section"} title={"Manage Section"}>
+      <NavList url={"/admin/section"} title={t("Manage_section")}>
         <FaUniversity className="text-[18px] text-[#515B73]" />
       </NavList>
-      <NavList url={"/admin/class"} title={" Class Name"} children_true={false}>
+      <NavList
+        url={"/admin/class"}
+        title={t("Manage_class_name")}
+        children_true={false}
+      >
         <FaChalkboardTeacher className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
         url={"/admin/subject"}
-        title={"Manage Subject"}
+        title={t("Manage_subject")}
         children_true={false}
       >
         <BiBook className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
         url={"/admin/class_group"}
-        title={"Manage Class Group"}
+        title={t("Manage_class_group")}
         children_true={false}
       >
         <FaLayerGroup className="text-[18px] text-[#515B73]" />
       </NavList>
+      <NavList url={"/admin/class-routine"} title={t("Class_routine")}>
+        <FaRegCalendarAlt className="text-[18px] text-[#515B73]" />
+      </NavList>
       <NavList
         url={"/admin/time-table"}
-        title={"Manage Time Table"}
+        title={t("Manage_time_table")}
         children_true={false}
       >
         <LuTable2 className="text-[18px] text-[#515B73]" />
       </NavList>
+
       {/* </div>
         </div> */}
 
       {/* =====> Examinations  <====== */}
-      <MenuDiraction title={"Examinations"} />
+      <MenuDiraction title={t("Menu_5")} />
       <NavList
         url={"/admin/exam_type"}
         title={"Exam Type"}

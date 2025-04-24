@@ -1,8 +1,20 @@
 {
   "Dashboard": "لوحة القيادة",
+  "Menu": "بيت",
   "Menu_1": "طالب",
   "Menu_2": "مدرس",
+  "Menu_3": "طاقم عمل",
+  "Menu_4": "أكاديمي",
+  "Menu_5": "اختبار",
   "Admission": "قبول الطلاب",
   "Manage_tracher": "إدارة المعلم",
-  "Teacher_Add_Class": "إضافة المعلم للفصل"
+  "Teacher_Add_Class": "إضافة المعلم للفصل",
+  "Manage_staff": "إدارة الموظفين",
+  "Class_room": "غرفة كلاس",
+  "Manage_section": "فئة الفصل",
+  "Manage_class_name": "اسم الفصل",
+  "Manage_subject": "موضوع الفصل",
+  "Manage_class_group": "مجموعة الصف",
+  "Class_routine": "روتين الفصل",
+  "Manage_time_table": "جدول الحصص"
 }
