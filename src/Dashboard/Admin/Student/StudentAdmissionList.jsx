@@ -18,6 +18,7 @@ import Message from "../../../Component/Message/Message";
 import Email from "../../../Component/Email/Email";
 import PhoneComponent from "../../../Component/PhoneComponent/PhoneComponent";
 import PageMenuDiraction from "../../../Component/PageMenuDiraction/PageMenuDiraction";
+import Swal from "sweetalert2";
 
 const StudentAdmissionList = ({ setCurrentPage, handleStudentUpdate }) => {
   const [message, setMessage] = useState(false);
@@ -30,6 +31,29 @@ const StudentAdmissionList = ({ setCurrentPage, handleStudentUpdate }) => {
 
   const handleClickThreeDot = (id) => {
     setThreeDoteId((prevId) => (prevId === id ? null : id));
+  };
+
+  // ======= Handle Delete Student =======//
+  const handleDeleteStudent = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setThreeDoteId("");
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+      setThreeDoteId("");
+    });
   };
 
   return (
@@ -236,7 +260,10 @@ const StudentAdmissionList = ({ setCurrentPage, handleStudentUpdate }) => {
                             <MdLockOutline />
                             Login Details
                           </button>
-                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                          <button
+                            onClick={() => setThreeDoteId("")}
+                            className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
+                          >
                             <PiToggleRight />
                             Disable
                           </button>
@@ -246,7 +273,10 @@ const StudentAdmissionList = ({ setCurrentPage, handleStudentUpdate }) => {
                               Promote Student
                             </button>
                           </Link>
-                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                          <button
+                            onClick={() => handleDeleteStudent()}
+                            className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
+                          >
                             <AiOutlineDelete />
                             Delete
                           </button>

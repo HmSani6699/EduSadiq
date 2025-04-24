@@ -7,6 +7,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import CustomSearchForm from "../../../../../Component/CustomSearchForm/CustomSearchForm";
 import PageMenuDiraction from "../../../../../Component/PageMenuDiraction/PageMenuDiraction";
+import Swal from "sweetalert2";
 
 const AddClassList = ({ setCurrentPage, handleAddClassUpdate }) => {
   const [view, setView] = useState("list");
@@ -14,6 +15,29 @@ const AddClassList = ({ setCurrentPage, handleAddClassUpdate }) => {
 
   const handleClickThreeDot = (id) => {
     setThreeDoteId((prevId) => (prevId === id ? null : id));
+  };
+
+  // ======= Handle Delete Student =======//
+  const handleDeleteTeacher = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setThreeDoteId("");
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+      setThreeDoteId("");
+    });
   };
 
   return (
@@ -28,11 +52,11 @@ const AddClassList = ({ setCurrentPage, handleAddClassUpdate }) => {
         addButton={true}
       />
       {/* =====> Tab Part End <===== */}
-      <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-lg border">
-        <div className="flex items-center justify-between bg-white px-[20px] pt-[20px]">
+      <div className="w-full overflow-x-auto bg-white rounded-[10px] border shadow-sm">
+        <div className="lg:flex items-center justify-between bg-white px-[20px] lg:pt-[20px] pt-[10px]">
           <h2 className="text-lg font-semibold">Teacher List</h2>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mt-[15px] lg:mt-0">
             {/* Filter Dropdown */}
             <button className="border px-3 py-1 rounded-[5px] text-[14px] flex items-center gap-2 text-gray-600">
               <FaFilter className="text-[14px]" /> Filter
@@ -64,8 +88,8 @@ const AddClassList = ({ setCurrentPage, handleAddClassUpdate }) => {
         </div>
         <div className="border h-[1px] border-gray-200 w-full my-[10px]"></div>
         {/* =====> Search Div  <====== */}
-        <div className="flex justify-between items-center px-[20px]">
-          <div className="flex items-center gap-[10px] lg:w-1/2 w-full">
+        <div className="flex lg:justify-between lg:items-center justify-end items-end px-[20px]">
+          <div className="lg:flex items-center gap-[10px] lg:w-1/2 w-full hidden ">
             <p className="text-[#515B73] text-[14px]">Row Per Page</p>
             <select className="outline-none border py-[8px] px-[10px] rounded-[5px] text-[#515B73]">
               <option value="10">10</option>
@@ -219,7 +243,10 @@ const AddClassList = ({ setCurrentPage, handleAddClassUpdate }) => {
                             <AiOutlineEdit />
                             Edit
                           </button>
-                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                          <button
+                            onClick={() => handleDeleteTeacher()}
+                            className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
+                          >
                             <AiOutlineDelete />
                             Delete
                           </button>

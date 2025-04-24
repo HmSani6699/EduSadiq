@@ -10,6 +10,7 @@ import { PiToggleRight } from "react-icons/pi";
 import CustomSearchForm from "../../../Component/CustomSearchForm/CustomSearchForm";
 import LoginDetails from "../Student/LoginDetails";
 import PageMenuDiraction from "../../../Component/PageMenuDiraction/PageMenuDiraction";
+import Swal from "sweetalert2";
 
 const TeacherList = ({ setCurrentPage, handleTeacherUpdate }) => {
   const [view, setView] = useState("list");
@@ -18,6 +19,29 @@ const TeacherList = ({ setCurrentPage, handleTeacherUpdate }) => {
 
   const handleClickThreeDot = (id) => {
     setThreeDoteId((prevId) => (prevId === id ? null : id));
+  };
+
+  // ======= Handle Delete Teacher =======//
+  const handleDeleteTeacher = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setThreeDoteId("");
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+      setThreeDoteId("");
+    });
   };
 
   return (
@@ -195,12 +219,18 @@ const TeacherList = ({ setCurrentPage, handleTeacherUpdate }) => {
                             <MdLockOutline />
                             Login Details
                           </button>
-                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                          <button
+                            onClick={() => setThreeDoteId("")}
+                            className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
+                          >
                             <PiToggleRight />
                             Disable
                           </button>
 
-                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                          <button
+                            onClick={() => handleDeleteTeacher()}
+                            className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100"
+                          >
                             <AiOutlineDelete />
                             Delete
                           </button>
