@@ -8,7 +8,7 @@ const StudentPromotion = () => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
-      <div className="flex items-center justify-between pt-[10px] pb-[20px]">
+      <div className="lg:flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
             Student Promotion
@@ -22,7 +22,7 @@ const StudentPromotion = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-[10px]">
+        <div className="flex items-center gap-[10px] mt-[10px] lg:mt-0">
           <button className="bg-white border rounded-[5px] py-[10px] px-[10px]">
             <img src={print} alt="" />
           </button>
@@ -45,7 +45,7 @@ const StudentPromotion = () => {
 
         {/* =====> Promotion form <===== */}
         <div className="p-5  ">
-          <div className="flex items-center">
+          <div className="lg:flex items-center">
             {/* Left Section */}
             <div className="p-5 border w-full lg:w-[45%]  rounded-lg">
               <h2 className="font-medium mb-2">Current Session *</h2>
@@ -62,7 +62,7 @@ const StudentPromotion = () => {
             </div>
 
             {/* Swap Button */}
-            <div className="lg:w-[10%] h-[50ppx] flex justify-center">
+            <div className="lg:w-[10%] h-[50ppx] flex justify-center my-[20px] lg:my-0">
               <button className="p-3 rounded-md bg-blue-600 h-[50px] text-white flex items-center justify-center">
                 <MdCompareArrows size={24} />
               </button>
@@ -75,11 +75,11 @@ const StudentPromotion = () => {
 
               <div className="mt-5">
                 <h2 className="font-medium mb-2">Promotion to Class *</h2>
-                <div className="flex flex-col sm:flex-row w-full items-center gap-4">
-                  <div className="w-[50%]">
+                <div className="lg:flex flex-col sm:flex-row w-full items-center gap-4">
+                  <div className="lg:w-[50%]">
                     <SelectInputField title={"Class"} />
                   </div>
-                  <div className="w-[50%]">
+                  <div className="lg:w-[50%]">
                     <SelectInputField title={"Section"} />
                   </div>
                 </div>
