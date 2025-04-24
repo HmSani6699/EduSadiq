@@ -129,7 +129,7 @@ const Dashboard = () => {
             </div>
             <div>
               <h2 className="text-[25px] font-bold text-[#202C4B]">10</h2>
-              <p className="text-gray-500 text-[14px]">Total Student</p>
+              <p className="text-gray-500 text-[14px]">Total Subject</p>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ const FineCollected = () => {
     <div className="bg-white p-5 rounded-lg shadow-sm flex justify-between items-center w-full">
       {/* Left Side: Title & Amount */}
       <div>
-        <h2 className="text-gray-500 text-md">Total Fees Collected</h2>
+        <h2 className="text-gray-500 text-md">Total Fine Collected</h2>
         <p className="text-[18px] font-bold text-gray-900 mt-[6px]">
           $25,000,02
         </p>
