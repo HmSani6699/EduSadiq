@@ -16,5 +16,10 @@
   "Manage_subject": "موضوع الفصل",
   "Manage_class_group": "مجموعة الصف",
   "Class_routine": "روتين الفصل",
-  "Manage_time_table": "جدول الحصص"
+  "Manage_time_table": "جدول الحصص",
+  "Exam_type": "مرة أخرى",
+  "Exam_schedule": "إختيارك",
+  "Exam_attendance": "مستلزمات الحياة",
+  "Exam_result": "كرة القدم",
+  "Exam_grade": "الرياضة"
 }

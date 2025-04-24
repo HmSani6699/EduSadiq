@@ -164,14 +164,14 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
       <MenuDiraction title={t("Menu_5")} />
       <NavList
         url={"/admin/exam_type"}
-        title={"Exam Type"}
+        title={t("Exam_type")}
         children_true={false}
       >
         <FaListAlt className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
         url={"/admin/exam_schedule"}
-        title={"Exam Schedule"}
+        title={t("Exam_schedule")}
         children_true={false}
       >
         <FaRegClock className="text-[18px] text-[#515B73]" />
@@ -179,21 +179,21 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
 
       <NavList
         url={"/admin/exam_attendance"}
-        title={"Exam Attendance"}
+        title={t("Exam_attendance")}
         children_true={false}
       >
         <FaUserCheck className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
         url={"/admin/exam_result"}
-        title={"Exam Result"}
+        title={t("Exam_result")}
         children_true={false}
       >
         <FaClipboardCheck className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
         url={"/admin/exam_grade"}
-        title={"Exam Grade"}
+        title={t("Exam_grade")}
         children_true={false}
       >
         <FaAward className="text-[18px] text-[#515B73]" />

@@ -16,5 +16,10 @@
   "Manage_subject": "Manage Subject",
   "Manage_class_group": "Manage Class Group",
   "Manage_time_table": "Manage Time Table",
-  "Class_routine": "Manage Class Routine"
+  "Class_routine": "Manage Class Routine",
+  "Exam_type": "Exam Type",
+  "Exam_schedule": "Exam Schedule",
+  "Exam_attendance": "Exam Attendance",
+  "Exam_result": "Exam Result",
+  "Exam_grade": "Exam Grade"
 }

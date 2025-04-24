@@ -16,5 +16,10 @@
   "Manage_subject": "ক্লাসের বিষয়",
   "Manage_class_group": "ক্লাস গ্রুপ",
   "Manage_time_table": "ক্লাস টাইম টেবিল",
-  "Class_routine": "ক্লাস রুটিন"
+  "Class_routine": "ক্লাস রুটিন",
+  "Exam_type": "পরীক্ষার নাম",
+  "Exam_schedule": "পরীক্ষার সময়সূচী",
+  "Exam_attendance": "পরীক্ষার উপস্থিতি",
+  "Exam_result": "পরীক্ষার ফলাফল",
+  "Exam_grade": "পরীক্ষার গ্রেড"
 }
