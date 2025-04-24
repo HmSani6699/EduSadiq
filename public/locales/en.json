@@ -27,5 +27,10 @@
   "Manage_fees_type": "Manage Fees Type",
   "Manage_fees_collected": "Manage Fees Collected",
   "Manage_donation": "Manage Donation",
-  "Notice_board": "Notice Board"
+  "Notice_board": "Notice Board",
+  "Admin_dashboard": "Admin Dashboard",
+  "Total_Student": "Total Student",
+  "Total_Teacher": "Total Teacher",
+  "Total_Staff": "Total Staff",
+  "Total_Subject": "Total Subject"
 }

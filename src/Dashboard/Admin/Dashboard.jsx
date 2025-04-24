@@ -9,10 +9,8 @@ import {
   BarChart,
   Bar,
   XAxis,
-  YAxis,
   Tooltip,
   ResponsiveContainer,
-  Legend,
   PieChart,
   Pie,
   Cell,
@@ -24,8 +22,11 @@ import FoodFeesCollected from "./Finance/FoodFeesCollected/FoodFeesCollected";
 import DonationCollected from "./Finance/DonationCollected/DonationCollected";
 import FineCollected from "./Finance/FineCollected/FineCollected";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Dashboard = () => {
+  const { t } = useTranslation();
+
   const data = [
     { name: "2023", value1: 5, value2: 5 },
     { name: "2023", value1: 10, value2: 10 },
@@ -52,12 +53,12 @@ const Dashboard = () => {
       <div className="lg:flex items-center justify-between pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
-            Admin Dashboard
+            {t("Admin_dashboard")}
           </h2>
           <div className="flex items-center gap-[10px]">
-            <p className="text-[#6A7287] text-[14px]">Dashboard</p>
+            <p className="text-[#6A7287] text-[14px]">{t("Dashboard")}</p>
             <p className="text-[#6a72876c]">/</p>
-            <p className="text-[#6A7287] text-[14px]">Admin Dashboard</p>
+            <p className="text-[#6A7287] text-[14px]">{t("Admin_dashboard")}</p>
           </div>
         </div>
 
@@ -85,54 +86,26 @@ const Dashboard = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4  gap-[20px] w-full mb-[30px]">
-        {/* ====> Total Student <==== */}
-        <div className="bg-white p-[10px] shadow-md rounded-[10px]">
-          <div className="flex items-center gap-[10px]">
-            <div className="h-[50px] w-[50px] bg-[#86ddff28] p-[8px] rounded-[8px]">
-              <img src={student} alt="" />
-            </div>
-            <div>
-              <h2 className="text-[25px] font-bold text-[#202C4B]">120</h2>
-              <p className="text-gray-500 text-[14px]">Total Student</p>
-            </div>
-          </div>
-        </div>
-        {/* ====> Total Student <==== */}
-        <div className="bg-white p-[10px] shadow-md rounded-[10px]">
-          <div className="flex items-center gap-[10px]">
-            <div className="h-[50px] w-[50px] bg-[#fde9ed86] p-[8px] rounded-[8px]">
-              <img src={teacher} alt="" />
-            </div>
-            <div>
-              <h2 className="text-[25px] font-bold text-[#202C4B]">20</h2>
-              <p className="text-gray-500 text-[14px]">Total Teacher</p>
+        {[
+          { image: student, title: t("Total_Student"), value: 120 },
+          { image: teacher, title: t("Total_Teacher"), value: 120 },
+          { image: staff, title: t("Total_Staff"), value: 120 },
+          { image: subject, title: t("Total_Subject"), value: 120 },
+        ].map((item, i) => (
+          <div key={i} className="bg-white p-[10px] shadow-md rounded-[10px]">
+            <div className="flex items-center gap-[10px]">
+              <div className="h-[50px] w-[50px] bg-[#86ddff28] p-[8px] rounded-[8px]">
+                <img src={item?.image} alt="image" />
+              </div>
+              <div>
+                <h2 className="text-[25px] font-bold text-[#202C4B]">
+                  {item?.value}
+                </h2>
+                <p className="text-gray-500 text-[14px]">{item?.title}</p>
+              </div>
             </div>
           </div>
-        </div>
-        {/* ====> Total Student <==== */}
-        <div className="bg-white p-[10px] shadow-md rounded-[10px]">
-          <div className="flex items-center gap-[10px]">
-            <div className="h-[50px] w-[50px] bg-[#FEF8EA] p-[8px] rounded-[8px]">
-              <img src={staff} alt="" />
-            </div>
-            <div>
-              <h2 className="text-[25px] font-bold text-[#202C4B]">10</h2>
-              <p className="text-gray-500 text-[14px]">Total Staff</p>
-            </div>
-          </div>
-        </div>
-        {/* ====> Total Student <==== */}
-        <div className="bg-white p-[10px] shadow-md rounded-[10px]">
-          <div className="flex items-center gap-[10px]">
-            <div className="h-[50px] w-[50px] bg-[#FDE9ED] p-[8px] rounded-[8px]">
-              <img src={subject} alt="" />
-            </div>
-            <div>
-              <h2 className="text-[25px] font-bold text-[#202C4B]">10</h2>
-              <p className="text-gray-500 text-[14px]">Total Subject</p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* ===== */}

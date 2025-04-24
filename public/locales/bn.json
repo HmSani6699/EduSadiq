@@ -27,5 +27,10 @@
   "Manage_fees_type": "ফি নাম",
   "Manage_fees_collected": "ফি সংগ্রহ ",
   "Manage_donation": "ডোনেশন ব্যবস্থাপনা",
-  "Notice_board": "নোটিশ বোর্ড"
+  "Notice_board": "নোটিশ বোর্ড",
+  "Admin_dashboard": "অ্যাডমিন ড্যাশবোর্ড",
+  "Total_Student": "মোট শিক্ষার্থী",
+  "Total_Teacher": "মোট শিক্ষক",
+  "Total_Staff": "মোট কর্মী",
+  "Total_Subject": "মোট বিষয়"
 }

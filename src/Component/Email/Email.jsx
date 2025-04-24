@@ -16,7 +16,7 @@ const Email = ({ setEmail }) => {
     }
   };
   return (
-    <div className="fixed inset-0 z-[70] flex justify-center items-center  py-[30px] px-[20px]  bg-black bg-opacity-50">
+    <div className="fixed inset-0 z-[70] flex justify-center items-center  py-[30px] px-[10px]  bg-black bg-opacity-50">
       <div className="bg-white   rounded-lg shadow-lg relative lg:w-[500px]  w-full ">
         <div className="flex items-center justify-between border-b p-[15px]">
           <h2 className="text-[20px] text-[#202C4B] font-bold">Email</h2>
@@ -42,13 +42,13 @@ const Email = ({ setEmail }) => {
               </tr>
             </thead>
             <tbody>
-              {[1, 2, 3].map((id, index) => (
-                <tr key={id} className={"border-b"}>
+              {["Father", "Mother", "Guardin"].map((item, i) => (
+                <tr key={i} className={"border-b"}>
                   <td className="whitespace-nowrap text-[#3D5EE1] text-[14px] pl-[20px] h-10 px-2 py-[13px]">
-                    Father
+                    {item}
                   </td>
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                    sadiq@gamil.com
+                    {item}@gamil.com
                   </td>
                   <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
                     <div className="flex items-center justify-center">
