@@ -19,6 +19,7 @@ const ParentsInfo = () => {
             <p className="text-[#506EE4] text-[14px]">Father</p>
           </div>
         </div>
+
         <div>
           <h2 className="text-[#202C4B] text-[15px] font-semibold">Phone</h2>
           <p className="text-[#202C4B] text-[14px] mt-[6px]">01996359111</p>

@@ -41,7 +41,7 @@ const StudentProfile = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-[10px]">
+        <div className="flex items-center gap-[10px] mt-[10px] lg:mt-0">
           <button className="bg-[#E9EDF4] text-[14px] text-[#515B73] font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm">
             <MdLockOutline /> Login Details
           </button>
@@ -164,7 +164,7 @@ const StudentProfile = () => {
         </div>
         <div className="lg:w-2/3">
           {/* tab */}
-          <div className="flex gap-[20px] overflow-auto feesCollect">
+          <div className="flex gap-[20px] overflow-auto feesCollect mt-[20px] lg:mt-0 pb-[15px] lg:pb-0">
             <TabButton
               title={"Student Details"}
               tabBtn={tabBtn}

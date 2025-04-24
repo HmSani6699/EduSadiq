@@ -7,8 +7,8 @@ const PreviousOrganaization = () => {
         Previous Organaization Details
       </h2>
 
-      <div className="rounded-[5px] p-[20px] flex items-center justify-between ">
-        <div>
+      <div className="rounded-[5px] p-[20px] lg:flex items-center justify-between ">
+        <div className="mb-[20px] lg:mb-0">
           <h2 className="text-[#202C4B] text-[14px] font-semibold">
             Previous Organaization Name
           </h2>
