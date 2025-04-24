@@ -6,6 +6,8 @@
   "Menu_3": "Staff",
   "Menu_4": "Academic",
   "Menu_5": "Examinations",
+  "Menu_6": "Finance",
+  "Menu_7": "Announcements",
   "Admission": "Student Admission",
   "Manage_tracher": "Manage Teacher",
   "Teacher_Add_Class": "Teacher Add Class",
@@ -21,5 +23,9 @@
   "Exam_schedule": "Exam Schedule",
   "Exam_attendance": "Exam Attendance",
   "Exam_result": "Exam Result",
-  "Exam_grade": "Exam Grade"
+  "Exam_grade": "Exam Grade",
+  "Manage_fees_type": "Manage Fees Type",
+  "Manage_fees_collected": "Manage Fees Collected",
+  "Manage_donation": "Manage Donation",
+  "Notice_board": "Notice Board"
 }

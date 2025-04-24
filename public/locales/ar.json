@@ -6,6 +6,8 @@
   "Menu_3": "طاقم عمل",
   "Menu_4": "أكاديمي",
   "Menu_5": "اختبار",
+  "Menu_6": "التمويل",
+  "Menu_7": "إعلان",
   "Admission": "قبول الطلاب",
   "Manage_tracher": "إدارة المعلم",
   "Teacher_Add_Class": "إضافة المعلم للفصل",
@@ -21,5 +23,9 @@
   "Exam_schedule": "إختيارك",
   "Exam_attendance": "مستلزمات الحياة",
   "Exam_result": "كرة القدم",
-  "Exam_grade": "الرياضة"
+  "Exam_grade": "الرياضة",
+  "Manage_fees_type": "اسم الرسوم",
+  "Manage_fees_collected": "تحصيل الرسوم",
+  "Manage_donation": "إدارة التبرعات",
+  "Notice_board": "لوحة الإعلانات"
 }

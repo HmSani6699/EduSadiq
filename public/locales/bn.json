@@ -6,6 +6,8 @@
   "Menu_3": "কর্মী",
   "Menu_4": "একাডেমিক",
   "Menu_5": "পরীক্ষা",
+  "Menu_6": "অর্থায়ন",
+  "Menu_7": "ঘোষণা",
   "Admission": "শিক্ষার্থী ভর্তি",
   "Manage_tracher": "শিক্ষক ব্যবস্থাপনা",
   "Teacher_Add_Class": "শিক্ষক অ্যাড ক্লাস",
@@ -21,5 +23,9 @@
   "Exam_schedule": "পরীক্ষার সময়সূচী",
   "Exam_attendance": "পরীক্ষার উপস্থিতি",
   "Exam_result": "পরীক্ষার ফলাফল",
-  "Exam_grade": "পরীক্ষার গ্রেড"
+  "Exam_grade": "পরীক্ষার গ্রেড",
+  "Manage_fees_type": "ফি নাম",
+  "Manage_fees_collected": "ফি সংগ্রহ ",
+  "Manage_donation": "ডোনেশন ব্যবস্থাপনা",
+  "Notice_board": "নোটিশ বোর্ড"
 }

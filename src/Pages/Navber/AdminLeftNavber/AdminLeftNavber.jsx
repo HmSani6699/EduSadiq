@@ -199,41 +199,41 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
         <FaAward className="text-[18px] text-[#515B73]" />
       </NavList>
       {/* =====> Finance  <====== */}
-      <MenuDiraction title={"Finance"} />
+      <MenuDiraction title={t("Menu_6")} />
       <NavList
         url={"/admin/fees_collect_type"}
-        title={"Manage Fees Type"}
+        title={t("Manage_fees_type")}
         children_true={false}
       >
         <FaFileInvoiceDollar className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
         url={"/admin/fees_collect"}
-        title={"Manage Fees Collected"}
+        title={t("Manage_fees_collected")}
         children_true={false}
       >
         <MdMoneyOff className="text-[18px] text-[#515B73]" />
       </NavList>
       <NavList
         url={"/admin/donation"}
-        title={"Manage Donation"}
+        title={t("Manage_donation")}
         children_true={false}
       >
         <FaHandHoldingHeart className="text-[18px] text-[#515B73]" />
       </NavList>
 
       {/* =====> Announcements  <====== */}
-      <MenuDiraction title={"Announcements"} />
+      <MenuDiraction title={t("Menu_7")} />
       <NavList
         url={"/admin/notise"}
-        title={"Notise Board"}
+        title={t("Notice_board")}
         children_true={false}
       >
         <LuClipboardList className="text-[18px] text-[#515B73]" />
       </NavList>
-      <NavList url={"/admin/events"} title={"Invoice"} children_true={false}>
+      {/* <NavList url={"/admin/events"} title={"Invoice"} children_true={false}>
         <MdOutlineEventAvailable className="text-[18px] text-[#515B73]" />
-      </NavList>
+      </NavList> */}
     </div>
   );
 };
