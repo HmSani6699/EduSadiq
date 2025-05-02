@@ -12,7 +12,7 @@ const FeesCollected = () => {
       {currentPage ? (
         <FeesCollectList setCurrentPage={setCurrentPage} />
       ) : (
-        <FeesCollectCreateUpdate type={type} setCurrentPage={setCurrentPage} />
+        <FeesCollectCreateUpdate setCurrentPage={setCurrentPage} />
       )}
     </div>
   );

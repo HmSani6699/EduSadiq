@@ -4,7 +4,6 @@ import ParentsInformation from "../../../Component/StudentAdmissionForm/ParentsI
 import SibilingInformation from "../../../Component/StudentAdmissionForm/SibilingInformation/SibilingInformation";
 import Address from "../../../Component/StudentAdmissionForm/Address/Address";
 import PreviousOrganization from "../../../Component/StudentAdmissionForm/PreviousOrganization/PreviousOrganization";
-import { IoClose } from "react-icons/io5";
 
 const StudentCreateUpdate = ({ type, setCurrentPage }) => {
   return (
@@ -23,13 +22,8 @@ const StudentCreateUpdate = ({ type, setCurrentPage }) => {
             <p className="text-[#6A7287] text-[14px]">Add Student</p>
           </div>
         </div>
-        <button
-          onClick={() => setCurrentPage("studentList")}
-          className="text-[14px] font-semibold text-[#fff] flex items-center gap-[6px] bg-red-500 py-[6px] px-[15px] rounded-[5px]  border"
-        >
-          <IoClose className="text-[20px]" /> Close
-        </button>
       </div>
+
       {/*  */}
       <PersonalInformation />
       <ParentsInformation />
@@ -38,10 +32,16 @@ const StudentCreateUpdate = ({ type, setCurrentPage }) => {
       <PreviousOrganization />
       {/*  */}
       <div className="flex items-end justify-end gap-[10px] mb-[15px]">
-        <button className="text-[14px] font-semibold text-[#202c4bab] py-[8px] px-[15px] bg-gray-200 rounded-[5px]  border">
+        <button
+          onClick={() => setCurrentPage("studentList")}
+          className="text-[14px] font-semibold text-[#202c4bab] py-[8px] px-[15px] bg-gray-200 rounded-[5px]  border hover:bg-red-600 hover:text-white"
+        >
           Cancle
         </button>
-        <button className="text-[14px] font-semibold text-[#fff] bg-[#506EE4] py-[8px] px-[15px] rounded-[5px]  border">
+        <button
+          onClick={() => setCurrentPage("studentList")}
+          className="text-[14px] font-semibold text-[#fff] bg-[#506EE4] py-[8px] px-[15px] rounded-[5px]  border"
+        >
           Add Student
         </button>
       </div>

@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import { BsInfoCircle, BsInfoSquare } from "react-icons/bs";
-import { FaCloudUploadAlt } from "react-icons/fa";
-import { FiUploadCloud } from "react-icons/fi";
-import { IoMdInformationCircleOutline } from "react-icons/io";
 import InputField from "../../InputField/InputField";
-import SelectInputField from "../../SelectInputField/SelectInputField";
 import { RiUserAddLine } from "react-icons/ri";
+import FileUploadFiled from "../../FileUploadFiled/FileUploadFiled";
 
 const ParentsInformation = () => {
   const [selectedGuardian, setSelectedGuardian] = useState("Others");
@@ -22,66 +18,32 @@ const ParentsInformation = () => {
       {/* =====> Fathers info <===== */}
       <div className="px-[20px]">
         <div>
-          <h2 className="text-[16px] font-[500] text-[#202C4B]  mt-[10px]">
+          <h2 className="text-[16px] font-[500] text-[#202C4B]  my-[10px]">
             Father’s Info
           </h2>
 
-          <div className="flex items-center gap-[15px] mt-[15px] ">
-            <div className="border-dotted h-[80px] w-[80px] border-2 text-[#202C4B] border-[#e9edf4] rounded-[5px] flex items-center justify-center">
-              <FiUploadCloud className="text-[#202C4B] text-[20px]" />
-            </div>
-            <div>
-              <div className="flex items-center gap-[10px] mb-[15px]">
-                <button className="text-[14px] text-[#202c4bab] py-[6px] px-[15px] hover:bg-[#506EE4] hover:text-white rounded-[5px]  border">
-                  Upload
-                </button>
-                <button className="text-[14px] text-[#fff] bg-[#506EE4] py-[6px] px-[15px] rounded-[5px]  border">
-                  Remobe
-                </button>
-              </div>
-              <p className="text-[12px] text-[#515B73]">
-                Upload image size 4MB, Format JPG, PNG, SVG
-              </p>
-            </div>
-          </div>
+          <FileUploadFiled />
           {/*  */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-[20px] py-[20px]">
             <InputField title={"Father Name"} />
-            <InputField title={"Email"} />
             <InputField title={"Phone Number"} />
+            <InputField title={"Email"} />
             <InputField title={"Father Occupation"} />
           </div>
         </div>
         {/* =====> Mothers info <===== */}
         <div className="border-t">
-          <h2 className="text-[16px] font-[500] text-[#202C4B]  mt-[10px]">
+          <h2 className="text-[16px] font-[500] text-[#202C4B]  my-[10px]">
             Mother’s Info
           </h2>
 
-          <div className="flex items-center gap-[15px] mt-[15px] ">
-            <div className="border-dotted h-[80px] w-[80px] border-2 text-[#202C4B] border-[#e9edf4] rounded-[5px] flex items-center justify-center">
-              <FiUploadCloud className="text-[#202C4B] text-[20px]" />
-            </div>
-            <div>
-              <div className="flex items-center gap-[10px] mb-[15px]">
-                <button className="text-[14px] text-[#202c4bab] py-[6px] px-[15px] hover:bg-[#506EE4] hover:text-white rounded-[5px]  border">
-                  Upload
-                </button>
-                <button className="text-[14px] text-[#fff] bg-[#506EE4] py-[6px] px-[15px] rounded-[5px]  border">
-                  Remobe
-                </button>
-              </div>
-              <p className="text-[12px] text-[#515B73]">
-                Upload image size 4MB, Format JPG, PNG, SVG
-              </p>
-            </div>
-          </div>
+          <FileUploadFiled />
           {/*  */}
           <div className=" grid grid-cols-1 lg:grid-cols-4 gap-[20px] py-[20px]">
-            <InputField title={"Father Name"} />
-            <InputField title={"Email"} />
+            <InputField title={"Mother's Name"} />
             <InputField title={"Phone Number"} />
-            <InputField title={"Father Occupation"} />
+            <InputField title={"Email"} />
+            <InputField title={"Mother's Occupation"} />
           </div>
         </div>
         {/* =====> Guardian Details info <===== */}
@@ -127,30 +89,14 @@ const ParentsInformation = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-[15px] mt-[15px] ">
-            <div className="border-dotted h-[80px] w-[80px] border-2 text-[#202C4B] border-[#e9edf4] rounded-[5px] flex items-center justify-center">
-              <FiUploadCloud className="text-[#202C4B] text-[20px]" />
-            </div>
-            <div>
-              <div className="flex items-center gap-[10px] mb-[15px]">
-                <button className="text-[14px] text-[#202c4bab] py-[6px] px-[15px] hover:bg-[#506EE4] hover:text-white rounded-[5px]  border">
-                  Upload
-                </button>
-                <button className="text-[14px] text-[#fff] bg-[#506EE4] py-[6px] px-[15px] rounded-[5px]  border">
-                  Remobe
-                </button>
-              </div>
-              <p className="text-[12px] text-[#515B73]">
-                Upload image size 4MB, Format JPG, PNG, SVG
-              </p>
-            </div>
-          </div>
+          <FileUploadFiled />
+
           {/*  */}
           <div className=" grid grid-cols-1 lg:grid-cols-3 gap-[20px] py-[20px]">
             <InputField title={"Guardian Name"} />
             <InputField title={"Guardian Relation"} />
-            <InputField title={"Email"} />
             <InputField title={"Phone Number"} />
+            <InputField title={"Email ( Optional )"} />
             <InputField title={"Occupation"} />
             <InputField title={"Address"} />
           </div>

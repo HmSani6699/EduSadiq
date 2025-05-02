@@ -68,9 +68,11 @@ const Dashboard = () => {
               <FaPlus className="text-[12px]" /> Add New Student
             </button>
           </Link>
-          <button className="bg-[#E9EDF4] text-[14px] text-[#515B73] font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[10px] shadow-sm">
-            Fees Details
-          </button>
+          <Link to={"/admin/fees_collect"}>
+            <button className="bg-[#E9EDF4] text-[14px] text-[#515B73] font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[10px] shadow-sm">
+              Fees Details
+            </button>
+          </Link>
         </div>
       </div>
       {/* =====> Tab Part End <===== */}
