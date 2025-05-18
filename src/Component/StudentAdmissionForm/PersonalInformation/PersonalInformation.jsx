@@ -17,7 +17,9 @@ const PersonalInformation = () => {
         </h2>
       </div>
       {/*  */}
-      <FileUploadFiled />
+      <div className="px-[20px]">
+        <FileUploadFiled />
+      </div>
 
       {/*  */}
       <div className="p-[20px] grid grid-cols-1 lg:grid-cols-3 gap-[20px]">

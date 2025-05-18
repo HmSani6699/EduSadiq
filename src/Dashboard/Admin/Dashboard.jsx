@@ -77,7 +77,7 @@ const Dashboard = () => {
       </div>
       {/* =====> Tab Part End <===== */}
 
-      <div className="w-full h-[100px] overflow-hidden rounded-[5px] relative lg:mb-[30px] mb-[15px]">
+      {/* <div className="w-full h-[100px] overflow-hidden rounded-[5px] relative lg:mb-[30px] mb-[15px]">
         <img className="w-full " src={banner_tab} alt="" />
         <div className="absolute top-1/2  left-[20px] -translate-y-1/2">
           <h2 className="text-[25px] text-white font-bold">
@@ -85,7 +85,7 @@ const Dashboard = () => {
           </h2>
           <p className="text-[14px] text-white ">Have a Good day at work</p>
         </div>
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-1 lg:grid-cols-4  gap-[20px] w-full mb-[30px]">
         {[

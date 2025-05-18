@@ -231,9 +231,9 @@ const AdminLeftNavber = ({ setIsSidebarOpen }) => {
       >
         <LuClipboardList className="text-[18px] text-[#515B73]" />
       </NavList>
-      {/* <NavList url={"/admin/events"} title={"Invoice"} children_true={false}>
+      <NavList url={"/admin/events"} title={"Invoice"} children_true={false}>
         <MdOutlineEventAvailable className="text-[18px] text-[#515B73]" />
-      </NavList> */}
+      </NavList>
     </div>
   );
 };
