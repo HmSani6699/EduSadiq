@@ -1,5 +1,3 @@
-import React from "react";
-import { FiUploadCloud } from "react-icons/fi";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import InputField from "../../InputField/InputField";
 import SelectInputField from "../../SelectInputField/SelectInputField";
@@ -91,7 +89,7 @@ const PersonalInformation = () => {
             { id: 8, value: "O−" },
           ]}
         />
-        <InputField title={"Primary Contact Number"} />
+        {/* <InputField title={"Primary Contact Number"} /> */}
         <SelectInputField
           title={"Student Type"}
           options={[
@@ -106,7 +104,15 @@ const PersonalInformation = () => {
             { id: 2, value: "Non-resident" },
           ]}
         />
+        <InputField title={"Admission Fees"} />
+        <InputField title={"Food Fees"} />
+        <InputField title={"Monthly Fees"} />
+        <InputField title={"Others Fees"} />
       </div>
+
+      {/* <div className="px-[20px] grid grid-cols-1 lg:grid-cols-4 gap-[20px]">
+    
+      </div> */}
     </div>
   );
 };

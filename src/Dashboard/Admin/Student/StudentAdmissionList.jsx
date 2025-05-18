@@ -116,7 +116,7 @@ const StudentAdmissionList = ({ setCurrentPage, handleStudentUpdate }) => {
             <p className="text-[#515B73] text-[14px]">Entries</p>
           </div>
           <div className="lg:w-1/2 w-full">
-            <CustomSearchForm classAdd={"w-2/3"} />
+            <CustomSearchForm classAdd={"w-full"} />
           </div>
         </div>
         {/* =====> Responsive Table <====== */}

@@ -118,7 +118,7 @@ const AdminLayout = () => {
                 )}
               </div>
               <IoNotificationsOutline className="text-[18px] cursor-pointer" />
-              <button className="lg:block hidden" onClick={toggleFullScreen}>
+              <button className="" onClick={toggleFullScreen}>
                 <img src={full_screen} alt="" />
               </button>
               <div className="flex items-center gap-[6px]">
